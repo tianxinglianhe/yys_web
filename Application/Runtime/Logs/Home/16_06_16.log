@@ -2061,3 +2061,280 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003510s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003721s ]
 
+[ 2016-06-16T21:16:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+
+[ 2016-06-16T21:29:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0304s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 235 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001858s ]
+
+[ 2016-06-16T21:29:13+08:00 ] 127.0.0.1 /index.php/home/hotelWineshop/paper.html?goodsTypeName=%E9%85%92%E5%BA%97%E7%94%A8%E7%BA%B8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(id) AS c FROM `goods` WHERE `f_goods_type_id` = (SELECT `id` FROM `goods_type` WHERE `name` = '酒店用纸'); [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: pageNow D:\wamp\www\Application\Home\Model\GoodsModel.class.php 第 33 行.
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE goods.f_goods_type_id = (SELECT id FROM goods_type WHERE `name` = '酒店用纸')
+LIMIT 0,8; [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\3aa7ea44b1b9c117d807f3d1e55c1f10.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018775s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2016-06-16T22:01:47+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000051s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0035s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 235 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-06-16T22:01:49+08:00 ] 127.0.0.1 /index.php/home/hotelWineshop/paper.html?goodsTypeName=%E9%85%92%E5%BA%97%E7%94%A8%E7%BA%B8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0036s ]
+SQL: SELECT COUNT(id) AS c FROM `goods` WHERE `f_goods_type_id` = (SELECT `id` FROM `goods_type` WHERE `name` = '酒店用纸'); [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: pageNow D:\wamp\www\Application\Home\Model\GoodsModel.class.php 第 33 行.
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE goods.f_goods_type_id = (SELECT id FROM goods_type WHERE `name` = '酒店用纸')
+LIMIT 0,8; [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\3aa7ea44b1b9c117d807f3d1e55c1f10.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2016-06-16T22:01:50+08:00 ] 127.0.0.1 /index.php/home/goods/detail.html?id=184
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0034s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name`,
+goods.`explain`,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE price_1.id = '184' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`name` FROM `norms` WHERE `f_goods_id` = 184  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\504d916dc2be2a9f6c3020a5fea2d9e5.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013636s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-06-16T22:06:42+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0077s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 235 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028786s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2016-06-16T22:06:44+08:00 ] 127.0.0.1 /index.php/home/hotelWineshop/paper.html?goodsTypeName=%E9%85%92%E5%BA%97%E7%94%A8%E7%BA%B8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(id) AS c FROM `goods` WHERE `f_goods_type_id` = (SELECT `id` FROM `goods_type` WHERE `name` = '酒店用纸'); [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: pageNow D:\wamp\www\Application\Home\Model\GoodsModel.class.php 第 33 行.
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE goods.f_goods_type_id = (SELECT id FROM goods_type WHERE `name` = '酒店用纸')
+LIMIT 0,8; [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\3aa7ea44b1b9c117d807f3d1e55c1f10.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2016-06-16T22:06:45+08:00 ] 127.0.0.1 /index.php/home/goods/detail.html?id=184
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0035s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name`,
+goods.`explain`,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE price_1.id = '184' [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`name` FROM `norms` WHERE `f_goods_id` = 184  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\504d916dc2be2a9f6c3020a5fea2d9e5.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014079s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000699s ]
+

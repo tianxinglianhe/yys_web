@@ -342,8 +342,9 @@
 							</a>
 						</li>
 						<li>
+							<?php $u = new \Home\Controller\UCloud('yys-img'); $wechatImg = $u->getPrivateImg('s_5760ae46143ce.png'); ?>
 							<a href="<?php echo U('wechat/index/bindWechat');?>">
-								<img src="<?php echo W_PUBLIC_IMG;?>btn_wechat_pay.png" alt="" style="width: 30px; margin-left: -5px;">
+								<img src="http://<?php echo ($wechatImg); ?>" alt="" style="width: 30px; margin-left: -5px;">
 								<span class="text-success">绑定微信</span>
 							</a>
 						</li>
@@ -378,7 +379,7 @@
 
 </script>
 
-<div class="jumbotron" style="background-color: #7B22A8; color: white;">
+<div class="jumbotron" style="background-color: #573E7E; color: white;">
 	<div class="container">
 		<h1>你好，宜优速</h1>
 		<?php if($_SESSION['emp']['employeeInfo']['id']>0): ?>

@@ -16,6 +16,7 @@
 			<h1>
 				修改商品
 				<small>{$goodsInfo['name']}</small>
+				<a class="btn btn-danger" href="javascript:;" id="btnDelGoods" name="{:md5($_SESSION['emp']['employeeInfo']['id'])}x{$goodsInfo['id']}">删除该商品</a>
 			</h1>
 		</div>
 	</div>
@@ -49,23 +50,27 @@
 			</p>
 			<input type="hidden" name="id" value="{$goodsInfo['id']}">
 			<p class="input-group">
+				<span class="input-group-addon">商品编号：</span>
+				<input class="form-control" type="text" name="open_id" id="txtOpenId" placeholder="选填" value="{$goodsInfo['open_id']}">
+			</p>
+			<p class="input-group">
 				<span class="input-group-addon">商品名称</span>
 				<input class="form-control" type="text" name="name" value="{$goodsInfo['name']}">
 			</p>
 			<p class="input-group">
 				<span class="input-group-addon">商品说明</span>
-				<input class="form-control" type="text" name="explain" value="{$goodsInfo['explain']}">
+				<input class="form-control" type="text" name="explain" value="{$goodsInfo['explain']}" placeholder="选填">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">商品单位</span>
+				<span class="input-group-addon">商品单位（箱、袋等）</span>
 				<input class="form-control" type="text" name="unit" value="{$goodsInfo['unit']}">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">商品价格</span>
+				<span class="input-group-addon">商品价格（元）</span>
 				<input class="form-control" type="text" name="price" value="{$goodsInfo['price']}">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">促销价格</span>
+				<span class="input-group-addon">促销价格（元）</span>
 				<input class="form-control" type="text" name="sale_price" value="{$goodsInfo['sale_price']}">
 			</p>
 			<p class="input-group">
@@ -79,12 +84,12 @@
 				       value="{:a4getDatetime($goodsInfo['sale_end'],'datetime')}">
 			</p>
 			<p class="input-group">
-				<span class=input-group-addon>库存（全部）：</span>
-				<input class="form-control" type="text" name="number" value="{$goodsInfo['inventory']}">
+				<span class=input-group-addon>全部库存（件）：</span>
+				<input class="form-control" type="text" name="number" value="{:a4default($goodsInfo['inventory'],99999)}">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">库存（促销）：</span>
-				<input class="form-control" type="text" name="sale_number" value="{$goodsInfo['sale_inventory']}">
+				<span class="input-group-addon">促销库存（件）：</span>
+				<input class="form-control" type="text" name="sale_number" value="{:a4default($goodsInfo['sale_inventory'],99999)}">
 			</p>
 			<a class="btn btn-success form-control" href="javascript:;" id="btnUpdateGoodsInfo">确定修改</a>
 		</form>
@@ -196,21 +201,24 @@
 </body>
 <script>
 
+	/**
+	 * @todo 更新商品信息
+	 */
 	document.getElementById('btnUpdateGoodsInfo').onclick = function () {
 		$.ajax({
 			url: '{:U("home/Goods/ajaxUpdateGoodsInfo")}',
 			type: 'post',
 			data: $('#formUpdateGoodsInfo').serialize(),
 			success: function (Ret) {
-				console.log(Ret);
 				if (Ret == 1) {
 					showSuccessModal('修改商品信息', '修改成功');
 				} else {
-					showFailModal('修改失败', '商品信息没有变化或修改失败');
+					showFailModal('1',Ret);
+//					showFailModal('修改失败', '商品信息没有变化或修改失败');
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 根据大类别获取子类别
@@ -228,7 +236,7 @@
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 删除规格信息
@@ -252,7 +260,7 @@
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 创建规格
@@ -272,7 +280,7 @@
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 删除图片
@@ -294,7 +302,7 @@
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 选择图片时同步显示内容
@@ -305,7 +313,7 @@
 		document.getElementById('spanChooseFileTitle').innerHTML = '已选图片：&nbsp;&nbsp;&nbsp;&nbsp;';
 		splitChar = OBJ.value.split('\\');
 		document.getElementById('spanChooseFile').innerHTML = splitChar[splitChar.length - 1];
-	}
+	};
 
 	/**
 	 * @todo 设置图片为主图片
@@ -327,6 +335,26 @@
 				}
 			}
 		});
-	}
+	};
+
+	/**
+	 * @todo 删除商品
+	 */
+	document.getElementById('btnDelGoods').onclick = function () {
+		$.ajax({
+			url: '{:U("home/goods/ajaxDelGoods")}',
+			type: 'post',
+			data: 'param=' + document.getElementById('btnDelGoods').name,
+			success: function (Ret) {
+				if (Ret == 1) {
+					showSuccessModal('删除商品','删除成功',function(){
+						location.href = '{:U("home/goods/update")}';
+					});
+				}else{
+					showFailModal('删除商品失败',Ret);
+				}
+			}
+		});
+	};
 </script>
 </html>

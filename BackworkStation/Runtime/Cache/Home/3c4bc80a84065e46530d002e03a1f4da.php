@@ -342,8 +342,9 @@
 							</a>
 						</li>
 						<li>
+							<?php $u = new \Home\Controller\UCloud('yys-img'); $wechatImg = $u->getPrivateImg('s_5760ae46143ce.png'); ?>
 							<a href="<?php echo U('wechat/index/bindWechat');?>">
-								<img src="http://yys-img.ufile.ucloud.com.cn/s_5760ae46143ce.png?UCloudPublicKey=WLw4pYG8jP3ECIQs8TRlffSQdykzUMojKGt6vENIkDPyuFio4+Z55A==&Expires=1465958718&Signature=HnLONp8rI0R0vwhNmYfjJNr/UQ4=" alt="" style="width: 30px; margin-left: -5px;">
+								<img src="http://<?php echo ($wechatImg); ?>" alt="" style="width: 30px; margin-left: -5px;">
 								<span class="text-success">绑定微信</span>
 							</a>
 						</li>
@@ -384,6 +385,7 @@
 			<h1>
 				修改商品
 				<small><?php echo ($goodsInfo['name']); ?></small>
+				<a class="btn btn-danger" href="javascript:;" id="btnDelGoods" name="<?php echo md5($_SESSION['emp']['employeeInfo']['id']);?>x<?php echo ($goodsInfo['id']); ?>">删除该商品</a>
 			</h1>
 		</div>
 	</div>
@@ -417,23 +419,27 @@
 			</p>
 			<input type="hidden" name="id" value="<?php echo ($goodsInfo['id']); ?>">
 			<p class="input-group">
+				<span class="input-group-addon">商品编号：</span>
+				<input class="form-control" type="text" name="open_id" id="txtOpenId" placeholder="选填" value="<?php echo ($goodsInfo['open_id']); ?>">
+			</p>
+			<p class="input-group">
 				<span class="input-group-addon">商品名称</span>
 				<input class="form-control" type="text" name="name" value="<?php echo ($goodsInfo['name']); ?>">
 			</p>
 			<p class="input-group">
 				<span class="input-group-addon">商品说明</span>
-				<input class="form-control" type="text" name="explain" value="<?php echo ($goodsInfo['explain']); ?>">
+				<input class="form-control" type="text" name="explain" value="<?php echo ($goodsInfo['explain']); ?>" placeholder="选填">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">商品单位</span>
+				<span class="input-group-addon">商品单位（箱、袋等）</span>
 				<input class="form-control" type="text" name="unit" value="<?php echo ($goodsInfo['unit']); ?>">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">商品价格</span>
+				<span class="input-group-addon">商品价格（元）</span>
 				<input class="form-control" type="text" name="price" value="<?php echo ($goodsInfo['price']); ?>">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">促销价格</span>
+				<span class="input-group-addon">促销价格（元）</span>
 				<input class="form-control" type="text" name="sale_price" value="<?php echo ($goodsInfo['sale_price']); ?>">
 			</p>
 			<p class="input-group">
@@ -447,12 +453,12 @@
 				       value="<?php echo a4getDatetime($goodsInfo['sale_end'],'datetime');?>">
 			</p>
 			<p class="input-group">
-				<span class=input-group-addon>库存（全部）：</span>
-				<input class="form-control" type="text" name="number" value="<?php echo ($goodsInfo['inventory']); ?>">
+				<span class=input-group-addon>全部库存（件）：</span>
+				<input class="form-control" type="text" name="number" value="<?php echo a4default($goodsInfo['inventory'],99999);?>">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">库存（促销）：</span>
-				<input class="form-control" type="text" name="sale_number" value="<?php echo ($goodsInfo['sale_inventory']); ?>">
+				<span class="input-group-addon">促销库存（件）：</span>
+				<input class="form-control" type="text" name="sale_number" value="<?php echo a4default($goodsInfo['sale_inventory'],99999);?>">
 			</p>
 			<a class="btn btn-success form-control" href="javascript:;" id="btnUpdateGoodsInfo">确定修改</a>
 		</form>
@@ -564,21 +570,24 @@
 </body>
 <script>
 
+	/**
+	 * @todo 更新商品信息
+	 */
 	document.getElementById('btnUpdateGoodsInfo').onclick = function () {
 		$.ajax({
 			url: '<?php echo U("home/Goods/ajaxUpdateGoodsInfo");?>',
 			type: 'post',
 			data: $('#formUpdateGoodsInfo').serialize(),
 			success: function (Ret) {
-				console.log(Ret);
 				if (Ret == 1) {
 					showSuccessModal('修改商品信息', '修改成功');
 				} else {
-					showFailModal('修改失败', '商品信息没有变化或修改失败');
+					showFailModal('1',Ret);
+//					showFailModal('修改失败', '商品信息没有变化或修改失败');
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 根据大类别获取子类别
@@ -596,7 +605,7 @@
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 删除规格信息
@@ -620,7 +629,7 @@
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 创建规格
@@ -640,7 +649,7 @@
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 删除图片
@@ -662,7 +671,7 @@
 				}
 			}
 		});
-	}
+	};
 
 	/**
 	 * @todo 选择图片时同步显示内容
@@ -673,7 +682,7 @@
 		document.getElementById('spanChooseFileTitle').innerHTML = '已选图片：&nbsp;&nbsp;&nbsp;&nbsp;';
 		splitChar = OBJ.value.split('\\');
 		document.getElementById('spanChooseFile').innerHTML = splitChar[splitChar.length - 1];
-	}
+	};
 
 	/**
 	 * @todo 设置图片为主图片
@@ -695,6 +704,26 @@
 				}
 			}
 		});
-	}
+	};
+
+	/**
+	 * @todo 删除商品
+	 */
+	document.getElementById('btnDelGoods').onclick = function () {
+		$.ajax({
+			url: '<?php echo U("home/goods/ajaxDelGoods");?>',
+			type: 'post',
+			data: 'param=' + document.getElementById('btnDelGoods').name,
+			success: function (Ret) {
+				if (Ret == 1) {
+					showSuccessModal('删除商品','删除成功',function(){
+						location.href = '<?php echo U("home/goods/update");?>';
+					});
+				}else{
+					showFailModal('删除商品失败',Ret);
+				}
+			}
+		});
+	};
 </script>
 </html>

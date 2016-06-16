@@ -205,6 +205,58 @@ class GoodsController extends Controller
 	}
 
 	/**
+	 * @todo AJAX删除商品
+	 */
+	public function ajaxDelGoods()
+	{
+		$ex = explode('x', $_POST['param']);
+		$sign = $ex[0];
+		$id = addslashes($ex[1]);
+		#验证操作权限
+		if ($sign == md5($_SESSION['emp']['employeeInfo']['id'])) {
+			#########通过验证
+			#########删除商品信息
+			$g = new GoodsModel();
+			$g->del_byId_useData($id);
+
+			#########删除商品价格
+			#获取地区最大值
+			$sql = "SELECT MAX(id) FROM `area`";
+			$maxArea = a4mysql($sql);
+			$maxArea = $maxArea[0]['MAX(id)'];
+			#遍历删除商品价格和库存
+			for ($i = 0; $i <= $maxArea; $i++) {
+				$sql = "DELETE FROM price_{$i} WHERE id={$id}";
+				a4mysql($sql);
+				$sql = "DELETE FROM inventory_{$i} WHERE id={$id}";
+				a4mysql($sql);
+			}
+
+			#########删除UCloud照片
+			#获取该商品名称
+			$gi = new GoodsImgModel();
+			$goodsImgInfo = $gi->get_byFGoodsId($id);
+			#遍历删除Ucloud照片
+			$u = new UCloud('goods-img');
+			foreach ($goodsImgInfo as $item) {
+				$u->delImg($item['name']);#删除UCloud原图
+				$u->delImg($item['thumb']);#删除UCloud缩略图
+			}
+
+			#########删除RDS商品照片
+			$gi->delete_byFGoodsId($id);
+
+			#########删除商品规格
+			$n = new NormsModel();
+			$n->delete_byFGoodsId($id);
+			echo(1);
+		} else {
+			echo('验证未通过');
+		}
+		exit;
+	}
+
+	/**
 	 * @todo AJAX添加商品基础信息
 	 */
 	public function ajaxCreateGoods()
@@ -443,6 +495,48 @@ class GoodsController extends Controller
 				echo 1;
 			} else {
 				echo $updateGoodsImgIsLeadRes;
+			}
+			exit;
+		}
+	}
+
+	/**
+	 * @todo AJAX修改商品信息
+	 */
+	public function ajaxUpdateGoodsInfo()
+	{
+		if (IS_POST) {
+			$_POST['update_time'] = time();
+			$_POST['sale_start'] = a4getTimestamp($_POST['sale_start']);
+			$_POST['sale_end'] = a4getTimestamp($_POST['sale_end']);
+			addslashes('post');#防注入过滤
+
+			#########修改商品信息
+			#修改基本信息
+			$g = new GoodsModel();
+			$updateGoodsInfoRes = $g->update_byId_usePOST();
+
+			#修改当前地区价格
+			$sql = "UPDATE price_{$_SESSION['emp']['employeeIpInfo']['cityId']} SET
+			price={$_POST['price']},sale_price={$_POST['sale_price']},sale_start={$_POST['sale_start']},sale_end={$_POST['sale_end']}
+			WHERE id={$_POST['id']}";
+			$updatePriceRes = a4mysql($sql);
+
+			#修改当前地区库存
+			#检查当前地区库存是否存在数据
+			$sql = "SELECT `number` FROM inventory_{$_SESSION['emp']['employeIpInfo']['cityId']} WHERE id={$_POST['id']}";
+			$currentNumber = a4mysql($sql);
+			if ($currentNumber > 0) {
+				#存在库存数据，进行修改
+				$sql = "UPDATE inventory_{$_SESSION['emp']['employeeIpInfo']['cityId']} SET
+				number={$_POST['number']},sale_number={$_POST['sale_number']}
+				WHERE id={$_POST['id']}";
+				$updateInventoryRes = a4mysql($sql);
+			} else {
+				#不存在库存数据，进行添加
+				$sql = "INSERT INTO inventory_{$_SESSION['emp']['employeeIpInfo']['cityId']} (id,`number`,sale_number)
+				VALUE({$_POST['id']},{$_POST['number']},{$_POST['sale_number']})";
+				$insertInventoryRes = a4mysql($sql);
 			}
 			exit;
 		}

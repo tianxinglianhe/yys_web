@@ -133,4 +133,17 @@ WHERE goods.id = " . addslashes($ID);
 		$this->create(I('post.'));
 		return $this->where($where)->save();
 	}
+
+	/**
+	 * @todo 根据编号删除商品信息
+	 *
+	 * @param integer $Data 编号
+	 *
+	 * @return mixed
+	 */
+	public function del_byId_useData($Data)
+	{
+		$where['id'] = array('eq', $Data);
+		return $this->where($where)->delete();
+	}
 }

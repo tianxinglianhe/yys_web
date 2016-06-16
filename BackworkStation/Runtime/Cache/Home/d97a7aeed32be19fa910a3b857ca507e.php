@@ -342,8 +342,9 @@
 							</a>
 						</li>
 						<li>
+							<?php $u = new \Home\Controller\UCloud('yys-img'); $wechatImg = $u->getPrivateImg('s_5760ae46143ce.png'); ?>
 							<a href="<?php echo U('wechat/index/bindWechat');?>">
-								<img src="http://yys-img.ufile.ucloud.com.cn/s_5760ae46143ce.png?UCloudPublicKey=WLw4pYG8jP3ECIQs8TRlffSQdykzUMojKGt6vENIkDPyuFio4+Z55A==&Expires=1465955763&Signature=iuV/6919KN5YHOo7JoE7ZsU6t6I=" alt="" style="width: 30px; margin-left: -5px;">
+								<img src="http://<?php echo ($wechatImg); ?>" alt="" style="width: 30px; margin-left: -5px;">
 								<span class="text-success">绑定微信</span>
 							</a>
 						</li>

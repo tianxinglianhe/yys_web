@@ -47,4 +47,16 @@ class NormsModel extends Model
 		$this->create(I('post'));
 		return $this->where(array('id' => array('eq', $_POST['id'])))->delete();
 	}
+
+	/**
+	 * @todo 通过绑定商品编号删除规格
+	 *
+	 * @param integer $FGoodsId 绑定商品编号
+	 *
+	 * @return mixed
+	 */
+	public function delete_byFGoodsId($FGoodsId)
+	{
+		return $this->where(array('f_goods_id' => array('eq', $FGoodsId)))->delete();
+	}
 }

@@ -61,53 +61,16 @@
 	 *
 	 * @param TITLE 模态框标题
 	 * @param CONTENT 模态框内容
-	 * @param WAIT 等待刷新的时间 如果等于0则不执行
 	 * @param FUNC 回调函数
 	 */
-	function showSuccessModal(TITLE, CONTENT, WAIT, FUNC) {
+	function showSuccessModal(TITLE, CONTENT, FUNC) {
 		document.getElementById('successModalTitle').innerHTML = TITLE;
 		document.getElementById('successModalContent').innerHTML = CONTENT;
 		document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
 		$('#successModal').modal('show');
-		if (WAIT > 0) {
-			document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + WAIT + ')';
-			WAIT *= 1000;
-			window.setTimeout(
-					function () {
-						FUNC();
-					},
-					WAIT
-			);
-			/**
-			 * @todo 倒计时
-			 *
-			 * @param I 倒计时记步起点(无特殊要求可以不用填写)
-			 */
-			countDown = function (I) {
-				if (isNaN(I)) {
-					I = 1;
-				}
-				if (I > WAIT) {
-					I = 1;
-				}
-				window.setTimeout(
-						function () {
-							document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + (WAIT / 1000 - I) + ')';
-							if((WAIT / 1000 - I)&&(WAIT / 1000 - I)>0){
-								I++;
-								countDown(I);
-							}else{
-								document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
-								window.clearTimeout();
-							}
-						},
-						1000
-				);
-			}
-			countDown();
-
-		}
-
+		$('#successModal').on('hidden.bs.modal', function () {
+			FUNC();
+		})
 	}
 
 	/**
@@ -123,51 +86,16 @@
 	 *
 	 * @param TITLE 模态框标题
 	 * @param CONTENT 模态框内容
-	 * @param WAIT 等待刷新的时间 如果等于0则不刷新 单位:秒
 	 * @param FUNC 回调函数
 	 */
-	function showFailModal(TITLE, CONTENT, WAIT, FUNC) {
+	function showFailModal(TITLE, CONTENT, FUNC) {
 		document.getElementById('failModalTitle').innerHTML = TITLE;
 		document.getElementById('failModalContent').innerHTML = CONTENT;
 		document.getElementById('btnFailModalClose').innerHTML = '关闭';
 		$('#failModal').modal('show');
-		if (WAIT > 0) {
-			document.getElementById('btnFailModalClose').innerHTML = '关闭 (' + WAIT + ')';
-			WAIT *= 1000;
-			window.setTimeout(
-					function () {
-						FUNC();
-					},
-					WAIT
-			);
-			/**
-			 * @todo 倒计时
-			 *
-			 * @param I 倒计时记步起点(无特殊要求可以不用填写)
-			 */
-			countDown = function (I) {
-				if (isNaN(I)) {
-					I = 1;
-				}
-				if (I > WAIT) {
-					I = 1;
-				}
-				window.setTimeout(
-						function () {
-							document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + (WAIT / 1000 - I) + ')';
-							if((WAIT / 1000 - I)&&(WAIT / 1000 - I)>0){
-								I++;
-								countDown(I);
-							}else{
-								document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
-								window.clearTimeout();
-							}
-						},
-						1000
-				);
-			}
-			countDown();
-		}
+		$('#failModal').on('hidden.bs.modal', function () {
+			FUNC();
+		})
 
 	}
 
@@ -242,7 +170,14 @@
 	}
 
 	/**
-	 * @todo 启动警告询问框
+	 * @todo 关闭普通询问框
+	 */
+	function closeDefaultConfirm() {
+		$('#defaultConfirm').modal('hide');
+	}
+
+	/**
+	 * @todo 启动风险询问框
 	 *
 	 * @param TITLE 等待框标题
 	 * @param CONTENT 等待框内容
@@ -259,6 +194,13 @@
 		document.getElementById('btnWarningConfirmNo').onclick = function () {
 			NO_FUNC();
 		}
+	}
+
+	/**
+	 * @todo 关闭风险询问框
+	 */
+	function closeWarningConfirm() {
+		$('#warningConfirm').modal('hide');
 	}
 </script>
 <!--引入jquery-->
@@ -344,7 +286,8 @@
 								<a class="btn btn-warning" href="javascript:;" id="btnSignIn">登录</a>
 							</span>
 					</div>
-					<a href="javascript:;" class="btn btn-link" id="btnWechatSignIn">微信登陆</a>
+					<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx819eb1e0004ea160&redirect_uri=http%3A%2F%2Fphphelper.cn
+&response_type=code&scope=snsapi_login&state=<?php echo session_id();?>#wechat_redirect" class="btn btn-link" id="btnWechatSignIn">微信登陆</a>
 					<a href="<?php echo U('home/user/signup');?>">快速注册</a>
 				</form>
 				<?php endif; ?>
@@ -368,9 +311,9 @@
 			data: $('#formSignIn').serialize(),
 			success: function (ret) {
 				if (ret != 1) {
-					showFailModal('登录失败', ret, 3, null);
+					showFailModal('登录失败', ret);
 				} else {
-					showSuccessModal('登录', '登录成功', 3, function () {
+					showSuccessModal('登录', '登录成功', function () {
 						location.reload();
 					});
 				}

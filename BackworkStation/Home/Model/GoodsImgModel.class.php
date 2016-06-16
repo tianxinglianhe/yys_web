@@ -66,4 +66,16 @@ class GoodsImgModel extends Model
 	{
 		return $this->where(array('id' => array('eq', addslashes($ID))))->delete();
 	}
+
+	/**
+	 * @todo 根据绑定商品编号删除商品图片
+	 *
+	 * @param integer $FGoodsId 绑定商品编号
+	 *
+	 * @return mixed
+	 */
+	public function delete_byFGoodsId($FGoodsId)
+	{
+		return $this->where(array('f_goods_id' => array('eq', $FGoodsId)))->delete();
+	}
 }
