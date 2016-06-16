@@ -1,0 +1,23 @@
+[ 2016-05-26T08:10:29+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0375s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0363s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 288 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000979s ]
+

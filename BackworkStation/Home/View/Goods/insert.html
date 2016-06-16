@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>添加商品 - 后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="page-header">
+			<h1>
+				添加商品
+				<small>请根据商品类别添加</small>
+			</h1>
+		</div>
+	</div>
+	<div class="row">
+		<form class="col-md-4" id="formCreateGoods">
+			<div class="page-header">
+				<h2>
+					<span class="label label-primary">第一步</span>
+					<small>填写商品基本资料</small>
+				</h2>
+			</div>
+			<p class="input-group input-group-lg">
+				<span class="input-group-addon">大&nbsp;类&nbsp;别</span>
+				<select class="form-control" id="selRootGoodsType">
+					<php>foreach($rootGoodsTypeInfo as $item):</php>
+					<option value="{$item['id']}">{$item['name']}</option>
+					<php>endforeach;</php>
+				</select>
+				<span class="input-group-btn">
+					<a class="btn btn-primary" href="javascript:;" id="btnGetSubGoodsType">确定</a>
+				</span>
+			</p>
+			<p class="input-group input-group-lg">
+				<span class="input-group-addon">小&nbsp;类&nbsp;别</span>
+				<select class="form-control" id="selSubGoodsType" name="f_goods_type_id"></select>
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">商品编号：</span>
+				<input class="form-control" type="text" name="open_id" id="txtOpenId" placeholder="选填">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">商品名称：</span>
+				<input class="form-control" type="text" name="name" id="txtName">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">商品说明：</span>
+				<input class="form-control" type="text" name="explain" id="txtExplain">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">商品单位：</span>
+				<input class="form-control" type="text" name="unit" id="txtUnit">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">商品价格：</span>
+				<input class="form-control" type="text" name="price" id="txtPrice">
+			</p>
+			<a href="javascript:;" class="btn btn-primary form-control" id="btnCreateGoods">创建商品</a>
+		</form>
+		<form class="col-md-4" id="formCreateNorms">
+			<div class="page-header">
+				<h2>
+					<span class="label label-success">第二步</span>
+					<small>选择商品规格</small>
+				</h2>
+			</div>
+			<!--成功添加商品信息的编号-->
+			<input type="hidden" name="f_goods_id" id="hdnGoodsId" value="{$_GET['f_goods_id']}">
+			<p class="input-group">
+				<span class="input-group-addon">规格名称：</span>
+				<input class="form-control" type="text" name="name" id="txtNormsName">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">规格值（数量/件）：</span>
+				<input class="form-control" type="text" name="value" id="txtValue">
+			</p>
+			<p class="input-group" style="margin-top: 5px;">
+				<span class="input-group-addon">规格说明：</span>
+				<input class="form-control" type="text" name="explain" id="txtNormsExplain">
+			</p>
+			<a href="javascript:;" class="btn btn-success form-control" style="margin-top: 5px;" id="btnCreateNorms">创建规格</a>
+		</form>
+		<!--上传图片-->
+		<form class="col-md-4" action="{:U('home/goods/insert')}?f_goods_id={$_GET['f_goods_id']}"
+		      enctype="multipart/form-data" method="post">
+			<div class="page-header">
+				<h2>
+					<span class="label label-danger">第三步</span>
+					<small>上传商品图片</small>
+				</h2>
+			</div>
+			<div class="input-group">
+				<input type="checkbox" name="is_lead" value="T" id="chkIsLead">
+				<label for="chkIsLead">作为主图片？</label>
+			</div>
+			<p class="input-group">
+				<span id="spanChooseFileTitle"></span>
+				<span id="spanChooseFile"></span>
+				<input type="file" name="file" id="file" style="display: none;" onchange="chooseFile(this)"/>
+			</p>
+			<div class="input-group" style="margin-top: 5px;">
+				<a class="btn btn-warning" href="javascript:;" onclick="file.click()" id="btnChooseFile">选择图片</a>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<php>if(a4isEmpty($_GET['f_goods_id'])==false):</php>
+				<input class="btn btn-danger" type="submit" value="上传">
+				<php>endif;</php>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+
+<script>
+	/**
+	 * @todo 根据大类别获取子类别
+	 */
+	document.getElementById('btnGetSubGoodsType').onclick = function () {
+		$.ajax({
+			url: '{:U("home/Goods/ajaxGetSubGoodsType")}',
+			type: 'post',
+			data: 'parent_id=' + document.getElementById('selRootGoodsType').value,
+			success: function (RET) {
+				subGoodsType = $.parseJSON(RET);
+				document.getElementById('selSubGoodsType').length = 0;
+				for (var item in subGoodsType) {
+					document.getElementById('selSubGoodsType').options[item] = new Option(subGoodsType[item]['name'], subGoodsType[item]['id']);
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 创建商品
+	 */
+	document.getElementById('btnCreateGoods').onclick = function () {
+		$.ajax({
+			url: '{:U("home/goods/ajaxCreateGoods")}',
+			type: 'post',
+			data: $('#formCreateGoods').serialize(),
+			success: function (RET) {
+				ret = JSON.parse(RET);
+				if (ret['result'] == 1) {
+					showSuccessModal('添加商品', '添加成功', function () {
+						location.href = '{:U("home/goods/insert")}?f_goods_id=' + ret['id'];
+					});
+				} else {
+					showFailModal('添加商品失败', ret['errMsg'], function () {
+						location.reload();
+					});
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 创建规格
+	 */
+	document.getElementById('btnCreateNorms').onclick = function () {
+		$.ajax({
+			url: '{:U("home/goods/ajaxCreateNorms")}',
+			type: 'post',
+			data: $('#formCreateNorms').serialize(),
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('创建规格', '创建成功', function () {
+						location.href = '{:U("home/goods/insert")}?f_goods_id=' + document.getElementById('hdnGoodsId').value;
+					});
+				} else {
+					showFailModal('创建规格失败', RET, function () {
+						location.reload();
+					});
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 选择图片时同步显示内容
+	 *
+	 * @param OBJ file标签对象
+	 */
+	chooseFile = function (OBJ) {
+		document.getElementById('spanChooseFileTitle').innerHTML = '已选图片：&nbsp;&nbsp;&nbsp;&nbsp;';
+		splitChar = OBJ.value.split('\\');
+		document.getElementById('spanChooseFile').innerHTML = splitChar[splitChar.length - 1];
+	}
+</script>
+</html>

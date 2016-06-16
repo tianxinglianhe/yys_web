@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+
+	<title>我的收藏 - 宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!--顶端广告-->
+			<a href="#">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<div class="page-header">
+				<h3>我的收藏</h3>
+			</div>
+		</div>
+		<php>foreach($goodsInfo as $item):</php>
+		<div class="col-md-3">
+			<div class="thumbnail">
+				<a href="{:U('home/goods/detail')}?id={$item['id']}">
+					<img src="{:W_ROOT_IMG}1.jpg" alt="{$item['name']}" height="200px">
+				</a>
+				<div class="caption">
+					<h3>商品名称</h3>
+					<span class="glyphicon glyphicon-yen" style="color: #D20000;">&nbsp;{$item['price']}</span>
+
+					<p>
+						<a href="#" class="btn btn-default" id="btnDelCollection" name="{$item['collection_id']}">取消收藏</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<php>endforeach;</php>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+	/**
+	 * @todo 删除收藏
+	 *
+	 * @returns {boolean}
+	 */
+	document.getElementById('btnDelCollection').onclick = function () {
+		$.ajax({
+			url: '{:U("home/user/ajaxDelCollection")}',
+			type: 'post',
+			data: 'id=' + this.name,
+			success: function (ret) {
+				if (ret == 1) {
+					showSuccessModal('取消收藏', '取消收藏成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('取消收藏', ret);
+				}
+			}
+		});
+		return false;
+	}
+</script>
+</body>
+</html>

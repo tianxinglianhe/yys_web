@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+	<title>修改信息 - 宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!--顶端广告-->
+			<a href="#">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<div class="container-fluid">
+	<div class="jumbotron" style="background-color: white;">
+		<div class="container">
+			<div class="row">
+				<php>$userInfo = $_SESSION['user']['userInfo'];</php>
+				<div class="col-md-4">
+					<form id="formUpdateUserInfo">
+						<input type="hidden" name="id" value="{$userInfo['id']}">
+						<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtSignInName"
+						      style="background-color: transparent;">
+							<span class="glyphicon glyphicon-user">&nbsp;登录账号</span>
+						</span>
+							<input type="text" class="form-control" placeholder="必填"
+							       aria-describedby="basic-addon-txtUsername" name="signin_name" value="{$userInfo['signin_name']}">
+						</div>
+						<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtUsername"
+						      style="background-color: transparent;">
+							<span class="glyphicon glyphicon-font" id="spanUsername">&nbsp;公司名称</span>
+						</span>
+							<input type="text" class="form-control" placeholder="必填"
+							       aria-describedby="basic-addon-txtUsername" name="username" value="{$userInfo['username']}">
+						</div>
+						<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtTelNo"
+						      style="background-color: transparent;">
+							<span class="glyphicon glyphicon-phone-alt">&nbsp;联系电话</span>
+						</span>
+							<input type="text" class="form-control" placeholder="选填"
+							       aria-describedby="basic-addon-txtUsername" name="tel_no" value="{$userInfo['tel_no']}">
+						</div>
+						<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtEmail"
+						      style="background-color: transparent;">
+							<span class="glyphicon glyphicon-envelope">&nbsp;联系邮箱</span>
+						</span>
+							<input type="text" class="form-control" placeholder="选填" aria-describedby="basic-addon-txtEmail"
+							       name="email" value="{$userInfo['email']}">
+						</div>
+						<div class="navbar-form" style="padding: 0;">
+							<select class="form-control" class="select" name="take_over_province" id="selTakeOverProvince" style="width: 28%;">
+							</select>
+							<select class="form-control" class="select" name="take_over_city" id="selTakeOverCity" style="width: 28%;">
+							</select>
+							<select class="form-control" class="select" name="take_over_town" id="selTakeOverTown">
+							</select>
+						</div>
+						<input type="text" class="form-control" placeholder="详细地址" name="take_over_ex" value="{$userInfo['take_over_ex']}">
+						<a class="btn btn-primary form-control" href="#" id="btnUpdateUserInfo" style="margin-top: 5px;">修改资料</a>
+					</form>
+					<form id="formUpdateUserPwd" style="margin-top: 5px;">
+						<input type="hidden" name="id" value="{$userInfo['id']}">
+						<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtPwd" style="background-color: transparent;">
+							<span class="glyphicon glyphicon-asterisk">&nbsp;登录密码</span>
+						</span>
+							<input type="text" class="form-control" placeholder="必填" aria-describedby="basic-addon-txtPwd"
+							       name="pwd">
+						</div>
+						<a class="btn btn-danger" href="#" id="btnUpdateUserPwd">修改密码</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--引入三级省市联动-->
+<script src="/a4js/PctCorrelation.js"></script>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+
+	/**
+	 * @todo 修改用户信息
+	 */
+	$('#btnUpdateUserInfo').on('click', null, null, function () {
+		$.ajax({
+			url: '{:U("home/user/ajaxUpdateUserInfo")}',
+			type: 'post',
+			data: $('#formUpdateUserInfo').serialize(),
+			success: function (ret) {
+				if (ret != 1) {
+					showFailModal('修改失败', ret);
+				} else {
+					showSuccessModal('修改信息','修改成功');
+				}
+			}
+		});
+		return false;
+	});
+
+	/**
+	 * @todo 修改用户登录密码
+	 */
+	$('#btnUpdateUserPwd').on('click', null, null, function () {
+		$.ajax({
+			url: '{:U("home/user/ajaxUpdateUserPwd")}',
+			type: 'post',
+			data: $('#formUpdateUserPwd').serialize(),
+			success: function (ret) {
+				if (ret != 1) {
+					showFailModal('修改失败', ret);
+				} else {
+					showSuccessModal('修改密码', '修改成功');
+				}
+			}
+		});
+		return false;
+	});
+
+	/**
+	 * @todo 页面加载后执行
+	 */
+	window.onload = function () {
+		//###############省市联动
+		//初始化省市联动信息
+		var selid = new Array('selTakeOverProvince', 'selTakeOverCity', 'selTakeOverTown');
+		var defval = new Array('{$userInfo.take_over_province}', '{$userInfo.take_over_city}', '{$userInfo.take_over_town}');
+		var pct = new PctCorrelation();
+		pct.initPct(selid, defval);
+	}
+</script>
+</body>
+</html>

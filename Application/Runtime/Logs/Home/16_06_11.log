@@ -1,0 +1,52 @@
+[ 2016-06-11T19:23:38+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001257s ]
+
+[ 2016-06-11T19:24:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0163s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 367 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045127s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001379s ]
+
+[ 2016-06-11T19:24:53+08:00 ] 127.0.0.1 /index.php/home/user/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000368s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\6b283965222160c45b469b432ce0117f.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001225s ]
+

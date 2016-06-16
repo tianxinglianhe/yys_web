@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+
+	<title>酒店用纸 - 酒店用品 -宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!--顶端广告-->
+			<a href="#">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<php>foreach($goodsInfo as $key=>$value):</php>
+		<div class="col-md-3">
+			<div class="thumbnail" style="border: none;">
+				<div class="row">
+					<div class="col-lg-12">
+						<a href="{:U('home/goods/detail')}?id={$value['id']}">
+							<img src="/Public/Goods/Img/{$value['id']}/{$value['img']}" alt="{$value['name']}" width="100%">
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="text-left">{:a4admixStrsub($value['name'])}</p>
+					</div>
+					<div class="col-lg-4">
+						<p class="text-right">
+							<span style="color: orangered;">{$value['price']}</span>
+							<br>
+							库存：{$value['inventory']}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<php>endforeach;</php>
+	</div>
+	<!--分页导航-->
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<nav>
+				<ul class="pagination">
+					<li>
+						<a href="{:U('home/hotelWineshop/paper')}?goodsTypeName={$_SESSION['sys']['limitPage']['goodsTypeName']}&pageNow={$_SESSION['sys']['limitPage']['pageNow']-1}" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<php>for($i=1;$i<=$_SESSION['sys']['limitPage']['pageMax'];$i++):</php>
+					<php>if($i==$_SESSION['sys']['limitPage']['pageNow']):</php>
+					<li><a href="{:U('home/hotelWineshop/paper')}?goodsTypeName={$_SESSION['sys']['limitPage']['goodsTypeName']}&pageNow={$i}"><strong style="color: orangered;">{$i}</strong></a></li>
+					<php>else:</php>
+					<li><a href="{:U('home/hotelWineshop/paper')}?goodsTypeName={$_SESSION['sys']['limitPage']['goodsTypeName']}&pageNow={$i}">{$i}</a></li>
+					<php>endif;</php>
+					<php>endfor;</php>
+					<li>
+						<a href="{:U('home/hotelWineshop/paper')}?goodsTypeName={$_SESSION['sys']['limitPage']['goodsTypeName']}&pageNow={$_SESSION['sys']['limitPage']['pageNow']+1}" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+</script>
+</body>
+</html>

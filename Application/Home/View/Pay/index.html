@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+	<title>选择支付方式 - 支付 - 宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!--顶端广告-->
+			<a href="#">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h2>
+					选择支付方式
+					<small>支付宝/微信/银联</small>
+				</h2>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="page-header">
+				<h3>收货人信息</h3>
+			</div>
+			<div>
+				<p>收货人姓名：{$_SESSION['user']['userInfo']['take_over_name']}</p>
+				<p>
+					收获地址：
+					{$_SESSION['user']['userInfo']['take_over_province']}
+					{$_SESSION['user']['userInfo']['take_over_city']}
+					{$_SESSION['user']['userInfo']['take_over_town']}
+					{$_SESSION['user']['userInfo']['take_over_ex']}
+				</p>
+			</div>
+			<form action="{:U('home/pay/scanPay')}" method="post" id="formScanPay">
+				<input type="hidden" name="no" value="{$_SESSION['sys']['pay']['orderFormInfo']['no']}">
+				<div id="divInvoiceInfo">
+					<div class="input-group input-group-sm">
+						<span class="input-group-addon">发票类型：</span>
+						<select class="form-control" name="invoice_type" id="lblInvoiceType">
+							<option value="个人">个人</option>
+							<option value="公司">公司</option>
+						</select>
+					</div>
+					<div class="input-group input-group-sm" style="margin-top: 5px;">
+						<span class="input-group-addon">公司名称：</span>
+						<input class="form-control" type="text" name="invoice_company_name" placeholder="个人发票无需填写">
+					</div>
+				</div>
+				<div class="navbar-form" style="margin-top: 5px;">
+					<input type="checkbox" name="is_need_invoice" value="1" id="chkIsNeedInVoice">
+					<label for="chkIsNeedInVoice">需要发票</label>
+					<div>
+						<a href="javascript:;" id="btnWechatScanPay">
+							<img src="{:W_PUBLIC_IMG}btn_wechat_pay.png" alt="微信支付" width="50px">
+							微信支付
+						</a>
+					</div>
+					<div>
+						<a href="javascript:;" id="btnAliScanPay">
+							<img src="{:W_PUBLIC_IMG}btn_ali_pay.jpg" alt="支付宝支付" width="45px">
+							支付宝支付
+						</a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-8">
+			<div class="page-header">
+				<h3>订单信息</h3>
+			</div>
+			<div>
+				<p>订单号：{$_SESSION['sys']['pay']['orderFormInfo']['no']}</p>
+				<p>下单时间：{:a4getDatetime($_SESSION['sys']['pay']['orderFormInfo']['create_time'],'datetime')}</p>
+				<p>总金额：￥{$_SESSION['sys']['pay']['orderFormInfo']['price']}</p>
+				<?php for($i=0;$i<count($goodsInfo);$i++):?>
+				<div class="thumbnail">
+					<div class="row">
+						<div class="col-md-3">
+							<img src="{:W_ROOT_IMG}3.jpg" alt="{$goodsInfo[$i]['name']}" width="150px">
+						</div>
+						<div class="caption col-md-7">
+							<p class="lead">{$goodsInfo[$i]['name']}</p>
+							<p>{$goodsInfo[$i]['explain']}</p>
+						</div>
+						<div class="caption col-md-2">
+							<p>数量：{$orderGoodsInfo[$i]['number']}</p>
+							<p>单价：￥{$goodsInfo[$i]['price']}</p>
+							<p>小计：￥{$goodsInfo[$i]['price']*$orderGoodsInfo[$i]['number']}</p>
+						</div>
+					</div>
+				</div>
+				<?php endfor;?>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12"></div>
+		</div>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+	/**
+	 * @todo 切换发票信息显示状态
+	 */
+	document.getElementById('chkIsNeedInVoice').onclick = function () {
+		if (this.checked == true) {
+			document.getElementById('divInvoiceInfo').style.display = '';
+		} else {
+			document.getElementById('divInvoiceInfo').style.display = 'none';
+		}
+	};
+
+	/**
+	 * @todo 自动执行
+	 */
+	window.onload = function () {
+		//隐藏发票区域
+		document.getElementById('divInvoiceInfo').style.display = 'none';
+	};
+
+	/**
+	 * @todo 微信扫码支付
+	 */
+	document.getElementById('btnWechatScanPay').onclick = function () {
+		$.ajax({
+			url: '{:U("home/pay/wechatScanPay")}',
+			type: 'post',
+			data: $('#formScanPay').serialize(),
+			success: function (RET) {
+				showSuccessModal('微信支付', RET);
+			}
+		});
+	};
+
+	/**
+	 * @todo 支付宝扫码支付
+	 */
+	document.getElementById('btnAliScanPay').onclick = function(){
+		window.open('{:U("home/pay/aliScanPay")}');
+	};
+</script>
+</body>
+</html>

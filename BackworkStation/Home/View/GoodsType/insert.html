@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="page-header">
+			<h2>创建商品类别</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-4">
+			<h4 style="margin-top: 35px;">创建大类别</h4>
+			<form id="formCreateRootGoodsType">
+				<!--默认父类编号为：0-->
+				<input type="hidden" name="parent_id" value="0">
+				<div class="input-group" style="margin-top: 5px;">
+					<span class="input-group-addon">搜索用名</span>
+					<input class="form-control" type="text" name="name">
+				</div>
+				<h5 class="text-danger">搜索使用，不可重复</h5>
+				<div class="input-group" style="margin-top: 5px;">
+					<span class="input-group-addon">显示用名</span>
+					<input class="form-control" type="text" name="nickname">
+				</div>
+				<h5>可以重复</h5>
+				<a class="btn btn-primary form-control" href="javascript:;" onclick="createRootGoodsType()" style="margin-top: 5px;">添加</a>
+			</form>
+			<h4 style="margin-top: 35px;">大类别修改</h4>
+			<table class="table">
+				<tr class="text-success bg-warning">
+					<td>搜索用名称 <br><span class="text-danger">不可重复</span></td>
+					<td>显示用名称 <br>可重复</td>
+					<td>操作</td>
+				</tr>
+				<php>foreach($rootGoodsTypeInfo as $item):</php>
+				<tr>
+					<form action="{:U('home/goodsType/updateRootGoodsType')}" method="post">
+						<input type="hidden" name="id" value="{$item['id']}">
+						<td><input class="form-control" type="text" value="{$item['name']}" name="name"></td>
+						<td><input class="form-control" type="text" value="{$item['nickname']}" name="nickname"></td>
+						<td>
+							<input class="btn btn-link" type="submit" value="修改">
+							<a class="btn btn-link" href="javascript:;" name="{$item['id']}" onclick="removeGoodsType(this)">删除</a>
+						</td>
+					</form>
+				</tr>
+				<php>endforeach;</php>
+			</table>
+		</div>
+		<div class="col-md-offset-1 col-md-4">
+			<h4>小类别</h4>
+			<form class="input-group input-group-lg" action="{:U('home/goodsType/insert')}" method="get">
+				<span class="input-group-addon">大类别</span>
+				<select class="form-control" name="parent_id" id="selParentId">
+					<php>foreach($rootGoodsTypeInfo as $item):</php>
+					<option value="{$item['id']}">{$item['name']}</option>
+					<php>endforeach;</php>
+				</select>
+				<span class="input-group-btn">
+					<input class="btn btn-primary" type="submit" value="确定">
+				</span>
+			</form>
+			<h4 style="margin-top: 35px;">创建小类别</h4>
+			<form id="formCreateSubGoodsType">
+				<input type="hidden" name="parent_id" value="{$_GET['parent_id']}">
+				<div class="input-group" style="margin-top: 5px;">
+					<span class="input-group-addon">搜索用名</span>
+					<input class="form-control" type="text" name="name">
+				</div>
+				<h5 class="text-danger">搜索使用，不可重复</h5>
+				<div class="input-group" style="margin-top: 5px;">
+					<span class="input-group-addon">显示用名</span>
+					<input class="form-control" type="text" name="nickname">
+				</div>
+				<h5>可以重复</h5>
+				<a class="btn btn-primary form-control" href="javascript:;" onclick="createSubGoodsType()" style="margin-top: 5px;">添加</a>
+			</form>
+			<h4 style="margin-top: 35px;">修改小类别</h4>
+			<table class="table">
+				<tr class="text-success bg-warning">
+					<td>搜索名</td>
+					<td>展示名</td>
+					<td>操作</td>
+				</tr>
+				<php>foreach($subGoodsTypeInfo as $item):</php>
+				<form action="{:U('home/goodsType/updateSubGoodsType')}" method="post">
+					<input type="hidden" name="id" value="{$item['id']}">
+					<tr>
+						<td><input class="form-control" type="text" name="name" value="{$item['name']}"></td>
+						<td><input class="form-control" type="text" name="nickname" value="{$item['nickname']}"></td>
+						<td>
+							<input class="btn btn-link" type="submit" value="修改">
+							<a class="btn btn-link" href="javascript:;" name="{$item['id']}" onclick="removeGoodsType(this)">删除</a>
+						</td>
+					</tr>
+				</form>
+				<php>endforeach;</php>
+			</table>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script>
+	/**
+	 * @todo 删除类别
+	 *
+	 * @param OBJ
+	 */
+	removeGoodsType = function (OBJ) {
+		$.ajax({
+			url: '{:U("home/goodsType/ajaxRemoveGoodsType")}',
+			type: 'post',
+			data: 'id=' + OBJ.name,
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('删除类别', '删除成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('删除类别失败', RET);
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 创建大类别
+	 */
+	createRootGoodsType = function () {
+		$.ajax({
+			url: '{:U("home/goodsType/ajaxCreateGoodsType")}',
+			type: 'post',
+			data: $('#formCreateRootGoodsType').serialize(),
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('创建类别', '创建类别成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('创建类别失败', RET);
+				}
+			}
+		});
+	}
+	/**
+	 * @todo 创建小类别
+	 */
+	createSubGoodsType = function () {
+		$.ajax({
+			url: '{:U("home/goodsType/ajaxCreateGoodsType")}',
+			type: 'post',
+			data: $('#formCreateSubGoodsType').serialize(),
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('创建类别', '创建类别成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('创建类别失败', RET);
+				}
+			}
+		});
+	}
+</script>
+</html>

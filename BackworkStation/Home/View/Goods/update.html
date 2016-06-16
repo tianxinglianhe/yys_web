@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>修改商品 - 后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="page-header">
+			<h1>
+				修改商品
+				<small>请根据类别选择商品</small>
+			</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="input-group input-group-sm">
+					<span class="input-group-addon">大&nbsp;类&nbsp;别</span>
+					<select class="form-control" id="selRootGoodsType">
+						<php>foreach($rootGoodsTypeInfo as $item):</php>
+						<option value="{$item['id']}">{$item['name']}</option>
+						<php>endforeach;</php>
+					</select>
+				<span class="input-group-btn">
+					<a class="btn btn-primary" href="javascript:;" id="btnGetSubGoodsType">确定</a>
+				</span>
+				</div>
+				<form class="input-group input-group-sm" style="margin-top: 5px;" action="{:U('home/goods/update')}" method="get">
+					<span class="input-group-addon">小&nbsp;类&nbsp;别</span>
+					<select class="form-control" id="selSubGoodsType" name="type"></select>
+					<span class="input-group-btn">
+						<input class="btn btn-success" type="submit" value="查询">
+					</span>
+				</form>
+			</div>
+			<div class="col-sm-9">
+				<table class="table table-response">
+					<tr class=bg-info>
+						<td>编号</td>
+						<td>名称</td>
+						<td>图片</td>
+						<td>价格</td>
+						<td>单位</td>
+					</tr>
+					<php>foreach($goodsInfo as $item):</php>
+					<tr>
+						<td>{$item['open_id']}</td>
+						<td>
+							<a href="{:U('home/goods/detail')}?id={$item['id']}">
+								{$item['name']}
+							</a>
+						</td>
+						<td>
+							<a href="{:U('home/goods/detail')}?id={$item['id']}">
+								<img src="{:W_PUBLIC_GOODS_IMG}{$item['id']}/{$item['img']}" alt="" height="100px">
+							</a>
+						</td>
+						<td>{$item['price']}</td>
+						<td>{$item['unit']}</td>
+					</tr>
+					<php>endforeach;</php>
+				</table>
+				<!--分页导航-->
+				<nav>
+					<ul class="pagination">
+						<li>
+							<a href="{:U('home/goods/update')}?page_now={$_SESSION['bs']['limitPage']['pageNow']-1}" aria-label="Previous">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+							</a>
+						</li>
+						<php>for($i=1;$i<=$_SESSION['bs']['limitPage']['pageMax'];$i++):</php>
+						<php>if($i==$_SESSION['bs']['limitPage']['pageNow']):</php>
+						<li><a href="{:U('home/goods/update')}?page_now={$i}&type={$_GET['type']}"><strong style="color:red;">{$i}</strong></a></li>
+						<php>else:</php>
+						<li><a href="{:U('home/goods/update')}?page_now={$i}&type={$_GET['type']}">{$i}</a></li>
+						<php>endif;</php>
+						<php>endfor;</php>
+						<li>
+							<a href="{:U('home/goods/update')}?page_now={$_SESSION['bs']['limitPage']['pageNow']-1}" aria-label="Next">
+								<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+</body>
+
+<script>
+	/**
+	 * @todo 根据大类别获取子类别
+	 */
+	document.getElementById('btnGetSubGoodsType').onclick = function () {
+		$.ajax({
+			url: '{:U("home/Goods/ajaxGetSubGoodsType")}',
+			type: 'post',
+			data: 'parent_id=' + document.getElementById('selRootGoodsType').value,
+			success: function (RET) {
+				subGoodsType = $.parseJSON(RET);
+				document.getElementById('selSubGoodsType').length = 0;
+				for (var item in subGoodsType) {
+					document.getElementById('selSubGoodsType').options[item] = new Option(subGoodsType[item]['name'], subGoodsType[item]['id']);
+				}
+			}
+		});
+	}
+</script>
+
+</html>

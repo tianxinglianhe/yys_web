@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>未支付 - 后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="page-header">
+			<h1>订单管理</h1>
+		</div>
+	</div>
+	<div class="row">
+		<ul class="nav nav-tabs nav-justified">
+			<li role="presentation">
+				<a href="{:U('home/pay/index')}">所有订单</a>
+			</li>
+			<li role="presentation">
+				<a href="{:U('home/pay/isPay')}">已付款</a>
+			</li>
+			<li role="presentation">
+				<a href="{:U('home/pay/unPay')}">未付款</a>
+			</li>
+			<li role="presentation" class="active">
+				<a href="{:U('home/pay/isOut')}">已出库</a>
+			</li>
+			<li role="presentation">
+				<a href="{:U('home/pay/isArrive')}">已收货</a>
+			</li>
+			<li role="presentation">
+				<a href="{:U('home/pay/isRefund')}">退款中</a>
+			</li>
+			<li role="presentation">
+				<a href="{:U('home/pay/isRefundDone')}">完成退款</a>
+			</li>
+		</ul>
+	</div>
+	<div class="row">
+		<table class="table">
+			<tr>
+				<td>下单人</td>
+				<td>下单时间</td>
+				<td>订单编号</td>
+				<td>金额</td>
+				<td>发票</td>
+				<td>支付状态</td>
+				<td>支付渠道</td>
+			</tr>
+			<php>foreach($ofInfo as $item):</php>
+			<tr>
+				<td>{$item['usernames']}</td>
+				<td>{:a4getDatetime($item['create_time'],'datetime');}</td>
+				<td>
+					<a class="btn btn-link" href="{:U('home/pay/detail')}?no={$item['no']}">
+						{$item['no']}
+					</a>
+				</td>
+				<td>{$item['price']}</td>
+				<td>
+					<php>if($item['is_need_invoice']==1):</php>
+					需要
+					<php>else:</php>
+					不需要
+					<php>endif;</php>
+				</td>
+				<td>{$item['order_form_status']}</td>
+				<td>{:a4default($item['pay_type']);}</td>
+			</tr>
+			<php>endforeach;</php>
+		</table>
+		<!--分页导航-->
+		<nav>
+			<ul class="pagination">
+				<li>
+					<a href="{:U('home/pay/index')}?page_now={$_SESSION['bs']['limitPage']['pageNow']-1}" aria-label="Previous">
+						<span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+				</li>
+				<php>for($i=1;$i<=$_SESSION['bs']['limitPage']['pageMax'];$i++):</php>
+				<php>if($i==$_SESSION['bs']['limitPage']['pageNow']):</php>
+				<li><a href="{:U('home/pay/index')}?page_now={$i}"><strong style="color: #D20000;">{$i}</strong></a></li>
+				<php>else:</php>
+				<li><a href="{:U('home/pay/index')}?page_now={$i}">{$i}</a></li>
+				<php>endif;</php>
+				<php>endfor;</php>
+				<li>
+					<a href="{:U('home/pay/index')}?page_now={$_SESSION['bs']['limitPage']['pageNow']+1}" aria-label="Next">
+						<span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</li>
+
+			</ul>
+		</nav>
+	</div>
+</div>
+
+</body>
+</html>

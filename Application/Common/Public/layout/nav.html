@@ -1,0 +1,109 @@
+<nav class="navbar navbar-default">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+			        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="glyphicon glyphicon-menu-hamburger"></span>
+			</button>
+			<a class="navbar-brand" href="{:U('home/index/index')}"><span class="text-danger">宜优速</span></a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-left">
+				<li>
+					<a href="#">当前地区：{$_SESSION['sys']['userIpInfo']['city']}</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<!--用户快捷菜单-->
+				<li>
+					<php>if($_SESSION['user']['userInfo']['id']>0):</php>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+					   aria-expanded="false"><span
+							style="color: #FF6600;">[{$_SESSION['user']['userInfo']['username']}] 欢迎登陆</span><span
+							class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="{:U('home/user/myOrderForm')}">
+								<span class="glyphicon glyphicon-menu-hamburger text-primary">&nbsp;我的订单</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('home/user/myHomePage')}">
+								<span class="glyphicon glyphicon-user text-primary">&nbsp;我的主页</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('home/user/myCollection')}">
+								<span class="glyphicon glyphicon-star text-primary">&nbsp;收藏夹</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('home/user/myShoppingCart')}">
+								<span class="glyphicon glyphicon-shopping-cart text-primary">&nbsp;购物车</span>
+							</a>
+						</li>
+						<li role="separator" class="divider"></li>
+						<li>
+							<a href="{:U('home/index/signout')}">
+								<span class="glyphicon glyphicon-log-out text-danger">&nbsp;退出登录</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<php>else:</php>
+				<!--登陆栏-->
+				<form class="navbar-form" id="formSignIn" action="{:U('home/user/signin')}" method="post">
+					<div class="input-group">
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-user"></span>
+							</span>
+						<input type="text" class="form-control" placeholder="账号"
+						       name="signin_name">
+							<span class="input-group-addon" id="basic-addonPassword">
+								<span class="glyphicon glyphicon-asterisk"></span>
+							</span>
+						<input type="password" class="form-control" placeholder="密码"
+						       aria-describedby="basic-addonPassword" name="pwd">
+							<span class="input-group-btn">
+								<a class="btn btn-warning" href="javascript:;" id="btnSignIn">登录</a>
+							</span>
+					</div>
+					<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx819eb1e0004ea160&redirect_uri=http%3A%2F%2Fphphelper.cn
+&response_type=code&scope=snsapi_login&state={:session_id()}#wechat_redirect" class="btn btn-link" id="btnWechatSignIn">微信登陆</a>
+					<a href="{:U('home/user/signup')}">快速注册</a>
+				</form>
+				<php>endif;</php>
+				</li>
+				<li><a href="{:U('home/company/contactUs')}"><span class="text-danger">在线咨询</span></a></li>
+				<li><a href="{:U('home/company/contactUs')}"><span class="text-danger">手机版</span></a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+	/**
+	 * @todo 执行登陆
+	 */
+	$('#btnSignIn').click(function () {
+		$.ajax({
+			url: '{:U("home/user/ajaxSignIn")}',
+			type: 'post',
+			data: $('#formSignIn').serialize(),
+			success: function (ret) {
+				if (ret != 1) {
+					showFailModal('登录失败', ret);
+				} else {
+					showSuccessModal('登录', '登录成功', function () {
+						location.reload();
+					});
+				}
+			}
+		})
+	});
+</script>

@@ -1,0 +1,88 @@
+[ 2016-05-30T08:48:35+08:00 ] 127.0.0.1 /wechat.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001464s ]
+
+[ 2016-05-30T08:49:05+08:00 ] 127.0.0.1 /wechat.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001825s ]
+
+[ 2016-05-30T08:49:45+08:00 ] 127.0.0.1 /wechat.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000985s ]
+
+[ 2016-05-30T08:52:33+08:00 ] 127.0.0.1 /wechat.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001924s ]
+
+[ 2016-05-30T08:52:50+08:00 ] 127.0.0.1 /wechat.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001716s ]
+
+[ 2016-05-30T10:24:58+08:00 ] 127.0.0.1 /wechat.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002553s ]
+
+[ 2016-05-30T10:25:23+08:00 ] 127.0.0.1 /wechat.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001834s ]
+
+[ 2016-05-30T10:26:00+08:00 ] 127.0.0.1 /wechat.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001435s ]
+

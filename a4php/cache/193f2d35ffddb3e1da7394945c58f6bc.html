@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--头部导入-->
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+<!-- Bootstrap -->
+<link href="/appearance/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->	<title>注册 - 宜优速</title>
+	<meta name="keywords" content="">
+	<meta name="discription" content="">
+	<meta name="author" content="">
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+			        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><span class="text-danger">宜优速</span></a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-left">
+				<span style="vertical-align: middle;line-height: 50px;">&nbsp;&nbsp;宜优速&middot;购省钱&middot;够方便</span>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+											<!--登陆栏-->
+						<form class="navbar-form" id="formLogin">
+	<div class="input-group">
+						<span class="input-group-addon" id="basic-addonUsername">
+							<span class="glyphicon glyphicon-user"></span>
+						</span>
+		<input type="text" class="form-control" placeholder="账号/邮箱/手机号"
+		       aria-describedby="basic-addonUsername">
+	</div>
+	<div class="input-group">
+						<span class="input-group-addon" id="basic-addonPassword">
+							<span class="glyphicon glyphicon-asterisk"></span>
+						</span>
+		<input type="text" class="form-control" placeholder="密码"
+		       aria-describedby="basic-addonPassword">
+	</div>
+	<a href="main_user_signup">快速注册</a>&nbsp;
+	<a href="#" class="btn btn-warning" id="btnLogin">登录</a>
+</form>									</li>
+				<li>
+					<a href="main_start_index">
+						<span class="text-danger">主页</span>
+					</a>
+				</li>
+								<li><a href="#"><span class="text-danger">招商加盟</span></a></li>
+				<li><a href="#"><span class="text-danger">企业制定</span></a></li>
+				<li><a href="#"><span class="text-danger">联系我们</span></a></li>
+				<!--				<li class="dropdown">-->
+				<!--					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+				<!--					<ul class="dropdown-menu">-->
+				<!--						<li><a href="#">Action</a></li>-->
+				<!--						<li><a href="#">Another action</a></li>-->
+				<!--						<li><a href="#">Something else here</a></li>-->
+				<!--						<li role="separator" class="divider"></li>-->
+				<!--						<li><a href="#">Separated link</a></li>-->
+				<!--					</ul>-->
+				<!--				</li>-->
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav><!--主体内容-->
+<div class="container-fluid">
+	<!--your code...-->
+	<div class="jumbotron" style="background-color: white;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h1>宜优速欢迎您！</h1>
+
+					<p>宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…</p>
+
+					<p>
+						<a class="btn btn-info btn-lg" href="#">联系我们</a>
+					</p>
+				</div>
+				<form class="col-lg-6" id="formSignUp">
+					<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtUsername">
+							<span class="glyphicon glyphicon-user">&nbsp;登录账号</span>
+						</span>
+						<input type="text" class="form-control" placeholder="必填" aria-describedby="basic-addon-txtUsername" name="signin_name">
+					</div>
+					<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtPwd">
+							<span class="glyphicon glyphicon-asterisk">&nbsp;登录密码</span>
+						</span>
+						<input type="text" class="form-control" placeholder="必填" aria-describedby="basic-addon-txtPwd" name="pwd">
+					</div>
+					<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtCompanyName">
+							<span class="glyphicon glyphicon-font">&nbsp;公司名称</span>
+						</span>
+						<input type="text" class="form-control" placeholder="必填" aria-describedby="basic-addon-txtCompanyName" name="company_name">
+					</div>
+					<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtTelNo">
+							<span class="glyphicon glyphicon-phone-alt">&nbsp;联系电话</span>
+						</span>
+						<input type="text" class="form-control" placeholder="选填" aria-describedby="basic-addon-txtUsername" name="tel_no">
+					</div>
+					<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtEmail">
+							<span class="glyphicon glyphicon-envelope">&nbsp;联系邮箱</span>
+						</span>
+						<input type="text" class="form-control" placeholder="选填" aria-describedby="basic-addon-txtEmail" name="email">
+					</div>
+					<div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-selTakeOverAddr">
+							<span class="glyphicon glyphicon-home">&nbsp;收货地址</span>
+						</span>
+						<select class="form-control" name="take_over_addr_province" id="selTakeOverAddrProvince" aria-describedby="basic-addon-selTakeOverAddr">
+
+						</select>
+						<select class="form-control" name="take_over_addr_city" id="selTakeOverAddrCity" aria-describedby="basic-addon-selTakeOverAddr">
+
+						</select>
+						<input type="text" class="form-control" placeholder="详细地址" name="take_over_addr_ex">
+					</div>
+					<input class="btn btn-success form-control" type="button" id="btnSignUp" value="注 册">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--页脚-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4 text-center">
+			<h3>
+				<span class="glyphicon glyphicon-copyright-mark"></span><strong>宜优速</strong> 2016 - 2017
+			</h3>
+			<h4>
+				备案号：<a href="#" style="text-decoration: none;">1234567890abc</a>
+			</h4>
+		</div>
+	</div>
+</div><!--尾部导入-->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/appearance/public/bootstrap/js/bootstrap.min.js"></script><!--模态框-->
+<!--成功模态框-->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title text-success" id="successTitle"></h4>
+			</div>
+			<div class="modal-body" id="successContent">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--失败模态框-->
+<div class="modal fade" id="failModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title text-danger" id="failTitle"></h4>
+			</div>
+			<div class="modal-body" id="failContent">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div><!--javascript-->
+<script language="javascript" type="text/javascript" charset="UTF-8">
+
+</script>
+<script src="/a4js/PctCorrelation.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8">
+	var pc = new PcCorrelation();
+	$(document).ready(function () {
+		//省市联动初始化
+		/*收货地址*/
+		pc.fillProvince('selTakeOverAddrProvince', '未选择');
+		pc.fillCity('selTakeOverAddrCity', '', '');
+	});
+	/*收货地址联动*/
+	$('#selTakeOverAddrProvince').click(function () {
+		pc.fillCity('selTakeOverAddrCity', $(this).val());
+	});
+</script>
+</body>
+</html>

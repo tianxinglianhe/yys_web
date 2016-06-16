@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>订单详情 - 后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="page-header">
+			<h2>订单详情</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<h3>用户信息</h3>
+			<p>收货人（公司名称）：{$ofInfo['username']}</p>
+			<p>
+				收货地址：
+				{$ofInfo['take_over_province']}
+				{$ofInfo['take_over_city']}
+				{$ofInfo['take_over_town']}
+				{$ofInfo['take_over_ex']}
+			</p>
+			<p>联系电话：{$ofInfo['tel_no']}</p>
+		</div>
+		<div class="col-md-4">
+			<h3>订单信息</h3>
+			<p>订单编号：{$ofInfo['no']}</p>
+			<p>下单时间：{:a4getDatetime($ofInfo['create_time'],'datetime');}</p>
+			<p>
+				总金额：
+				<span class="glyphicon glyphicon-usd" style="color: #D20000;"> <strong>
+					{$ofInfo['price']}
+				</strong></span>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3>打印订单</h3>
+			<a href="{:U('home/pay/printOutOrderForm')}?id={$ofInfo['id']}" class="btn btn-success btn-lg">打印订单</a>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 55px;">
+		<table class="table">
+			<tr class="warning">
+				<td colspan="6"><h4>订单商品</h4></td>
+			</tr>
+			<tr class="info">
+				<td>商品</td>
+				<td>类别</td>
+				<td>规格</td>
+				<td>数量</td>
+				<td>单价</td>
+				<td>小计</td>
+			</tr>
+			<php>foreach($ogInfo as $item):</php>
+			<tr>
+				<td>
+					<img src="{:W_PUBLIC_GOODS_IMG}{$item['goods_id']}/{$item['img']}" alt="{$item['name']}" style="width: 200px;">
+					<p>{$item['name']}</p>
+				</td>
+				<td>{$item['type']}</td>
+				<td>{$item['norms']}</td>
+				<td>{$item['number']}</td>
+				<td>{$item['once_price']}</td>
+				<td>{$item['number'] * $item['once_price']}</td>
+			</tr>
+			<php>endforeach;</php>
+		</table>
+	</div>
+</div>
+
+</body>
+</html>

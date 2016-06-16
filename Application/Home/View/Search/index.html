@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+	<title>宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!--顶端广告-->
+			<a href="#">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="page-header">
+				<h2>搜索
+					<small>产品名称/产品类别</small>
+				</h2>
+			</div>
+			<form class="navbar-form" action="{:U('home/search/search')}" method="get">
+				<div class="input-group input-group-lg" style="height: 50px;">
+				<span class="input-group-addon" id="basic-addon1">
+					<span class="glyphicon glyphicon-search"></span>
+				</span>
+					<input type="text" class="form-control" placeholder="产品名称/产品类别" aria-describedby="basic-addon1" style="height: 50px;" name="sreach_condition">
+				</div>
+				<button class="btn btn-success btn-lg">搜索</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+</script>
+</body>
+</html>

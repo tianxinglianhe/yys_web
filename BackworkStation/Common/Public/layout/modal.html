@@ -1,0 +1,90 @@
+<!--成功模态框-->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<h3 class="modal-title text-success text-center">
+					<strong id="successModalTitle"></strong>
+				</h3>
+			</div>
+			<h4 class="modal-body" id="successModalContent"></h4>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" data-dismiss="modal" id="btnSuccessModalClose">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--失败模态框-->
+<div class="modal fade" id="failModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<h3 class="modal-title text-danger text-center">
+					<strong id="failModalTitle"></strong>
+				</h3>
+			</div>
+			<h4 class="modal-body" id="failModalContent"></h4>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal" id="btnFailModalClose">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+	/**
+	 * @todo 启动成功提示模态框
+	 *
+	 * @param TITLE 模态框标题
+	 * @param CONTENT 模态框内容
+	 * @param FUNC 回调函数
+	 */
+	function showSuccessModal(TITLE, CONTENT, FUNC) {
+		document.getElementById('successModalTitle').innerHTML = TITLE;
+		document.getElementById('successModalContent').innerHTML = CONTENT;
+		document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
+		$('#successModal').modal('show');
+		$('#successModal').on('hidden.bs.modal', function () {
+			FUNC();
+		})
+	}
+
+	/**
+	 * @todo 关闭成功提示框
+	 */
+	function closeSuccessModal() {
+		$('#successModal').modal('hide');
+	}
+
+
+	/**
+	 * @todo 启动失败提示模态框
+	 *
+	 * @param TITLE 模态框标题
+	 * @param CONTENT 模态框内容
+	 * @param FUNC 回调函数
+	 */
+	function showFailModal(TITLE, CONTENT, FUNC) {
+		document.getElementById('failModalTitle').innerHTML = TITLE;
+		document.getElementById('failModalContent').innerHTML = CONTENT;
+		document.getElementById('btnFailModalClose').innerHTML = '关闭';
+		$('#failModal').modal('show');
+		$('#failModal').on('hidden.bs.modal', function () {
+			FUNC();
+		})
+
+	}
+
+	/**
+	 * @todo 关闭失败提示框
+	 */
+	function closeFailModal() {
+		$('#failModal').modal('hide');
+	}
+
+
+</script>

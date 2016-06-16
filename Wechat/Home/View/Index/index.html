@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<form action="{:U('home/index/sendTemplateMsg')}" method="post">
+	订单时间：<input type="text" name="time" value="{:a4getNow('datetime');}">
+	金额：<input type="text" name="price" value="">
+	<input type="submit" value="提交">
+</form>
+</body>
+</html>

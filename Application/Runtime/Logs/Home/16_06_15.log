@@ -1,0 +1,2180 @@
+[ 2016-06-15T09:23:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0212s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036412s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000786s ]
+
+[ 2016-06-15T10:51:03+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0114s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000330s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000423s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2016-06-15T10:52:41+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0105s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000789s ]
+
+[ 2016-06-15T10:53:11+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0162s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2016-06-15T15:17:19+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001508s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0338s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0378s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000385s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001060s ]
+
+[ 2016-06-15T15:17:26+08:00 ] 127.0.0.1 /index.php/home/user/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0455s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0503s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0474s ]
+SQL: SELECT * FROM `user` WHERE `signin_name` = 'test' LIMIT 1   [ RunTime:0.0368s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0445s ]
+SQL: UPDATE `user` SET `last_time`='1465975046' WHERE `id` = 8 [ RunTime:0.0426s ]
+
+[ 2016-06-15T15:17:28+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0479s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000364s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000523s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042936s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000904s ]
+
+[ 2016-06-15T15:17:30+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0530s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000289s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000506s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
+
+[ 2016-06-15T15:18:31+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0377s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0377s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000337s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000558s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2016-06-15T15:21:19+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0350s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0347s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2016-06-15T15:21:52+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0381s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0492s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000247s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028259s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2016-06-15T15:23:22+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0329s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0339s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000380s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000533s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001286s ]
+
+[ 2016-06-15T15:23:28+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0371s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0394s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000668s ]
+
+[ 2016-06-15T15:23:49+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0377s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0357s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000292s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000434s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2016-06-15T15:24:06+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0777s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0362s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032874s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2016-06-15T15:24:27+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.2972s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.1721s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000352s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000751s ]
+
+[ 2016-06-15T15:24:40+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.4161s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0511s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000312s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000459s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000984s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001100s ]
+
+[ 2016-06-15T15:25:33+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.2049s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.2552s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000290s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000487s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001245s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001351s ]
+
+[ 2016-06-15T15:30:40+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001066s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0364s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0347s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2016-06-15T15:31:37+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+NOTIC: [2] PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: MySQL server has gone away D:\wamp\www\ThinkPHP\Library\Think\Db\Driver.class.php 第 103 行.
+ERR: SQLSTATE[HY000] [2006] MySQL server has gone away
+
+[ 2016-06-15T15:31:37+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0415s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0398s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000252s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000352s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2016-06-15T15:31:42+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0361s ]
+NOTIC: [8] Undefined index: sys D:\wamp\www\Application\Home\Model\CartModel.class.php 第 27 行.
+NOTIC: [8] Undefined index: sys D:\wamp\www\Application\Home\Model\CartModel.class.php 第 28 行.
+NOTIC: [8] Undefined index: sys D:\wamp\www\Application\Home\Model\CartModel.class.php 第 29 行.
+NOTIC: [8] Undefined index: sys D:\wamp\www\Application\Home\Model\CartModel.class.php 第 30 行.
+NOTIC: [8] Undefined index: sys D:\wamp\www\Application\Home\Model\CartModel.class.php 第 37 行.
+NOTIC: [8] Undefined index: sys D:\wamp\www\Application\Home\Model\CartModel.class.php 第 37 行.
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Home\Model\CartModel.class.php 第 39 行.
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 16
+
+[ 2016-06-15T15:32:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.1190s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0628s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Undefined index: user D:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 316 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001139s ]
+
+[ 2016-06-15T15:32:13+08:00 ] 127.0.0.1 /index.php/home/user/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.1723s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.6250s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.4035s ]
+SQL: SELECT * FROM `user` WHERE `signin_name` = 'test' LIMIT 1   [ RunTime:0.1188s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.1533s ]
+SQL: UPDATE `user` SET `last_time`='1465975932' WHERE `id` = 8 [ RunTime:0.2036s ]
+
+[ 2016-06-15T15:32:16+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.5625s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.4453s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000280s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000508s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026338s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000979s ]
+
+[ 2016-06-15T15:32:18+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.1246s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0898s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000313s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000465s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2016-06-15T15:33:00+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0447s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0441s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045415s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045535s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001422s ]
+
+[ 2016-06-15T15:34:24+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0432s ]
+SQL: INSERT INTO `order_goods` (`f_order_form_no`,`f_goods_id`,`f_norms_id`,`number`) VALUES ('62bce2b8fcfac3a278b6bc1d26614c28','184','1','1') [ RunTime:0.0378s ]
+SQL: INSERT INTO `order_goods` (`f_order_form_no`,`f_goods_id`,`f_norms_id`,`number`) VALUES ('62bce2b8fcfac3a278b6bc1d26614c28','184','1','1') [ RunTime:0.0783s ]
+SQL: INSERT INTO `order_goods` (`f_order_form_no`,`f_goods_id`,`f_norms_id`,`number`) VALUES ('62bce2b8fcfac3a278b6bc1d26614c28','184','1','1') [ RunTime:0.0452s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0450s ]
+SQL: INSERT INTO `order_form` (`f_user_id`,`create_time`,`no`,`price`,`f_order_form_status_id`) VALUES ('8','1465976064','62bce2b8fcfac3a278b6bc1d26614c28','181.5','3') [ RunTime:0.0404s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0548s ]
+SQL: DELETE FROM `cart` WHERE `id` = '1' [ RunTime:0.1218s ]
+SQL: DELETE FROM `cart` WHERE `id` = '2' [ RunTime:0.0462s ]
+SQL: DELETE FROM `cart` WHERE `id` = '3' [ RunTime:0.0457s ]
+
+[ 2016-06-15T15:34:25+08:00 ] 127.0.0.1 /index.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0426s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '62bce2b8fcfac3a278b6bc1d26614c28'  [ RunTime:0.0827s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0392s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0415s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0381s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.1275s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000295s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000451s ]
+NOTIC: [8] Undefined index: explain D:\wamp\www\Application\Runtime\Cache\Home\10f69b614a07b73184b66620648f7651.php 第 533 行.
+NOTIC: [8] Undefined index: explain D:\wamp\www\Application\Runtime\Cache\Home\10f69b614a07b73184b66620648f7651.php 第 533 行.
+NOTIC: [8] Undefined index: explain D:\wamp\www\Application\Runtime\Cache\Home\10f69b614a07b73184b66620648f7651.php 第 533 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001303s ]
+
+[ 2016-06-15T15:37:40+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+
+[ 2016-06-15T15:27:55+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0382s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0709s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000399s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-06-15T15:28:50+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-06-15T15:28:50+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0376s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0376s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000430s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2016-06-15T16:03:28+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0505s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0369s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022431s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2016-06-15T16:03:58+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0467s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0537s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000306s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000438s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035063s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000883s ]
+
+[ 2016-06-15T16:05:02+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0360s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0334s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000355s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000506s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035558s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2016-06-15T16:05:03+08:00 ] 127.0.0.1 /index.php/home/user/myOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0356s ]
+SQL: SELECT
+order_form.id,
+order_form.f_user_id,
+order_form.create_time,
+order_form.refund_time,
+order_form.`no`,
+order_form.price,
+order_form.is_need_invoice,
+order_form.f_order_form_status_id,
+order_form.bc_id,
+order_form_status.`name` AS order_form_status_name
+FROM `order_form`
+INNER JOIN order_form_status ON order_form_status.id = order_form.f_order_form_status_id
+WHERE order_form.f_user_id = 8
+AND f_order_form_status_id > 0 [ RunTime:0.0393s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0405s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0511s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = 'b4ba7dc71051e65b969503c8a1c059a7'  [ RunTime:0.0735s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0391s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '2f0489d964619b84564a04495ff8aa43'  [ RunTime:0.0444s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0337s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '62bce2b8fcfac3a278b6bc1d26614c28'  [ RunTime:0.0514s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0516s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0369s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0365s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+NOTIC: [8] Undefined index: goods D:\wamp\www\Application\Runtime\Cache\Home\29e75cbd77d33d91950dd368c5090943.php 第 501 行.
+NOTIC: [8] Undefined index: goods D:\wamp\www\Application\Runtime\Cache\Home\29e75cbd77d33d91950dd368c5090943.php 第 501 行.
+NOTIC: [8] Undefined index: goods D:\wamp\www\Application\Runtime\Cache\Home\29e75cbd77d33d91950dd368c5090943.php 第 501 行.
+NOTIC: [8] Undefined index: goods D:\wamp\www\Application\Runtime\Cache\Home\29e75cbd77d33d91950dd368c5090943.php 第 501 行.
+NOTIC: [8] Undefined index: goods D:\wamp\www\Application\Runtime\Cache\Home\29e75cbd77d33d91950dd368c5090943.php 第 501 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032547s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2016-06-15T16:05:03+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0415s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0462s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031364s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2016-06-15T16:05:31+08:00 ] 127.0.0.1 /index.php/home/user/myOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002757s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0539s ]
+SQL: SELECT
+order_form.id,
+order_form.f_user_id,
+order_form.create_time,
+order_form.refund_time,
+order_form.`no`,
+order_form.price,
+order_form.is_need_invoice,
+order_form.f_order_form_status_id,
+order_form.bc_id,
+order_form_status.`name` AS order_form_status_name
+FROM `order_form`
+INNER JOIN order_form_status ON order_form_status.id = order_form.f_order_form_status_id
+WHERE order_form.f_user_id = 8
+AND f_order_form_status_id > 0 [ RunTime:0.0471s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0413s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0664s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = 'b4ba7dc71051e65b969503c8a1c059a7'  [ RunTime:0.0783s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0387s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '2f0489d964619b84564a04495ff8aa43'  [ RunTime:0.0364s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0355s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '62bce2b8fcfac3a278b6bc1d26614c28'  [ RunTime:0.0338s ]
+NOTIC: [2] PDO::prepare() [<a href='pdo.prepare'>pdo.prepare</a>]: MySQL server has gone away D:\wamp\www\ThinkPHP\Library\Think\Db\Driver.class.php 第 156 行.
+ERR: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+
+[ 2016-06-15T16:06:18+08:00 ] 127.0.0.1 /index.php/home/user/myOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+NOTIC: [2] PDO::__construct() [<a href='pdo.--construct'>pdo.--construct</a>]: MySQL server has gone away D:\wamp\www\ThinkPHP\Library\Think\Db\Driver.class.php 第 103 行.
+ERR: SQLSTATE[HY000] [2006] MySQL server has gone away
+
+[ 2016-06-15T16:09:37+08:00 ] 127.0.0.1 /index.php/home/user/myOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0112s ]
+SQL: SELECT
+order_form.id,
+order_form.f_user_id,
+order_form.create_time,
+order_form.refund_time,
+order_form.`no`,
+order_form.price,
+order_form.is_need_invoice,
+order_form.f_order_form_status_id,
+order_form.bc_id,
+order_form_status.`name` AS order_form_status_name
+FROM `order_form`
+INNER JOIN order_form_status ON order_form_status.id = order_form.f_order_form_status_id
+WHERE order_form.f_user_id = 8
+AND f_order_form_status_id > 0 [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = 'b4ba7dc71051e65b969503c8a1c059a7'  [ RunTime:0.0011s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0023s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '2f0489d964619b84564a04495ff8aa43'  [ RunTime:0.0005s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_110.price AS price,
+inventory_110.number AS inventory,
+price_110.sale_price AS sale_price,
+inventory_110.sale_number AS sale_inventory,
+price_110.sale_start AS sale_time,
+price_110.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+WHERE price_110.id = 184 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+NOTIC: [8] Undefined index: goods D:\wamp\www\Application\Runtime\Cache\Home\29e75cbd77d33d91950dd368c5090943.php 第 501 行.
+NOTIC: [8] Undefined index: goods D:\wamp\www\Application\Runtime\Cache\Home\29e75cbd77d33d91950dd368c5090943.php 第 501 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000893s ]
+
+[ 2016-06-15T16:09:41+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0121s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020241s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2016-06-15T16:38:18+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0150s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033810s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001510s ]
+
+[ 2016-06-15T16:38:19+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0150s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001068s ]
+
+[ 2016-06-15T16:38:35+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0147s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029840s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001626s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001200s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001281s ]
+
+[ 2016-06-15T16:40:13+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0143s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001213s ]
+
+[ 2016-06-15T16:26:59+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0167s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000921s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000979s ]
+
+[ 2016-06-15T16:49:13+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0151s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021529s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000829s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2016-06-15T16:53:06+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0146s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001213s ]
+
+[ 2016-06-15T16:53:12+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000828s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+
+[ 2016-06-15T16:54:05+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0149s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000202s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022593s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2016-06-15T16:54:05+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0137s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030231s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000993s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2016-06-15T16:54:14+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+
+[ 2016-06-15T17:19:49+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0134s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022390s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000808s ]
+
+[ 2016-06-15T17:21:22+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0151s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2016-06-15T17:21:25+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+
+[ 2016-06-15T17:22:46+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0213s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000779s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2016-06-15T17:22:49+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Home\Controller\UserController.class.php 第 217 行.
+
+[ 2016-06-15T17:23:30+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+
+[ 2016-06-15T17:23:59+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+
+[ 2016-06-15T17:45:37+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+
+[ 2016-06-15T17:45:37+08:00 ] 127.0.0.1 /index.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0184s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '62bce2b8fcfac3a278b6bc1d26614c28'  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0196s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001163s ]
+
+[ 2016-06-15T17:45:44+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [8] Undefined index: param D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:46:07+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [8] Undefined index: param D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:46:15+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [8] Undefined index: param D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:46:27+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0149s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001050s ]
+
+[ 2016-06-15T17:46:30+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [8] Undefined index: param D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:47:02+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [8] Undefined index: param D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:47:08+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0143s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023942s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-06-15T17:47:11+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [8] Undefined index: param D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:47:31+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:48:15+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:49:03+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Home\Controller\UserController.class.php 第 224 行.
+
+[ 2016-06-15T17:49:22+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+
+[ 2016-06-15T17:49:33+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+
+[ 2016-06-15T17:51:48+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001396s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+
+[ 2016-06-15T17:51:54+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0147s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_110.price AS price,
+price_110.sale_price AS sale_price,
+price_110.sale_start AS sale_start,
+price_110.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_110 ON price_110.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.0019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001592s ]
+
+[ 2016-06-15T17:52:01+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+
+[ 2016-06-15T17:52:16+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001397s ]
+NOTIC: [8] Undefined index: cityIp D:\wamp\www\a4php\func\func.php 第 1327 行.
+

@@ -1,0 +1,72 @@
+[ 2016-06-07T19:06:22+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined index: emp E:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp E:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp E:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000767s ]
+
+[ 2016-06-07T19:06:30+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.1065s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.1104s ]
+
+[ 2016-06-07T19:06:31+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+

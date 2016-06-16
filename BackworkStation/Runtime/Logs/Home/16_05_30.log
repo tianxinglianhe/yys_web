@@ -1,0 +1,75 @@
+[ 2016-05-30T11:53:50+08:00 ] 127.0.0.1 /bs.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] Undefined index: emp E:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp E:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 426 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024359s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2016-05-30T13:04:51+08:00 ] 127.0.0.1 /bs.php/home/goodsType/insert.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0496s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0343s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0361s ]
+NOTIC: [8] Undefined index: parent_id E:\wamp\www\BackworkStation\Home\Controller\GoodsTypeController.class.php 第 20 行.
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = ''  [ RunTime:0.0335s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+NOTIC: [8] Undefined index: emp E:\wamp\www\BackworkStation\Runtime\Cache\Home\9cf0b48441a11eb010919afd98270be9.php 第 281 行.
+NOTIC: [8] Undefined index: parent_id E:\wamp\www\BackworkStation\Runtime\Cache\Home\9cf0b48441a11eb010919afd98270be9.php 第 484 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-05-30T13:06:01+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0358s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.m_phone,
+employee.email,
+employee.wechat_id,
+employee.qq,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0374s ]
+

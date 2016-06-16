@@ -1,0 +1,162 @@
+<!--成功模态框-->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<h3 class="modal-title text-success text-center">
+					<strong id="successModalTitle"></strong>
+				</h3>
+			</div>
+			<h4 class="modal-body" id="successModalContent"></h4>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-success" data-dismiss="modal" id="btnSuccessModalClose">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--失败模态框-->
+<div class="modal fade" id="failModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+						aria-hidden="true">&times;</span></button>
+				<h3 class="modal-title text-danger text-center">
+					<strong id="failModalTitle"></strong>
+				</h3>
+			</div>
+			<h4 class="modal-body" id="failModalContent"></h4>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal" id="btnFailModalClose">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+	/**
+	 * @todo 启动成功提示模态框
+	 *
+	 * @param TITLE 模态框标题
+	 * @param CONTENT 模态框内容
+	 * @param WAIT 等待刷新的时间 如果等于0则不执行
+	 * @param FUNC 回调函数
+	 */
+	function showSuccessModal(TITLE, CONTENT, WAIT, FUNC) {
+		document.getElementById('successModalTitle').innerHTML = TITLE;
+		document.getElementById('successModalContent').innerHTML = CONTENT;
+		document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
+		$('#successModal').modal('show');
+		if (WAIT > 0) {
+			document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + WAIT + ')';
+			WAIT *= 1000;
+			window.setTimeout(
+					function () {
+						FUNC();
+					},
+					WAIT
+			);
+			/**
+			 * @todo 倒计时
+			 *
+			 * @param I 倒计时记步起点(无特殊要求可以不用填写)
+			 */
+			countDown = function (I) {
+				if (isNaN(I)) {
+					I = 1;
+				}
+				if (I > WAIT) {
+					I = 1;
+				}
+				window.setTimeout(
+						function () {
+							document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + (WAIT / 1000 - I) + ')';
+							if((WAIT / 1000 - I)&&(WAIT / 1000 - I)>0){
+								I++;
+								countDown(I);
+							}else{
+								document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
+								window.clearTimeout();
+							}
+						},
+						1000
+				);
+			}
+			countDown();
+
+		}
+
+	}
+
+	/**
+	 * @todo 关闭成功提示框
+	 */
+	function closeSuccessModal() {
+		$('#successModal').modal('hide');
+	}
+
+
+	/**
+	 * @todo 启动失败提示模态框
+	 *
+	 * @param TITLE 模态框标题
+	 * @param CONTENT 模态框内容
+	 * @param WAIT 等待刷新的时间 如果等于0则不刷新 单位:秒
+	 * @param FUNC 回调函数
+	 */
+	function showFailModal(TITLE, CONTENT, WAIT, FUNC) {
+		document.getElementById('failModalTitle').innerHTML = TITLE;
+		document.getElementById('failModalContent').innerHTML = CONTENT;
+		document.getElementById('btnFailModalClose').innerHTML = '关闭';
+		$('#failModal').modal('show');
+		if (WAIT > 0) {
+			document.getElementById('btnFailModalClose').innerHTML = '关闭 (' + WAIT + ')';
+			WAIT *= 1000;
+			window.setTimeout(
+					function () {
+						FUNC();
+					},
+					WAIT
+			);
+			/**
+			 * @todo 倒计时
+			 *
+			 * @param I 倒计时记步起点(无特殊要求可以不用填写)
+			 */
+			countDown = function (I) {
+				if (isNaN(I)) {
+					I = 1;
+				}
+				if (I > WAIT) {
+					I = 1;
+				}
+				window.setTimeout(
+						function () {
+							document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + (WAIT / 1000 - I) + ')';
+							if((WAIT / 1000 - I)&&(WAIT / 1000 - I)>0){
+								I++;
+								countDown(I);
+							}else{
+								document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
+								window.clearTimeout();
+							}
+						},
+						1000
+				);
+			}
+			countDown();
+		}
+
+	}
+
+	/**
+	 * @todo 关闭失败提示框
+	 */
+	function closeFailModal() {
+		$('#failModal').modal('hide');
+	}
+
+
+</script>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<div class="page-header">
+				<h2>注册员工</h2>
+			</div>
+			<form id="formSignUp">
+				<p class="input-group">
+					<span class="input-group-addon">账号：</span>
+					<input type="text" class="form-control" name="signin_name">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">密码：</span>
+					<input type="text" class="form-control" name="pwd">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">姓名：</span>
+					<input type="text" class="form-control" name="username">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">手机号：</span>
+					<input type="text" class="form-control" name="tel_no">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">邮箱：</span>
+					<input type="text" class="form-control" name="email">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">身份证：</span>
+					<input type="text" class="form-control" name="pid">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">QQ号：</span>
+					<input type="text" class="form-control" name="qq_id">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">生日：</span>
+					<input type="text" class="form-control" name="birthday_time" placeholder="格式：2016-01-01">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">性别：</span>
+					<select class="form-control" name="e_gender" id="selEGender">
+						<option value="M">男</option>
+						<option value="F">女</option>
+					</select>
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">入职时间：</span>
+					<input type="text" class="form-control" name="join_time" value="{:a4getNow('date');}">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">员工类型：</span>
+					<select class="form-control" name="f_employee_type_id" id="selFEmployeeTypeId">
+						<php>foreach($etInfo as $item):</php>
+						<option value="{$item['id']}">{$item['name']}</option>
+						<php>endforeach;</php>
+					</select>
+				</p>
+				<p>
+					<a href="javascript:;" class="btn btn-success form-control" id="btnSignUpEmployee">注册员工</a>
+				</p>
+			</form>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+</div>
+
+</body>
+<script>
+	/**
+	 * @todo 注册员工
+	 */
+	document.getElementById('btnSignUpEmployee').onclick = function () {
+		$.ajax({
+			url: '{:U("home/employee/ajaxSignUp")}',
+			type: 'post',
+			data: $('#formSignUp').serialize(),
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('注册员工', '注册员工成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('注册员工失败', RET);
+				}
+			}
+		});
+	}
+</script>
+</html>

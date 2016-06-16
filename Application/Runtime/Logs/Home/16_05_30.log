@@ -1,0 +1,357 @@
+[ 2016-05-30T08:41:27+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004018s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004201s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0401s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0317s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000512s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000681s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041530s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041694s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001408s ]
+
+[ 2016-05-30T11:56:49+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0378s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0349s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029953s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2016-05-30T12:02:08+08:00 ] 127.0.0.1 /index.php/home/hotelWineshop/paper.html?goodsTypeName=%E9%85%92%E5%BA%97%E7%94%A8%E7%BA%B8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001375s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0339s ]
+SQL: SELECT COUNT(id) AS c FROM `goods` WHERE `f_goods_type_id` = (SELECT `id` FROM `goods_type` WHERE `name` = '酒店用纸'); [ RunTime:0.0331s ]
+NOTIC: [8] Undefined index: pageNow E:\wamp\www\Application\Home\Model\GoodsModel.class.php 第 33 行.
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time,
+goods_img.`name` AS img
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE goods.f_goods_type_id = (SELECT id FROM goods_type WHERE `name` = '酒店用纸')
+LIMIT 0,8; [ RunTime:0.0403s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\3aa7ea44b1b9c117d807f3d1e55c1f10.php 第 287 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2016-05-30T12:02:16+08:00 ] 127.0.0.1 /index.php/home/hotelWineshop/paper.html?goodsTypeName=%E9%85%92%E5%BA%97%E7%94%A8%E7%BA%B8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0345s ]
+SQL: SELECT COUNT(id) AS c FROM `goods` WHERE `f_goods_type_id` = (SELECT `id` FROM `goods_type` WHERE `name` = '酒店用纸'); [ RunTime:0.0340s ]
+NOTIC: [8] Undefined index: pageNow E:\wamp\www\Application\Home\Model\GoodsModel.class.php 第 33 行.
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time,
+goods_img.`name` AS img
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE goods.f_goods_type_id = (SELECT id FROM goods_type WHERE `name` = '酒店用纸')
+LIMIT 0,8; [ RunTime:0.0341s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000287s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\3aa7ea44b1b9c117d807f3d1e55c1f10.php 第 287 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2016-05-30T12:03:36+08:00 ] 127.0.0.1 /index.php/home/search/search.html?sreach_condition=%E9%A5%AD%E5%BA%97
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0365s ]
+SQL: SELECT
+goods.id,
+goods.`name`,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE  goods.`name` LIKE '%饭店%'
+OR goods.f_goods_type_id = (SELECT goods_type.id FROM goods_type WHERE goods_type.`name` LIKE '%饭店%') [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\d493d29eaca732476fc68bd8ef06fb97.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2016-05-30T12:04:18+08:00 ] 127.0.0.1 /index.php/home/hotel/dinnerware.html?goodsTypeName=%E9%A4%90%E5%85%B7%E4%B8%93%E5%8C%BA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(id) AS c FROM `goods` WHERE `f_goods_type_id` = (SELECT `id` FROM `goods_type` WHERE `name` = '餐具专区'); [ RunTime:0.0326s ]
+NOTIC: [8] Undefined index: pageNow E:\wamp\www\Application\Home\Model\GoodsModel.class.php 第 33 行.
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time,
+goods_img.`name` AS img
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE goods.f_goods_type_id = (SELECT id FROM goods_type WHERE `name` = '餐具专区')
+LIMIT 0,8; [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000428s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000596s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\abba353ca7f0d35a77be6318ce9861df.php 第 287 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001025s ]
+
+[ 2016-05-30T12:04:24+08:00 ] 127.0.0.1 /index.php/home/search/search.html?sreach_condition=%E9%A4%90%E5%85%B7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0352s ]
+SQL: SELECT
+goods.id,
+goods.`name`,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE  goods.`name` LIKE '%餐具%'
+OR goods.f_goods_type_id = (SELECT goods_type.id FROM goods_type WHERE goods_type.`name` LIKE '%餐具%') [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000301s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\d493d29eaca732476fc68bd8ef06fb97.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2016-05-30T12:04:36+08:00 ] 127.0.0.1 /index.php/home/search/search.html?sreach_condition=%E4%B8%80%E6%AC%A1%E6%80%A7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0387s ]
+SQL: SELECT
+goods.id,
+goods.`name`,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE  goods.`name` LIKE '%一次性%'
+OR goods.f_goods_type_id = (SELECT goods_type.id FROM goods_type WHERE goods_type.`name` LIKE '%一次性%') [ RunTime:0.0382s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\d493d29eaca732476fc68bd8ef06fb97.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2016-05-30T12:07:12+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0359s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0335s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000356s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001508s ]
+
+[ 2016-05-30T11:44:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.042339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.042516s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0340s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0362s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000417s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000615s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001736s ]
+
+[ 2016-05-30T11:45:51+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0337s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0332s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2016-05-30T11:51:31+08:00 ] 127.0.0.1 /index.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0378s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0344s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+NOTIC: [8] Undefined index: user E:\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 286 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="jumbotron" style="background-color: #7B22A8; color: white;">
+	<div class="container">
+		<h1>你好，宜优速</h1>
+		<php>if($_SESSION['emp']['employeeInfo']['id']>0):</php>
+		<php>$emp = $_SESSION['emp']['employeeInfo'];</php>
+		<div class="row">
+			<div class="col-md-6">
+				<h4>[{$emp['username']}] 欢迎登陆</h4>
+				<h4 id="timeNow"></h4>
+				<h4>权限：{$emp['employee_type_name']}</h4>
+			</div>
+			<div class="col-md-6">
+				<h2>没有解决不了的事情！</h2>
+				<h2>只有你想不到的方法！</h2>
+				<h2>换位思考，虚心学习！</h2>
+			</div>
+		</div>
+		<php>else:</php>
+		<div class="row">
+			<div class="col-md-6">
+				<p>请登录</p>
+			</div>
+			<div class="col-md-6">
+				<h2>没有解决不了的事情！</h2>
+				<h2>只有你想不到的方法！</h2>
+				<h2>换位思考，虚心学习！</h2>
+			</div>
+		</div>
+		<php>endif;</php>
+	</div>
+</div>
+
+</body>
+
+<script>
+	/**
+	 * @todo 随页面启动
+	 */
+	showTimeNow = function () {
+		window.setTimeout(
+				function () {
+					document.getElementById('timeNow').innerHTML = getNowFormatDate();
+					showTimeNow();
+				},
+				1000);
+	}
+	showTimeNow();
+</script>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+	<title>我的购物车 - 宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!--顶端广告-->
+			<a href="javascript:;">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<div class="page-header">
+				<h3>我的购物车</h3>
+			</div>
+		</div>
+	</div>
+	<table class="table table-responsive">
+		<tr>
+			<td>操作</td>
+			<td width="50%">商品</td>
+			<td>规格</td>
+			<td>单价</td>
+			<td>小计</td>
+			<td colspan="2">数量</td>
+		</tr>
+		<form id="formOrderForm">
+			<php>foreach($goodsInfo as $item):</php>
+			<input type="hidden" name="cart_id[]" value="{$item['cart_id']}">
+			<input type="hidden" name="f_goods_id[]" value="{$item['goods_id']}">
+			<tr>
+				<td><input type="checkbox" value="{$item['cart_id']}" name="ck"></td>
+				<td>
+					<img src="" alt="商品名称" height="100px">
+					<span>{$item['name']}</span>
+					<input type="hidden" name="f_norms_id[]" value="{$item['norms_id']}">
+				</td>
+				<td>{$item['norms_name']}</td>
+				<td>￥ {$item['price']}</td>
+				<td>
+					<h4>
+				<span class="label label-danger">￥{$item['number']*$item['price']}
+					<input type="hidden" name="price[]" value="{$item['number']*$item['price']}">
+				</span>
+					</h4>
+				</td>
+				<td>
+					<input class="form-control" name="number[]" type="number" min="1" max="99" step="1" value="{$item['number']}">
+				</td>
+				<td>
+					<a href="javascript:void(0);" name="{$item['cart_id']}" onclick="funDelCart(this)">删除</a>
+					<br>
+					<a href="javascript:void(0);" name="{$item['goods_id']}" onclick="funCart2Collection(this)">添加到我的收藏</a>
+				</td>
+			</tr>
+			<php>endforeach;</php>
+		</form>
+	</table>
+	<div class="row">
+		<div class="col-md-1 col-md-offset-11">
+			<a href="javascript:void(0);" class="btn btn-warning" id="btnCreateOrderForm">提交订单</a>
+		</div>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+
+	/**
+	 * @todo 提交订单
+	 */
+	document.getElementById('btnCreateOrderForm').onclick = function () {
+		var arrObj = new Array;
+		var i = 0;
+		$('input[name="ck"]:checked').each(function () {
+			obj = $("input[name='ck']:checked").eq(i).val();
+			arrObj[i] = obj;
+			i++;
+		});
+		$.ajax({
+			url: '{:U("home/user/ajaxCreateOrderForm2")}',
+			type: 'post',
+			data: 'param=' + JSON.stringify(arrObj),
+			success: function (ret) {
+				if (ret == 1) {
+					location.href = '{:U("home/pay/index")}';
+				} else {
+					showSuccessModal('订单详情', ret);
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 删除购物车商品
+	 */
+	funDelCart = function (OBJ) {
+		$.ajax({
+			url: '{:U("home/user/ajaxDelCart")}',
+			type: 'post',
+			data: 'id=' + OBJ.name,
+			success: function (ret) {
+				if (ret == 1) {
+					showSuccessModal('删除购物车商品', '删除成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('删除购物车商品', ret);
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 将商品添加到收藏夹
+	 */
+	funCart2Collection = function (OBJ) {
+		$.ajax({
+			url: '{:U("home/user/ajaxCart2Collection")}',
+			type: 'post',
+			data: 'f_goods_id=' + OBJ.name,
+			success: function (ret) {
+				if (ret == 1) {
+					showSuccessModal('添加到收藏夹', '收藏成功');
+				} else {
+					showFailModal('添加到收藏夹', ret);
+				}
+			}
+		});
+	}
+</script>
+</body>
+</html>

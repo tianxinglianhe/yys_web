@@ -1,0 +1,393 @@
+[ 2016-06-11T19:25:31+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+NOTIC: [8] Undefined index: emp D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2016-06-11T19:25:35+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+ERR: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-06-11T19:25:38+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+ERR: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-06-11T19:25:48+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+ERR: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2016-06-11T19:25:59+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0101s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0009s ]
+
+[ 2016-06-11T19:26:00+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015458s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000676s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-06-11T19:26:03+08:00 ] 127.0.0.1 /bs.php/home/goodsType/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002132s ]
+
+[ 2016-06-11T19:26:06+08:00 ] 127.0.0.1 /bs.php/home/goods/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001654s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: type D:\wamp\www\BackworkStation\Home\Controller\GoodsController.class.php 第 86 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Undefined variable: goodsInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 470 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 470 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 492 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 496 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 504 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000870s ]
+
+[ 2016-06-11T19:26:08+08:00 ] 127.0.0.1 /bs.php/home/goods/update.html?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: type D:\wamp\www\BackworkStation\Home\Controller\GoodsController.class.php 第 86 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined variable: goodsInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 470 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 470 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 492 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 496 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 504 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015403s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000919s ]
+
+[ 2016-06-11T19:26:09+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxGetSubGoodsType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '1'  [ RunTime:0.0010s ]
+
+[ 2016-06-11T19:26:10+08:00 ] 127.0.0.1 /bs.php/home/goods/update.html?type=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0102s ]
+SQL: SELECT COUNT(id) FROM `goods` WHERE goods.f_goods_type_id = 5 [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: page_now D:\wamp\www\BackworkStation\Home\Model\GoodsModel.class.php 第 60 行.
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.unit,
+price_110.price AS price,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE f_goods_status_id = 1
+AND goods.f_goods_type_id = 5
+ORDER BY goods.id DESC
+LIMIT 0,5 [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-06-11T19:26:12+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0106s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yiyousu.area_goods_price' doesn't exist
+
+[ 2016-06-11T19:28:23+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0085s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_time,
+price_110.inventory,
+price_110.sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001461s ]
+
+[ 2016-06-11T19:30:19+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001213s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0123s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_time,
+price_110.inventory,
+price_110.sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001161s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001266s ]
+
+[ 2016-06-11T19:30:28+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001275s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0177s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0127s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_time,
+price_110.inventory,
+price_110.sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+

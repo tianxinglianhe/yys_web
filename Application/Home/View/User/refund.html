@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+	<title>宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!--顶端广告-->
+			<a href="#">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="page-header">
+		<h2>退款申请
+			<small>请核对订单信息和填写退款原因</small>
+		</h2>
+	</div>
+	<div class="row">
+		<div class="col-md-5">
+			<div class="page-header">
+				<h3>订单信息
+					<small>请核对订单信息</small>
+				</h3>
+				<p>订单编号：{$ofInfo['no']}</p>
+				<p>下单时间：{:a4getDatetime($ofInfo['create_time']);}</p>
+				<p>金额：{$ofInfo['price']}</p>
+				<p>支付类型：{$ofInfo['pay_type']}</p>
+			</div>
+		</div>
+		<div class="col-offset-md-1 col-md-5">
+			<div class="page-header">
+				<h3>退款说明
+					<small>请填写退款说明</small>
+				</h3>
+				<form id="formRefund">
+					<input type="hidden" name="no" value="{$ofInfo['no']}">
+					<input type="hidden" name="f_order_form_status_id" value="6">
+					<textarea class="form-control" name="refund_explain" id="txtExplain" cols="20" rows="3"></textarea>
+					<a class="btn btn-danger form-control" href="javascript:;" id="btnCreateRefund" style="margin-top: 5px;">提交</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+	document.getElementById('btnCreateRefund').onclick = function () {
+		$.ajax({
+			url: '{:U("home/user/ajaxCreateRefund")}',
+			type: 'post',
+			data: $('#formRefund').serialize(),
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('申请退款', '申请退款成功', function () {
+						location.herf = '{:U("home/user/myOrderForm")}';
+					});
+				} else {
+					showFailModal('申请退款失败', RET);
+				}
+			}
+		});
+	}
+</script>
+</body>
+</html>

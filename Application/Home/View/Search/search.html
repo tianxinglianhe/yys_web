@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+	<title>宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<!--顶端广告-->
+			<a href="#">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<div class="container">
+	<div class="row">
+		<php>foreach($goodsInfo as $item):</php>
+		<div class="col-md-3">
+			<div class="thumbnail" style="border: none;">
+				<div class="row">
+					<div class="col-lg-12">
+						<a href="{:U('home/goods/detail')}?id={$item['id']}">
+							<img src="{:W_ROOT_IMG}cut3.jpg" alt="$item['name']" width="100%">
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="text-left">{:a4admixStrsub($item['name'])}</p>
+					</div>
+					<div class="col-lg-4">
+						<p class="text-right">
+							<span style="color: orangered;">{$item['price']}</span>
+							<br>
+							库存：{$item['inventory']}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<php>endforeach;</php>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+</script>
+</body>
+</html>

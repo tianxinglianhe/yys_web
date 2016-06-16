@@ -1,0 +1,159 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<a class="navbar-brand" href="{:U('home/index/index')}">宜优速</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<php>if($_SESSION['emp']['employeeInfo']['id']>0):</php>
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="{:U('home/employee/signout')}" id="btnSignOut">欢迎登陆 [{$_SESSION['emp']['employeeInfo']['username']}] <span class="text-danger">退出登录</span></a>
+				</li>
+			</ul>
+			<php>else:</php>
+			<form class="nav navbar-nav navbar-form" id="formSignIn">
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-user"></span>
+						</span>
+						<input type="text" class="form-control" placeholder="用户名" name="signin_name">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-text-background"></span>
+						</span>
+						<input type="password" class="form-control" placeholder="密码" name="pwd">
+						<span class="input-group-btn"><a href="javascript:;" class="btn btn-primary" id="btnSignIn">登录</a></span>
+					</div>
+					<a href="{:U('home/employee/signup')}" class="btn btn-link">注册</a>
+				</div>
+			</form>
+			<php>endif;</php>
+			<php>if($_SESSION['emp']['employeeInfo']['id']>0):</php>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						权限管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">增加权限</a></li>
+						<li><a href="#">修改权限</a></li>
+						<li><a href="#">权限对应关系管理</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#"><span class="text-danger">删除权限</span></a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						部门管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">增加部门</a></li>
+						<li><a href="#">修改部门</a></li>
+						<li><a href="#">部门人员管理</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#"><span class="text-danger">删除部门</span></a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						员工管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">增加员工</a></li>
+						<li><a href="#">修改员工</a></li>
+						<li><a href="#">员工额外权限</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						商品管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="{:U('home/goods/insert')}">
+								<span class="glyphicon glyphicon-plus text-primary"> 增加商品</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('home/goods/update')}">
+								<span class="glyphicon glyphicon-pencil text-warning"> 修改商品</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						商品类别
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="{:U('home/goodsType/insert')}">
+								<span class="glyphicon glyphicon-plus text-primary"> 增加类别</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('home/goodsType/update')}">
+								<span class="glyphicon glyphicon-pencil text-warning"> 修改类别</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						订单管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="{:U('home/pay/index')}">
+								<span class="glyphicon glyphicon-ok text-primary"> 订单管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="{:U('wechat/index/bindWechat')}">
+								<img src="http://yys-img.ufile.ucloud.com.cn/s_5760ae46143ce.png?UCloudPublicKey=WLw4pYG8jP3ECIQs8TRlffSQdykzUMojKGt6vENIkDPyuFio4+Z55A==&Expires=1465958718&Signature=HnLONp8rI0R0vwhNmYfjJNr/UQ4=" alt="" style="width: 30px; margin-left: -5px;">
+								<span class="text-success">绑定微信</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<php>endif;</php>
+		</div>
+	</div>
+</nav>
+<script>
+	/**
+	 * @todo 执行登陆
+	 */
+	document.getElementById('btnSignIn').onclick = function () {
+		$.ajax({
+			url: '{:U("home/employee/ajaxSignIn")}',
+			type: 'post',
+			data: $('#formSignIn').serialize(),
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('登陆', '登陆成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('登陆失败', RET);
+				}
+			}
+		});
+	}
+
+
+</script>

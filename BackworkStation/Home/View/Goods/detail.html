@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="page-header">
+			<h1>
+				修改商品
+				<small>{$goodsInfo['name']}</small>
+			</h1>
+		</div>
+	</div>
+	<div class="row">
+		<form class="col-md-4" id="formUpdateGoodsInfo">
+			<div class="page-header">
+				<h3>基本信息</h3>
+			</div>
+			<p class="input-group input-group-lg">
+				<span class="input-group-addon">大&nbsp;类&nbsp;别</span>
+				<select class="form-control" id="selRootGoodsType">
+					<php>foreach($rootGoodsTypeInfo as $item):</php>
+					<option value="{$item['id']}">{$item['name']}</option>
+					<php>endforeach;</php>
+				</select>
+				<span class="input-group-btn">
+					<a class="btn btn-primary" href="javascript:;" id="btnGetSubGoodsType">确定</a>
+				</span>
+			</p>
+			<p class="input-group input-group-lg" style="margin-top: 5px;">
+				<span class="input-group-addon">小&nbsp;类&nbsp;别</span>
+				<select class="form-control" id="selSubGoodsType" name="f_goods_type_id">
+					<php>foreach($subGoodsTypeInfo as $item):</php>
+					<php>if($item['id']==$goodsInfo['f_goods_type_id']):</php>
+					<option value="{$item['id']}" selected="selected">{$item['name']}</option>
+					<php>else:</php>
+					<option value="{$item['id']}">{$item['name']}</option>
+					<php>endif;</php>
+					<php>endforeach;</php>
+				</select>
+			</p>
+			<input type="hidden" name="id" value="{$goodsInfo['id']}">
+			<p class="input-group">
+				<span class="input-group-addon">商品名称</span>
+				<input class="form-control" type="text" name="name" value="{$goodsInfo['name']}">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">商品说明</span>
+				<input class="form-control" type="text" name="explain" value="{$goodsInfo['explain']}">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">商品单位</span>
+				<input class="form-control" type="text" name="unit" value="{$goodsInfo['unit']}">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">商品价格</span>
+				<input class="form-control" type="text" name="price" value="{$goodsInfo['price']}">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">促销价格</span>
+				<input class="form-control" type="text" name="sale_price" value="{$goodsInfo['sale_price']}">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">促销起始时间：</span>
+				<input class="form-control" type="text" name="sale_start"
+				       value="{:a4getDatetime($goodsInfo['sale_start'],'datetime')}">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">促销终止时间：</span>
+				<input class="form-control" type="text" name="sale_end"
+				       value="{:a4getDatetime($goodsInfo['sale_end'],'datetime')}">
+			</p>
+			<p class="input-group">
+				<span class=input-group-addon>库存（全部）：</span>
+				<input class="form-control" type="text" name="number" value="{$goodsInfo['inventory']}">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">库存（促销）：</span>
+				<input class="form-control" type="text" name="sale_number" value="{$goodsInfo['sale_inventory']}">
+			</p>
+			<a class="btn btn-success form-control" href="javascript:;" id="btnUpdateGoodsInfo">确定修改</a>
+		</form>
+		<div class="col-md-4">
+			<div class="page-header">
+				<h3>规格信息</h3>
+			</div>
+			<h5>创建规格</h5>
+			<form id="formCreateNorms">
+				<input type="hidden" name="f_goods_id" value="{$_GET['id']}">
+				<div class="input-group">
+					<span class="input-group-addon">规格名称：</span>
+					<input class="form-control" type="text" name="name">
+				</div>
+				<div class="input-group" style="margin-top: 5px;">
+					<span class="input-group-addon">规格说明：</span>
+					<input class="form-control" type="text" name="explain">
+				</div>
+				<a class="btn btn-success form-control" href="javascript:;" id="btnCreateNorms"
+				   style="margin-top: 5px;">创建规格</a>
+			</form>
+			<h5>修改规格</h5>
+			<table class="table table-border">
+				<php>foreach($normsInfo as $item):</php>
+				<form action="{:U('home/goods/updateNorms')}?id={$_GET['id']}" method="post">
+					<input type="hidden" name="hdnNormsId" value="{$item['id']}">
+					<tr>
+						<td>名称</td>
+						<td>
+							<input class="form-control" type="text" name="name" value="{$item['name']}">
+						</td>
+					</tr>
+					<tr>
+						<td>值/件</td>
+						<td>
+							<input class="form-control" type="text" name="value" value="{$item['value']}">
+						</td>
+					</tr>
+					<tr>
+						<td>说明</td>
+						<td>
+							<input class="form-control" type="text" name="explain" value="{$item['explain']}">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input class="btn btn-warning" type="submit" value="修改">
+							<a class="btn btn-danger" href="javascript:;" name="{$item['id']}"
+							   onclick="removeNorms(this)">删除</a>
+						</td>
+					</tr>
+				</form>
+				<php>endforeach;</php>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<div class="row">
+				<div class="page-header">
+					<h3>图片信息</h3>
+				</div>
+			</div>
+			<div class="row">
+				<h5>上传图片</h5>
+				<form class="col-md-4" action="{:U('home/goods/detail')}?id={$_GET['id']}" enctype="multipart/form-data"
+				      method="post">
+					<div class="input-group">
+						<input type="checkbox" name="is_lead" value="T" id="chkIsLead">
+						<label for="chkIsLead">作为主图片？</label>
+					</div>
+					<div class="input-group" style="margin-top: 5px;">
+						<span id="spanChooseFileTitle"></span>
+						<span id="spanChooseFile"></span>
+						<input type="file" name="file" id="file" style="display: none;" onchange="chooseFile(this)"/>
+					</div>
+					<div class="input-group" style="margin-top: 5px;">
+						<a class="btn btn-warning" href="javascript:;" onclick="file.click()"
+						   id="btnChooseFile">选择图片</a>
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<php>if(a4isEmpty($_GET['id'])==false):</php>
+						<input class="btn btn-danger" type="submit" value="上传">
+						<php>endif;</php>
+					</div>
+				</form>
+			</div>
+			<div class="row">
+				<h5>图片管理</h5>
+				<php>foreach($goodsImgInfo as $item):</php>
+				<form class="col-md-4">
+					<a href="javascript:;" class="thumbnail">
+						<img src="http://{$item['thumb_url']}" alt="{$item['name']}">
+					</a>
+					<p class="text-center">
+						<a href="javascript:;" onclick="removeGoodsImg(this)"
+						   name="{$item['id']}|{$_GET['id']}|{$item['name']}">删除图片</a>
+						<br>
+						<php>if($item['is_lead']=='T'):</php>
+						主图片
+						<php>else:</php>
+						<a href="javascript:;" onclick="setIsLead(this)" name="{$item['id']}|{$_GET['id']}">设置为主图片</a>
+						<php>endif;</php>
+					</p>
+				</form>
+				<php>endforeach;</php>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+<script>
+
+	document.getElementById('btnUpdateGoodsInfo').onclick = function () {
+		$.ajax({
+			url: '{:U("home/Goods/ajaxUpdateGoodsInfo")}',
+			type: 'post',
+			data: $('#formUpdateGoodsInfo').serialize(),
+			success: function (Ret) {
+				console.log(Ret);
+				if (Ret == 1) {
+					showSuccessModal('修改商品信息', '修改成功');
+				} else {
+					showFailModal('修改失败', '商品信息没有变化或修改失败');
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 根据大类别获取子类别
+	 */
+	document.getElementById('btnGetSubGoodsType').onclick = function () {
+		$.ajax({
+			url: '{:U("home/Goods/ajaxGetSubGoodsType")}',
+			type: 'post',
+			data: 'parent_id=' + document.getElementById('selRootGoodsType').value,
+			success: function (RET) {
+				subGoodsType = $.parseJSON(RET);
+				document.getElementById('selSubGoodsType').length = 0;
+				for (var item in subGoodsType) {
+					document.getElementById('selSubGoodsType').options[item] = new Option(subGoodsType[item]['name'], subGoodsType[item]['id']);
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 删除规格信息
+	 *
+	 * @param OBJ
+	 */
+	removeNorms = function (OBJ) {
+		$.ajax({
+			url: '{:U("home/goods/ajaxRemoveNorms")}',
+			type: 'post',
+			data: 'id=' + OBJ.name,
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('删除规格', '删除成功', function () {
+						location.reload();
+					})
+				} else {
+					showFailModal('删除规格失败', RET, null, function () {
+						closeFailModal();
+					});
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 创建规格
+	 */
+	document.getElementById('btnCreateNorms').onclick = function () {
+		$.ajax({
+			url: '{:U("home/goods/ajaxCreateNorms_forUpdateGoods")}',
+			type: 'post',
+			data: $('#formCreateNorms').serialize(),
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('创建规格', '创建成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('创建规格失败', RET);
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 删除图片
+	 *
+	 * @param OBJ
+	 */
+	removeGoodsImg = function (OBJ) {
+		$.ajax({
+			url: '{:U("home/goods/ajaxRemoveGoodsImg")}',
+			type: 'post',
+			data: 'params=' + OBJ.name,
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('删除图片', '删除图片成功', function () {
+						location.reload();
+					})
+				} else {
+					showFailModal('删除图片失败', RET);
+				}
+			}
+		});
+	}
+
+	/**
+	 * @todo 选择图片时同步显示内容
+	 *
+	 * @param OBJ file标签对象
+	 */
+	chooseFile = function (OBJ) {
+		document.getElementById('spanChooseFileTitle').innerHTML = '已选图片：&nbsp;&nbsp;&nbsp;&nbsp;';
+		splitChar = OBJ.value.split('\\');
+		document.getElementById('spanChooseFile').innerHTML = splitChar[splitChar.length - 1];
+	}
+
+	/**
+	 * @todo 设置图片为主图片
+	 *
+	 * @param OBJ
+	 */
+	setIsLead = function (OBJ) {
+		$.ajax({
+			url: '{:U("home/goods/ajaxSetIsLead")}',
+			type: 'post',
+			data: 'params=' + OBJ.name,
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('设置主图片', '设置主图片成功', function () {
+						location.reload();
+					});
+				} else {
+					showFailModal('设置主图片失败', RET);
+				}
+			}
+		});
+	}
+</script>
+</html>

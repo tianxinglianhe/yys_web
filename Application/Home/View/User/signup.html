@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--头部引入bootstrap-->
+    <include file="./Application/Common/Public/layout/head.html"/>
+    <title>注册 - 宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!--顶端广告-->
+            <a href="#">
+                <img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您" width="100%"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<div class="container-fluid">
+    <div class="jumbotron" style="background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>宜优速欢迎您！</h1>
+
+                    <p>宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…宜优速介绍…</p>
+
+                    <p>
+                        <a class="btn btn-info btn-lg" href="#">联系我们</a>
+                    </p>
+                </div>
+                <form class="col-lg-4" id="formSignUp" action="{:U('home/user/signup')}" method="post">
+                    <div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtUsername"
+                              style="background-color: transparent;">
+							<span class="glyphicon glyphicon-user">&nbsp;登录账号</span>
+						</span>
+                        <input type="text" class="form-control" placeholder="必填"
+                               aria-describedby="basic-addon-txtUsername" name="signin_name">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtPwd" style="background-color: transparent;">
+							<span class="glyphicon glyphicon-asterisk">&nbsp;登录密码</span>
+						</span>
+                        <input type="text" class="form-control" placeholder="必填" aria-describedby="basic-addon-txtPwd"
+                               name="pwd">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtCompanyName"
+                              style="background-color: transparent;">
+							<span class="glyphicon glyphicon-font" id="spanUsername">&nbsp;公司名称</span>
+						</span>
+                        <input type="text" class="form-control" placeholder="必填"
+                               aria-describedby="basic-addon-txtUserame" name="username">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtTelNo"
+                              style="background-color: transparent;">
+							<span class="glyphicon glyphicon-phone-alt">&nbsp;联系电话</span>
+						</span>
+                        <input type="text" class="form-control" placeholder="选填"
+                               aria-describedby="basic-addon-txtUsername" name="tel_no">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 7px;">
+						<span class="input-group-addon" id="basic-addon-txtEmail"
+                              style="background-color: transparent;">
+							<span class="glyphicon glyphicon-envelope">&nbsp;联系邮箱</span>
+						</span>
+                        <input type="text" class="form-control" placeholder="选填" aria-describedby="basic-addon-txtEmail"
+                               name="email">
+                    </div>
+                    <div class="navbar-form" style="padding: 0;">
+                        <select class="form-control" class="select" name="take_over_province" id="selTakeOverProvince" style="width: 28%;">
+                            <option></option>
+                        </select>
+                        <select class="form-control" class="select" name="take_over_city" id="selTakeOverCity" style="width: 28%;">
+                            <option></option>
+                        </select>
+                        <select class="form-control" class="select" name="take_over_town" id="selTakeOverTown">
+                            <option></option>
+                        </select>
+                    </div>
+                    <input type="text" class="form-control" placeholder="详细地址" name="take_over_ex">
+                    <div class="input-group" style="margin-bottom: 7px;">
+                        用户类型：
+                        <input type="radio" name="f_user_type" id="radUserType1" value="1" checked="checked"/>
+                        <label for="radUserType1">酒店&nbsp;&nbsp;&nbsp;</label>
+                        <input type="radio" name="f_user_type" id="radUserType2" value="2"/>
+                        <label for="radUserType2">饭店&nbsp;&nbsp;&nbsp;</label>
+                        <input type="radio" name="f_user_type" id="radUserType3" value="3"/>
+                        <label for="radUserType3">娱乐&nbsp;&nbsp;&nbsp;</label>
+                        <input type="radio" name="f_user_type" id="radUserType4" value="4"/>
+                        <label for="radUserType4">个人&nbsp;&nbsp;&nbsp;</label>
+                    </div>
+                    <input type="checkbox" checked="checked" value="1" name="is_signup_agreement"
+                           id="chkSignUpAgreement">
+                    <label for="chkSignUpAgreement">我同意注册协议</label>
+                    &nbsp;&nbsp;<a href="#" id="watchSignUpAgreement">查看注册协议</a>
+                    <!--<input class="btn btn-success form-control" type="submit" id="btnSignUp" value="注 册">-->
+                    <a class="btn btn-success form-control" href="#" id="btnSignUp">注 册</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--引入三级省市联动-->
+<script src="/a4js/PctCorrelation.js"></script>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+
+    /**
+     * @todo 注册
+     */
+    $('#btnSignUp').on('click', null, null, function () {
+        $.ajax({
+            url: '{:U("home/user/ajaxSignUp")}',
+            type: 'post',
+            data: $('#formSignUp').serialize(),
+            success: function (ret) {
+                if (ret != 1) {
+                    showFailModal('注册失败', ret);
+                } else {
+                    showSuccessModal('注册', '注册成功',function () {
+                        location.reload();
+                    });
+                }
+            }
+        });
+    });
+
+    /**
+     * @todo 页面加载后执行
+     */
+    window.onload = function () {
+        //###############省市联动
+        //初始化省市联动信息
+        var selid = new Array('selTakeOverProvince', 'selTakeOverCity', 'selTakeOverTown');
+        var defval = new Array('北京市', '北京市', '朝阳区');
+        var pct = new PctCorrelation();
+        pct.initPct(selid, defval);
+    }
+
+    //###############切换用户状态
+    document.getElementById('radUserType1').onclick = function () {
+        document.getElementById('spanUsername').innerHTML = '&nbsp;公司名称';
+    }
+    document.getElementById('radUserType2').onclick = function () {
+        document.getElementById('spanUsername').innerHTML = '&nbsp;公司名称';
+    }
+    document.getElementById('radUserType3').onclick = function () {
+        document.getElementById('spanUsername').innerHTML = '&nbsp;公司名称';
+    }
+    document.getElementById('radUserType4').onclick = function () {
+        document.getElementById('spanUsername').innerHTML = '&nbsp;用户昵称';
+    }
+
+    //###############显示注册协议
+    document.getElementById('watchSignUpAgreement').onclick = function () {
+        $('#successTitle').text('注册协议');
+        $('#successContent').text('协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容' +
+                '协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容' +
+                '协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容' +
+                '协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容' +
+                '协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容' +
+                '协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容' +
+                '协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容协议内容');
+        $('#successModal').modal('show');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>绑定微信 - 后台 - 宜优速</title>
+</head>
+<body>
+
+<!--引入导航条-->
+<include file="./BackworkStation/Common/Public/layout/nav.html"/>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="page-header">
+				<h2 class="text-center">
+					第一步：
+					<small>扫码</small>
+				</h2>
+			</div>
+			<div class="thumbnail" style="border: none;">
+				<div class="caption center-block text-center">
+					<img src="{:W_PUBLIC_WECHAT}employeeBindWechat.png" alt="" width="50%">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="page-header">
+				<h2>
+					第二步：
+					<small>输入员工信息</small>
+				</h2>
+			</div>
+			<form id="formBindWechat">
+				<div style="height: 47px;"></div>
+				<p class="input-group">
+					<span class="input-group-addon">员工账号：</span>
+					<input class="form-control" type="text" name="signin_name">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">登陆密码：</span>
+					<input class="form-control" type="password" name="pwd">
+				</p>
+				<a href="javascript:;" id="btnBindWechat" class="btn btn-success form-control">绑定微信</a>
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>
+<script>
+	/**
+	 * @todo 执行绑定
+	 */
+	document.getElementById('btnBindWechat').onclick = function () {
+		$.ajax({
+			url: '{:U("wechat/index/ajaxBindWechat")}',
+			type: 'post',
+			data: $('#formBindWechat').serialize(),
+			success: function (RET) {
+				if (RET == 1) {
+					showSuccessModal('绑定微信', '绑定成功', 2, function () {
+						closeSuccessModal();
+					});
+				} else {
+					showFailModal('绑定微信失败', RET);
+				}
+			}
+		});
+	}
+</script>
+</html>

@@ -1,0 +1,2077 @@
+[ 2016-06-12T14:36:47+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001051s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0133s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+NOTIC: [8] Undefined index: employeeInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: employeeInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: employeeInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2016-06-12T14:36:51+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0143s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0021s ]
+
+[ 2016-06-12T14:36:52+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0150s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2016-06-12T14:36:55+08:00 ] 127.0.0.1 /bs.php/home/goods/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: type D:\wamp\www\BackworkStation\Home\Controller\GoodsController.class.php 第 86 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+NOTIC: [8] Undefined variable: goodsInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 470 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 470 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 492 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 496 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 504 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-06-12T14:36:56+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxGetSubGoodsType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '1'  [ RunTime:0.0011s ]
+
+[ 2016-06-12T14:36:56+08:00 ] 127.0.0.1 /bs.php/home/goods/update.html?type=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(id) FROM `goods` WHERE goods.f_goods_type_id = 5 [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: page_now D:\wamp\www\BackworkStation\Home\Model\GoodsModel.class.php 第 60 行.
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.unit,
+price_110.price AS price,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE f_goods_status_id = 1
+AND goods.f_goods_type_id = 5
+ORDER BY goods.id DESC
+LIMIT 0,5 [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-06-12T14:36:58+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000991s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.1066s ]
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'price_110.sale_time' in 'field list'
+
+[ 2016-06-12T14:42:18+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0101s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000776s ]
+
+[ 2016-06-12T14:46:02+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0083s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-06-12T14:46:21+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0115s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000737s ]
+
+[ 2016-06-12T14:47:06+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0094s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018188s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000680s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000742s ]
+
+[ 2016-06-12T14:47:36+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0091s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024276s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2016-06-12T14:54:37+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0106s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020773s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2016-06-12T15:05:42+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0099s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001252s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001336s ]
+
+[ 2016-06-12T15:08:06+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0173s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0144s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2016-06-12T15:22:58+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0098s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2016-06-12T16:08:50+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0094s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018929s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2016-06-12T16:08:52+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+
+[ 2016-06-12T16:09:11+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0121s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0118s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0178s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001108s ]
+
+[ 2016-06-12T16:09:12+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+
+[ 2016-06-12T16:09:22+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001210s ]
+
+[ 2016-06-12T16:09:28+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001188s ]
+
+[ 2016-06-12T16:10:26+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0014s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0099s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001106s ]
+
+[ 2016-06-12T16:11:40+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0093s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000866s ]
+
+[ 2016-06-12T16:14:26+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+
+[ 2016-06-12T16:15:10+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0136s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0114s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000927s ]
+
+[ 2016-06-12T16:15:11+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-06-12T16:18:20+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0086s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018530s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018627s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-06-12T16:18:36+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0097s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000782s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2016-06-12T16:18:39+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-06-12T17:20:01+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0151s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+NOTIC: [8] Undefined index: employeeInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: employeeInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: employeeInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020143s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000941s ]
+
+[ 2016-06-12T17:20:09+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000701s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0114s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0038s ]
+
+[ 2016-06-12T17:20:10+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0086s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021288s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000768s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2016-06-12T17:20:28+08:00 ] 127.0.0.1 /bs.php/home/goods/update.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0137s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: type D:\wamp\www\BackworkStation\Home\Controller\GoodsController.class.php 第 86 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+NOTIC: [8] Undefined variable: goodsInfo D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 470 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 470 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 492 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 496 行.
+NOTIC: [8] Undefined index: bs D:\wamp\www\BackworkStation\Runtime\Cache\Home\d97a7aeed32be19fa910a3b857ca507e.php 第 504 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022386s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2016-06-12T17:20:29+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxGetSubGoodsType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '1'  [ RunTime:0.0013s ]
+
+[ 2016-06-12T17:20:29+08:00 ] 127.0.0.1 /bs.php/home/goods/update.html?type=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(id) FROM `goods` WHERE goods.f_goods_type_id = 5 [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: page_now D:\wamp\www\BackworkStation\Home\Model\GoodsModel.class.php 第 60 行.
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.unit,
+price_110.price AS price,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE f_goods_status_id = 1
+AND goods.f_goods_type_id = 5
+ORDER BY goods.id DESC
+LIMIT 0,5 [ RunTime:0.0051s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000233s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2016-06-12T17:20:31+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0102s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000235s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2016-06-12T17:20:34+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000771s ]
+
+[ 2016-06-12T17:23:39+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0097s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `f_goods_type_id`='5',`id`='384',`name`='aa',`explain`='aa',`unit`='aa' WHERE `id` = '384' [ RunTime:0.0022s ]
+
+[ 2016-06-12T17:23:44+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0121s ]
+NOTIC: [8] Undefined index: validate D:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\www\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `goods` SET `f_goods_type_id`='5',`id`='384',`name`='bb',`explain`='aa',`unit`='aa' WHERE `id` = '384' [ RunTime:0.0013s ]
+
+[ 2016-06-12T17:23:49+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0098s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000170s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-06-12T17:24:55+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001374s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0016s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0123s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000266s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2016-06-12T17:25:05+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0126s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0015s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0118s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2016-06-12T17:26:26+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0110s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000818s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2016-06-12T17:26:27+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+
+[ 2016-06-12T17:27:00+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0100s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0102s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-06-12T17:27:01+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+
+[ 2016-06-12T17:29:46+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+
+[ 2016-06-12T17:29:48+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0090s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028968s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000671s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2016-06-12T17:29:49+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000956s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+
+[ 2016-06-12T17:30:06+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+
+[ 2016-06-12T17:30:07+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+
+[ 2016-06-12T17:30:10+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0113s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020487s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2016-06-12T17:30:22+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+
+[ 2016-06-12T17:30:47+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0136s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0133s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0131s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034579s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001535s ]
+
+[ 2016-06-12T17:32:11+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0102s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017681s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-06-12T17:25:58+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0108s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018437s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2016-06-12T17:26:00+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001016s ]
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+ERR: 1146:Table 'yiyousu.invertory_110' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `invertory_110`
+
+[ 2016-06-12T17:59:17+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0111s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0132s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017987s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-06-12T17:59:19+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-06-12T18:00:20+08:00 ] 127.0.0.1 /bs.php/home/goods/detail.html?id=384
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `goods_type` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `goods_type` WHERE `parent_id` = '0'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `goods_type` WHERE ( parent_id <> 0 )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0102s ]
+SQL: SELECT
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+price_110.price AS price,
+price_110.sale_price,
+price_110.sale_start,
+price_110.sale_end,
+inventory_110.number AS inventory,
+inventory_110.sale_number AS sale_inventory,
+goods_img.id AS img_id,
+goods_img.`name` AS img,
+goods_img.is_lead,
+goods_type.`name` AS goods_type_name
+FROM goods
+LEFT JOIN price_110 ON price_110.id = goods.id
+LEFT JOIN inventory_110 ON inventory_110.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+LEFT JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+WHERE goods.id = 384 [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `norms` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `norms` WHERE `f_goods_id` = '384'  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods_img` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `goods_img` WHERE `f_goods_id` = '384'  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017474s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000665s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-06-12T18:00:22+08:00 ] 127.0.0.1 /bs.php/home/Goods/ajaxUpdateGoodsInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+

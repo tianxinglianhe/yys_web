@@ -1,0 +1,4273 @@
+[ 2016-06-02T08:48:25+08:00 ] 123.123.96.186 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 429 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2016-06-02T09:08:40+08:00 ] 123.123.96.186 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000661s ]
+
+[ 2016-06-02T09:08:52+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-06-02T09:08:57+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-06-02T09:09:45+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+
+[ 2016-06-02T09:10:01+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0012s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0006s ]
+
+[ 2016-06-02T09:10:03+08:00 ] 123.123.96.186 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2016-06-02T13:21:24+08:00 ] 123.123.96.186 /bs.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-06-02T13:27:10+08:00 ] 123.123.96.186 /bs.php/home/employee/signout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-06-02T13:27:10+08:00 ] 123.123.96.186 /bs.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013343s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013407s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2016-06-02T13:27:12+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+
+[ 2016-06-02T13:28:41+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012525s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2016-06-02T13:29:20+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012727s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2016-06-02T13:31:35+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2016-06-02T13:31:59+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0015s ]
+SQL: SELECT `id` FROM `employee` WHERE `signin_name` = 'qinru' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `id` FROM `employee` WHERE `username` = '秦茹' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `employee` WHERE `tel_no` = '13811093990' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `employee` WHERE `pid` = '' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-06-02T13:33:00+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0015s ]
+SQL: SELECT `id` FROM `employee` WHERE `signin_name` = 'qinru' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id` FROM `employee` WHERE `tel_no` = '13811093990' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] mktime() expects parameter 1 to be long, string given /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 110 行.
+NOTIC: [8] A non well formed numeric value encountered /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 111 行.
+NOTIC: [8] Undefined index: validate /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `employee` (`signin_name`,`pwd`,`username`,`tel_no`,`email`,`pid`,`qq_id`,`birthday_time`,`e_gender`,`join_time`,`f_employee_type_id`,`f_employee_status_id`) VALUES ('qinru','ed2b1f468c5f915f3f1cf75d7068baae','秦茹','13811093990','','','','0','F','1472056380','3','1') [ RunTime:0.0005s ]
+
+[ 2016-06-02T13:33:02+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-06-02T13:33:09+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0015s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0008s ]
+
+[ 2016-06-02T13:33:11+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-06-02T13:41:13+08:00 ] 123.123.96.186 /bs.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2016-06-02T13:41:20+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0012s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0008s ]
+
+[ 2016-06-02T13:41:24+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0013s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0004s ]
+
+[ 2016-06-02T13:41:26+08:00 ] 123.123.96.186 /bs.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2016-06-02T13:51:05+08:00 ] 123.123.96.186 /bs.php/home/employee/signout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-06-02T13:51:05+08:00 ] 123.123.96.186 /bs.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2016-06-02T13:51:07+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000525s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2016-06-02T13:53:38+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0012s ]
+SQL: SELECT `id` FROM `employee` WHERE `signin_name` = 'linkun' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `employee` WHERE `tel_no` = '15501031831' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] mktime() expects parameter 1 to be long, string given /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 110 行.
+NOTIC: [8] A non well formed numeric value encountered /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 111 行.
+NOTIC: [8] Undefined index: validate /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `employee` (`signin_name`,`pwd`,`username`,`tel_no`,`email`,`pid`,`qq_id`,`birthday_time`,`e_gender`,`join_time`,`f_employee_type_id`,`f_employee_status_id`) VALUES ('linkun','ed2b1f468c5f915f3f1cf75d7068baae','林坤','15501031831','','','','0','M','1472057618','3','1') [ RunTime:0.0005s ]
+
+[ 2016-06-02T13:53:40+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2016-06-02T13:54:08+08:00 ] 123.123.96.186 /bs.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000586s ]
+
+[ 2016-06-02T13:54:09+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-06-02T13:56:29+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0012s ]
+SQL: SELECT `id` FROM `employee` WHERE `signin_name` = 'caoyuan' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `employee` WHERE `tel_no` = '18519215354' LIMIT 1   [ RunTime:0.0250s ]
+NOTIC: [2] mktime() expects parameter 1 to be long, string given /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 110 行.
+NOTIC: [8] A non well formed numeric value encountered /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 111 行.
+NOTIC: [8] Undefined index: validate /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `employee` (`signin_name`,`pwd`,`username`,`tel_no`,`email`,`pid`,`qq_id`,`birthday_time`,`e_gender`,`join_time`,`f_employee_type_id`,`f_employee_status_id`) VALUES ('caoyuan','ed2b1f468c5f915f3f1cf75d7068baae','曹园','18519215354','','','','0','M','1472057789','3','1') [ RunTime:0.0006s ]
+
+[ 2016-06-02T13:56:30+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-06-02T13:57:17+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0011s ]
+SQL: SELECT `id` FROM `employee` WHERE `signin_name` = 'luzhihao' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `employee` WHERE `tel_no` = '13811188441' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] mktime() expects parameter 1 to be long, string given /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 110 行.
+NOTIC: [8] A non well formed numeric value encountered /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 111 行.
+NOTIC: [8] Undefined index: validate /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `employee` (`signin_name`,`pwd`,`username`,`tel_no`,`email`,`pid`,`qq_id`,`birthday_time`,`e_gender`,`join_time`,`f_employee_type_id`,`f_employee_status_id`) VALUES ('luzhihao','ed2b1f468c5f915f3f1cf75d7068baae','卢志浩','13811188441','','','','0','M','1472057837','1','1') [ RunTime:0.0004s ]
+
+[ 2016-06-02T13:57:18+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2016-06-02T13:58:03+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0012s ]
+SQL: SELECT `id` FROM `employee` WHERE `signin_name` = 'limei' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `employee` WHERE `tel_no` = '18510780526' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] mktime() expects parameter 1 to be long, string given /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 110 行.
+NOTIC: [8] A non well formed numeric value encountered /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 111 行.
+NOTIC: [8] Undefined index: validate /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `employee` (`signin_name`,`pwd`,`username`,`tel_no`,`email`,`pid`,`qq_id`,`birthday_time`,`e_gender`,`join_time`,`f_employee_type_id`,`f_employee_status_id`) VALUES ('limei','ed2b1f468c5f915f3f1cf75d7068baae','李梅','18510780526','','','','0','F','1472057883','1','1') [ RunTime:0.0008s ]
+
+[ 2016-06-02T13:58:05+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2016-06-02T13:58:40+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignUp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0012s ]
+SQL: SELECT `id` FROM `employee` WHERE `signin_name` = 'yujizhou' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `id` FROM `employee` WHERE `tel_no` = '13522178057' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] mktime() expects parameter 1 to be long, string given /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 110 行.
+NOTIC: [8] A non well formed numeric value encountered /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/EmployeeController.class.php 第 111 行.
+NOTIC: [8] Undefined index: validate /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /data/home/qxu1192070148/htdocs/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `employee` (`signin_name`,`pwd`,`username`,`tel_no`,`email`,`pid`,`qq_id`,`birthday_time`,`e_gender`,`join_time`,`f_employee_type_id`,`f_employee_status_id`) VALUES ('yujizhou','ed2b1f468c5f915f3f1cf75d7068baae','余济舟','13522178057','','','','0','M','1472057920','3','1') [ RunTime:0.0004s ]
+
+[ 2016-06-02T13:58:42+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/caa92eb9671b54a900ec1f6fdc97edd1.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2016-06-02T13:58:52+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0016s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0007s ]
+
+[ 2016-06-02T13:58:54+08:00 ] 123.123.96.186 /bs.php/home/employee/signup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `employee_type` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `employee_type`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013997s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2016-06-02T14:14:10+08:00 ] 123.123.96.186 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0182s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0005s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016030s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2016-06-02T14:14:15+08:00 ] 123.123.96.186 /bs.php/home/pay/isPay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 50 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0003s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 2
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+NOTIC: [8] Undefined index: usernames /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/df5f23c32d763355c9f283c952ae601c.php 第 476 行.
+NOTIC: [8] Undefined index: usernames /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/df5f23c32d763355c9f283c952ae601c.php 第 476 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014798s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2016-06-02T14:14:17+08:00 ] 123.123.96.186 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0003s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014446s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000571s ]
+
+[ 2016-06-02T14:14:21+08:00 ] 123.123.96.186 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0009s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 479 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2016-06-02T14:17:47+08:00 ] 123.123.96.186 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0010s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2016-06-02T14:21:54+08:00 ] 123.123.96.186 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0017s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0008s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 305 行.
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-06-02T14:21:57+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+ERR: 非法操作:printOutOrderForm
+
+[ 2016-06-02T14:25:00+08:00 ] 220.181.132.216 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0015s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0009s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 305 行.
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2016-06-02T14:25:12+08:00 ] 220.181.132.216 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+ERR: 非法操作:printOutOrderForm
+
+[ 2016-06-02T14:25:12+08:00 ] 171.8.167.73 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+ERR: 非法操作:printOutOrderForm
+
+[ 2016-06-02T14:25:13+08:00 ] 101.199.108.51 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 305 行.
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013069s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2016-06-02T14:25:13+08:00 ] 171.8.167.63 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+ERR: 非法操作:printOutOrderForm
+
+[ 2016-06-02T14:25:28+08:00 ] 101.199.108.59 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+ERR: 非法操作:printOutOrderForm
+
+[ 2016-06-02T14:25:31+08:00 ] 171.8.167.68 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+ERR: 非法操作:printOutOrderForm
+
+[ 2016-06-02T14:26:04+08:00 ] 117.136.0.21 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+ERR: 非法操作:printOutOrderForm
+
+[ 2016-06-02T14:28:07+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+ERR: 非法操作:printOutOrderForm
+
+[ 2016-06-02T14:28:26+08:00 ] 123.123.96.186 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0006s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 305 行.
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-06-02T14:28:27+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+ERR: 模板不存在:BackworkStation/Home/View/Pay/printOutOrderForm.html
+
+[ 2016-06-02T14:28:36+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+ERR: 模板不存在:BackworkStation/Home/View/Pay/printOutOrderForm.html
+
+[ 2016-06-02T14:28:39+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0006s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+ERR: 模板不存在:BackworkStation/Home/View/Pay/printOutOrderForm.html
+
+[ 2016-06-02T14:28:47+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0015s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0008s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+ERR: 模板不存在:BackworkStation/Home/View/Pay/printOutOrderForm.html
+
+[ 2016-06-02T14:29:09+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+ERR: 模板不存在:BackworkStation/Home/View/Pay/printOutOrderForm.html
+
+[ 2016-06-02T14:29:12+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+ERR: 模板不存在:BackworkStation/Home/View/Pay/printOutOrderForm.html
+
+[ 2016-06-02T14:30:12+08:00 ] 123.123.96.186 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2016-06-02T14:30:13+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Use of undefined constant W_PUBLIC_COMPANY - assumed 'W_PUBLIC_COMPANY' /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 437 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2016-06-02T14:30:13+08:00 ] 123.123.96.186 /bs.php/home/pay/W_PUBLIC_COMPANYyiyousu_logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+
+[ 2016-06-02T14:30:13+08:00 ] 123.123.96.186 /bs.php/home/pay/W_PUBLIC_COMPANYyiyousu_logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+
+[ 2016-06-02T14:30:16+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0008s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 305 行.
+NOTIC: [8] Use of undefined constant W_PUBLIC_COMPANY - assumed 'W_PUBLIC_COMPANY' /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 437 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2016-06-02T14:30:16+08:00 ] 123.123.96.186 /bs.php/home/pay/W_PUBLIC_COMPANYyiyousu_logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+
+[ 2016-06-02T14:31:34+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2016-06-02T14:31:55+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011212s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2016-06-02T14:32:00+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011624s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2016-06-02T14:32:05+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/9c7ce7da89bb8c810c30d7439487a8b7.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2016-06-02T14:35:40+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0006s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2016-06-02T16:25:11+08:00 ] 123.123.96.186 /bs.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 305 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/7845707409def0668184300e473d9e9a.php 第 435 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2016-06-02T16:25:26+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0015s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0008s ]
+
+[ 2016-06-02T16:25:29+08:00 ] 123.123.96.186 /bs.php/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012362s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000570s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2016-06-02T16:25:32+08:00 ] 123.123.96.186 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0004s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014415s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2016-06-02T16:25:33+08:00 ] 123.123.96.186 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2016-06-02T16:25:35+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: num /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 65 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037224s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001350s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001516s ]
+
+[ 2016-06-02T16:26:17+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0011s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: num /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 65 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000537s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2016-06-02T16:30:23+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0009s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: num /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 65 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000635s ]
+
+[ 2016-06-02T16:49:47+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: num /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 65 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010590s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010662s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2016-06-02T16:53:15+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0006s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: num /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 65 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010437s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000567s ]
+
+[ 2016-06-02T16:57:22+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0012s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: num /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 65 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2016-06-02T17:03:37+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0007s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: num /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 65 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2016-06-02T17:14:52+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0014s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0008s ]
+
+[ 2016-06-02T17:14:53+08:00 ] 123.123.96.186 /bs.php/home/pay/printOutOrderForm.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0014s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0009s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: num /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 65 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2016-06-02T17:15:30+08:00 ] 123.123.96.186 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.0012s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.tel_no,
+employee.email,
+employee.wechat_id,
+employee.qq_id,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.0004s ]
+
+[ 2016-06-02T17:15:31+08:00 ] 123.123.96.186 /bs.php/home/pay/detail.html?id=52
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 52 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0006s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = '25642ea444dc86b60cb8ea8c8ac6c6fd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013786s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2016-06-02T17:15:51+08:00 ] 123.123.96.186 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0004s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2016-06-02T17:15:53+08:00 ] 123.123.96.186 /bs.php/home/pay/detail.html?id=51
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 51 [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0006s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = 'd16d69744bc0f45cf5acb538d98d5bfd' [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2016-06-02T17:15:57+08:00 ] 123.123.96.186 /bs.php/home/pay/isOut.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 110 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0003s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 4
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-06-02T17:15:59+08:00 ] 123.123.96.186 /bs.php/home/pay/isRefund.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 138 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0003s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 6
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-06-02T17:16:02+08:00 ] 123.123.96.186 /bs.php/home/pay/isPay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 82 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0003s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 2
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+NOTIC: [8] Undefined index: usernames /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/df5f23c32d763355c9f283c952ae601c.php 第 476 行.
+NOTIC: [8] Undefined index: usernames /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/df5f23c32d763355c9f283c952ae601c.php 第 476 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014174s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2016-06-02T17:16:03+08:00 ] 123.123.96.186 /bs.php/home/pay/unPay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 96 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0003s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 3
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+
+[ 2016-06-02T17:16:11+08:00 ] 123.123.96.186 /bs.php/home/pay/unPay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 96 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0003s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 3
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+
+[ 2016-06-02T17:18:50+08:00 ] 220.181.132.216 /bs.php/home/pay/detail.html?id=51
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0014s ]
+SQL: SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.id = 51 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0008s ]
+SQL: SELECT
+order_goods.id,
+order_goods.f_order_form_no,
+order_goods.f_goods_id,
+order_goods.f_norms_id,
+order_goods.number,
+goods.id,
+goods.open_id,
+goods.`name`,
+goods.f_goods_type_id,
+goods.create_time,
+goods.update_time,
+goods.f_goods_status_id,
+goods.`explain`,
+goods.unit,
+goods_img.`name` AS img,
+goods_type.`name` AS type,
+norms.`name` AS norms,
+area_goods_price.price AS once_price,
+area_goods_price.sale_price AS once_sale_price,
+area_goods_price.inventory AS once_inventory,
+area_goods_price.sale_inventory AS once_sale_inventory,
+area_goods_price.sale_time AS once_sale_time
+FROM
+order_goods
+INNER JOIN goods ON goods.id = order_goods.f_goods_id
+LEFT JOIN goods_img ON goods_img.id = order_goods.f_goods_id
+INNER JOIN goods_type ON goods_type.id = goods.f_goods_type_id
+INNER JOIN norms ON norms.id = order_goods.f_norms_id
+INNER JOIN area_goods_price ON area_goods_price.id = order_goods.f_goods_id
+WHERE order_goods.f_order_form_no = 'd16d69744bc0f45cf5acb538d98d5bfd' [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 305 行.
+NOTIC: [8] Undefined index: goods_id /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/f82c559ae0975233090e1afe26437792.php 第 483 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2016-06-02T17:18:59+08:00 ] 220.181.132.216 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0002s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/a2049d0eb2547d8a26c055402b5c7f79.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/a2049d0eb2547d8a26c055402b5c7f79.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014325s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-06-02T17:19:32+08:00 ] 220.181.132.216 /bs.php/home/pay/isRefund.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 138 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0011s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 6
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/721261d40c4a6ca48dc0943ec6a6c4df.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/721261d40c4a6ca48dc0943ec6a6c4df.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2016-06-02T17:20:15+08:00 ] 220.181.132.216 /bs.php/home/pay/unPay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 96 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0003s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 3
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/d4c50e34a468de28fbf0552f18846ded.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/d4c50e34a468de28fbf0552f18846ded.php 第 305 行.
+NOTIC: [8] Undefined index: usernames /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/d4c50e34a468de28fbf0552f18846ded.php 第 476 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049162s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-06-02T17:30:28+08:00 ] 123.123.96.186 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011837s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2016-06-02T17:35:00+08:00 ] 101.199.112.53 /bs.php/home/pay/isRefund.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0018s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 138 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0005s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 6
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/721261d40c4a6ca48dc0943ec6a6c4df.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/721261d40c4a6ca48dc0943ec6a6c4df.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000568s ]
+
+[ 2016-06-02T17:36:05+08:00 ] 117.136.38.7 /bs.php/home/pay/isRefund.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 138 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0007s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 6
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/721261d40c4a6ca48dc0943ec6a6c4df.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/721261d40c4a6ca48dc0943ec6a6c4df.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020556s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-06-02T17:40:47+08:00 ] 117.136.38.238 /bs.php/home/pay/detail.html?id=51
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+ERR: :
+ [ SQL语句 ] : SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.no = ?no
+ERR: :
+ [ SQL语句 ] : SELECT
+of.id,
+of.f_user_id AS of_f_user_id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.f_order_form_status_id,
+of.bc_id,
+of.f_pay_type_id,
+u.username,
+u.take_over_province,
+u.take_over_city,
+u.take_over_town,
+u.take_over_ex,
+u.tel_no
+FROM
+order_form AS of
+INNER JOIN `user` AS u ON u.id = of.f_user_id
+WHERE
+of.no = ?no
+
+[ 2016-06-02T17:44:41+08:00 ] 117.136.0.37 /bs.php/home/pay/unPay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 96 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0004s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 3
+ORDER BY of.id DESC
+LIMIT 0,3 [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/d4c50e34a468de28fbf0552f18846ded.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/d4c50e34a468de28fbf0552f18846ded.php 第 305 行.
+NOTIC: [8] Undefined index: usernames /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/d4c50e34a468de28fbf0552f18846ded.php 第 476 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-06-02T17:47:14+08:00 ] 101.199.108.54 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0004s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,4 [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/a2049d0eb2547d8a26c055402b5c7f79.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/a2049d0eb2547d8a26c055402b5c7f79.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014312s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2016-06-02T17:47:50+08:00 ] 182.140.230.20 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0004s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,4 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/a2049d0eb2547d8a26c055402b5c7f79.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/a2049d0eb2547d8a26c055402b5c7f79.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2016-06-02T17:48:26+08:00 ] 117.136.38.213 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: page_now /data/home/qxu1192070148/htdocs/BackworkStation/Home/Controller/PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.0005s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,4 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/a2049d0eb2547d8a26c055402b5c7f79.php 第 281 行.
+NOTIC: [8] Undefined index: emp /data/home/qxu1192070148/htdocs/BackworkStation/Runtime/Cache/Home/a2049d0eb2547d8a26c055402b5c7f79.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013889s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000543s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+

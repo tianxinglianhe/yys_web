@@ -1,0 +1,585 @@
+[ 2016-05-29T10:44:46+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016843s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006311s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index: emp D:\ide\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp D:\ide\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 426 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007024s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008614s ]
+
+[ 2016-05-29T10:44:51+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.1274s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.m_phone,
+employee.email,
+employee.wechat_id,
+employee.qq,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.1249s ]
+
+[ 2016-05-29T10:44:53+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2016-05-29T10:44:55+08:00 ] 127.0.0.1 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1042s ]
+NOTIC: [8] Undefined index: page_now D:\ide\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1033s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+
+[ 2016-05-29T12:54:23+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8] Undefined index: emp E:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 281 行.
+NOTIC: [8] Undefined index: emp E:\wamp\www\BackworkStation\Runtime\Cache\Home\7845707409def0668184300e473d9e9a.php 第 426 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001237s ]
+
+[ 2016-05-29T12:54:30+08:00 ] 127.0.0.1 /bs.php/home/employee/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+SQL: SHOW COLUMNS FROM `employee` [ RunTime:0.1401s ]
+SQL: SELECT
+employee.id,
+employee.signin_name,
+employee.pwd,
+employee.username,
+employee.m_phone,
+employee.email,
+employee.wechat_id,
+employee.qq,
+employee.birthday_time,
+employee.e_gender,
+employee.join_time,
+employee.leave_time,
+employee.f_employee_type_id,
+employee.f_employee_status_id,
+employee_type.`name` AS employee_type_name
+FROM `employee`
+INNER JOIN employee_type ON employee_type.id = employee.f_employee_type_id
+WHERE employee.f_employee_status_id = 1
+AND employee.signin_name = 'admin' [ RunTime:0.1375s ]
+
+[ 2016-05-29T12:54:34+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001960s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000843s ]
+
+[ 2016-05-29T12:54:34+08:00 ] 127.0.0.1 /bs.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015113s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2016-05-29T12:54:36+08:00 ] 127.0.0.1 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1154s ]
+NOTIC: [8] Undefined index: page_now E:\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1240s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1211s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000375s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000608s ]
+
+[ 2016-05-29T12:57:34+08:00 ] 127.0.0.1 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1363s ]
+NOTIC: [8] Undefined index: page_now E:\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1316s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1372s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000840s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2016-05-29T12:57:37+08:00 ] 127.0.0.1 /bs.php/home/pay/isRefund.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1114s ]
+NOTIC: [8] Undefined index: page_now E:\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 106 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1020s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 6
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Undefined index: usernames E:\wamp\www\BackworkStation\Runtime\Cache\Home\721261d40c4a6ca48dc0943ec6a6c4df.php 第 468 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016163s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000830s ]
+
+[ 2016-05-29T12:57:40+08:00 ] 127.0.0.1 /bs.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1361s ]
+NOTIC: [8] Undefined index: page_now E:\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 18 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1258s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1325s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000436s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000680s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037157s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000931s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001015s ]
+
+[ 2016-05-29T12:57:51+08:00 ] 127.0.0.1 /bs.php/home/pay/isRefund.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001130s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1217s ]
+NOTIC: [8] Undefined index: page_now E:\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 106 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1179s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 6
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+NOTIC: [8] Undefined index: usernames E:\wamp\www\BackworkStation\Runtime\Cache\Home\721261d40c4a6ca48dc0943ec6a6c4df.php 第 468 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000823s ]
+
+[ 2016-05-29T13:04:46+08:00 ] 127.0.0.1 /bs.php/home/pay/ajaxRefundIsDone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1072s ]
+
+[ 2016-05-29T13:05:11+08:00 ] 127.0.0.1 /bs.php/home/pay/ajaxRefundIsDone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+
+[ 2016-05-29T13:06:22+08:00 ] 127.0.0.1 /bs.php/home/pay/isRefund.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1160s ]
+NOTIC: [8] Undefined index: page_now E:\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 106 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1144s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 6
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1154s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000404s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000597s ]
+NOTIC: [8] Undefined index: usernames E:\wamp\www\BackworkStation\Runtime\Cache\Home\721261d40c4a6ca48dc0943ec6a6c4df.php 第 468 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035405s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2016-05-29T13:06:23+08:00 ] 127.0.0.1 /bs.php/home/pay/ajaxRefundIsDone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1313s ]
+
+[ 2016-05-29T13:08:58+08:00 ] 127.0.0.1 /bs.php/home/pay/ajaxRefundIsDone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1117s ]
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\ThinkPHP\Library\Think\Db\Driver.class.php 第 550 行.
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\ThinkPHP\Library\Think\Db\Driver.class.php 第 596 行.
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\ThinkPHP\Library\Think\Db\Driver.class.php 第 596 行.
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\ThinkPHP\Library\Think\Db\Driver.class.php 第 597 行.
+NOTIC: [8] Undefined offset: 0 E:\wamp\www\ThinkPHP\Library\Think\Db\Driver.class.php 第 600 行.
+SQL: UPDATE `order_form` SET `f_order_form_status_id`='7' WHERE ( `no` = null  ) [ RunTime:0.1152s ]
+
+[ 2016-05-29T13:10:40+08:00 ] 127.0.0.1 /bs.php/home/pay/ajaxRefundIsDone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1136s ]
+
+[ 2016-05-29T13:12:03+08:00 ] 127.0.0.1 /bs.php/home/pay/isRefund.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.4009s ]
+NOTIC: [8] Undefined index: page_now E:\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 106 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1261s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 6
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1396s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000289s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000460s ]
+NOTIC: [8] Undefined index: usernames E:\wamp\www\BackworkStation\Runtime\Cache\Home\721261d40c4a6ca48dc0943ec6a6c4df.php 第 468 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001516s ]
+
+[ 2016-05-29T13:12:04+08:00 ] 127.0.0.1 /bs.php/home/pay/ajaxRefundIsDone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1212s ]
+SQL: UPDATE `order_form` SET `f_order_form_status_id`='7' WHERE `no` = 'd16d69744bc0f45cf5acb538d98d5bfd' [ RunTime:0.1276s ]
+
+[ 2016-05-29T13:12:20+08:00 ] 127.0.0.1 /bs.php/home/pay/isRefundDone.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1389s ]
+NOTIC: [8] Undefined index: page_now E:\wamp\www\BackworkStation\Home\Controller\PayController.class.php 第 120 行.
+SQL: SELECT COUNT(id) AS c FROM order_form [ RunTime:0.1349s ]
+SQL: SELECT
+of.id,
+of.create_time,
+of.refund_time,
+of.`no`,
+of.price,
+of.is_need_invoice,
+of.bc_id,
+ofs.`name` AS order_form_status,
+p.`name` AS pay_type,
+u.username AS username
+FROM
+order_form AS of
+LEFT JOIN order_form_status AS ofs ON ofs.id = of.f_order_form_status_id
+LEFT JOIN pay_type AS p ON p.id = of.f_pay_type_id
+LEFT JOIN `user` AS u ON u.id = of.f_user_id
+WHERE of.f_order_form_status_id = 7
+ORDER BY of.id DESC
+LIMIT 0,2 [ RunTime:0.1372s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined index: usernames E:\wamp\www\BackworkStation\Runtime\Cache\Home\c8bdc74218383aa99ee815f3bcad3b12.php 第 467 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001167s ]
+

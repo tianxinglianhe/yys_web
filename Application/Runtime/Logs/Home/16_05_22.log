@@ -1,0 +1,345 @@
+[ 2016-05-22T17:39:28+08:00 ] 127.0.0.1 /index.php/home/user/myshoppingcart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.1385s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN area_goods_price ON area_goods_price.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.1358s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001048s ]
+
+[ 2016-05-22T17:39:32+08:00 ] 127.0.0.1 /index.php/home/user/myorderform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1213s ]
+SQL: SELECT
+order_form.id,
+order_form.f_user_id,
+order_form.create_time,
+order_form.refund_time,
+order_form.`no`,
+order_form.price,
+order_form.is_need_invoice,
+order_form.f_order_form_status_id,
+order_form_status.`name` AS order_form_status_name
+FROM `order_form`
+INNER JOIN order_form_status ON order_form_status.id = order_form.f_order_form_status_id
+WHERE order_form.f_user_id = 8 [ RunTime:0.1161s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.1215s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.1209s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = 'a8af22086d14dce5b3bed4e06a0f2f83'  [ RunTime:0.1206s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+goods.img AS img,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE area_goods_price.id = 184 [ RunTime:0.1169s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+goods.img AS img,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE area_goods_price.id = 184 [ RunTime:0.1225s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '63c4d08cde750aa3e02f703a8038069a'  [ RunTime:0.1201s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+goods.img AS img,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE area_goods_price.id = 184 [ RunTime:0.1222s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '7ebd751940d5ac74ae227cacfdbda630'  [ RunTime:0.1225s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+goods.img AS img,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE area_goods_price.id = 184 [ RunTime:0.1193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined index: goods D:\ide\wamp\www\Application\Runtime\Cache\Home\bc944fcd82eb773a1ca8a43de15789e6.php 第 489 行.
+NOTIC: [8] Undefined index: goods D:\ide\wamp\www\Application\Runtime\Cache\Home\bc944fcd82eb773a1ca8a43de15789e6.php 第 489 行.
+NOTIC: [8] Undefined index: goods D:\ide\wamp\www\Application\Runtime\Cache\Home\bc944fcd82eb773a1ca8a43de15789e6.php 第 489 行.
+NOTIC: [8] Undefined index: goods D:\ide\wamp\www\Application\Runtime\Cache\Home\bc944fcd82eb773a1ca8a43de15789e6.php 第 489 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021076s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000495s ]
+
+[ 2016-05-22T17:39:37+08:00 ] 127.0.0.1 /index.php/home/user/ajaxdelorderform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1293s ]
+SQL: DELETE FROM `order_form` WHERE `no` = 'a8af22086d14dce5b3bed4e06a0f2f83' [ RunTime:0.1300s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.1273s ]
+SQL: DELETE FROM `order_goods` WHERE `f_order_form_no` = 'a8af22086d14dce5b3bed4e06a0f2f83' [ RunTime:0.1307s ]
+
+[ 2016-05-22T17:39:39+08:00 ] 127.0.0.1 /index.php/home/user/myorderform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1039s ]
+SQL: SELECT
+order_form.id,
+order_form.f_user_id,
+order_form.create_time,
+order_form.refund_time,
+order_form.`no`,
+order_form.price,
+order_form.is_need_invoice,
+order_form.f_order_form_status_id,
+order_form_status.`name` AS order_form_status_name
+FROM `order_form`
+INNER JOIN order_form_status ON order_form_status.id = order_form.f_order_form_status_id
+WHERE order_form.f_user_id = 8 [ RunTime:0.1082s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.1079s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.1064s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '63c4d08cde750aa3e02f703a8038069a'  [ RunTime:0.1018s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+goods.img AS img,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE area_goods_price.id = 184 [ RunTime:0.1086s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '7ebd751940d5ac74ae227cacfdbda630'  [ RunTime:0.1084s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+goods.img AS img,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE area_goods_price.id = 184 [ RunTime:0.1078s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined index: goods D:\ide\wamp\www\Application\Runtime\Cache\Home\bc944fcd82eb773a1ca8a43de15789e6.php 第 489 行.
+NOTIC: [8] Undefined index: goods D:\ide\wamp\www\Application\Runtime\Cache\Home\bc944fcd82eb773a1ca8a43de15789e6.php 第 489 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2016-05-22T17:39:43+08:00 ] 127.0.0.1 /index.php/home/user/ajaxdelorderform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1211s ]
+SQL: DELETE FROM `order_form` WHERE `no` = '63c4d08cde750aa3e02f703a8038069a' [ RunTime:0.1242s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.1247s ]
+SQL: DELETE FROM `order_goods` WHERE `f_order_form_no` = '63c4d08cde750aa3e02f703a8038069a' [ RunTime:0.1245s ]
+
+[ 2016-05-22T17:39:45+08:00 ] 127.0.0.1 /index.php/home/user/myorderform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1443s ]
+SQL: SELECT
+order_form.id,
+order_form.f_user_id,
+order_form.create_time,
+order_form.refund_time,
+order_form.`no`,
+order_form.price,
+order_form.is_need_invoice,
+order_form.f_order_form_status_id,
+order_form_status.`name` AS order_form_status_name
+FROM `order_form`
+INNER JOIN order_form_status ON order_form_status.id = order_form.f_order_form_status_id
+WHERE order_form.f_user_id = 8 [ RunTime:0.1423s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.1417s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.1441s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '7ebd751940d5ac74ae227cacfdbda630'  [ RunTime:0.1353s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+goods.img AS img,
+area_goods_price.price AS price,
+area_goods_price.inventory AS inventory,
+area_goods_price.sale_price AS sale_price,
+area_goods_price.sale_inventory AS sale_inventory,
+area_goods_price.sale_time AS sale_time
+FROM
+goods
+INNER JOIN area_goods_price ON area_goods_price.id = goods.id
+WHERE area_goods_price.id = 184 [ RunTime:0.1428s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+NOTIC: [8] Undefined index: goods D:\ide\wamp\www\Application\Runtime\Cache\Home\bc944fcd82eb773a1ca8a43de15789e6.php 第 489 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059078s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001054s ]
+
+[ 2016-05-22T17:39:48+08:00 ] 127.0.0.1 /index.php/home/user/ajaxdelorderform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1099s ]
+SQL: DELETE FROM `order_form` WHERE `no` = '7ebd751940d5ac74ae227cacfdbda630' [ RunTime:0.1073s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.1051s ]
+SQL: DELETE FROM `order_goods` WHERE `f_order_form_no` = '7ebd751940d5ac74ae227cacfdbda630' [ RunTime:0.1011s ]
+
+[ 2016-05-22T17:39:50+08:00 ] 127.0.0.1 /index.php/home/user/myorderform
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.1183s ]
+SQL: SELECT
+order_form.id,
+order_form.f_user_id,
+order_form.create_time,
+order_form.refund_time,
+order_form.`no`,
+order_form.price,
+order_form.is_need_invoice,
+order_form.f_order_form_status_id,
+order_form_status.`name` AS order_form_status_name
+FROM `order_form`
+INNER JOIN order_form_status ON order_form_status.id = order_form.f_order_form_status_id
+WHERE order_form.f_user_id = 8 [ RunTime:0.1217s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.1225s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.1208s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000824s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2016-05-22T17:55:30+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.1188s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.1194s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8] Undefined index: user D:\ide\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 269 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045246s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000885s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+

@@ -1,0 +1,65 @@
+[ 2016-06-03T02:53:29+08:00 ] 101.226.103.59 /wechat.php/home/index/response?signature=2da513c0f18c24edc41125dd26087f3ac5178796&timestamp=1464893608&nonce=70642068
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8] Undefined index: sendTemplateLog /data/home/qxu1192070148/htdocs/Wechat/Home/Controller/IndexController.class.php 第 35 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2016-06-03T10:47:33+08:00 ] 127.0.0.1 /wechat.php/home/index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+NOTIC: [8] Undefined index: access_token E:\wamp\www\a4php\func\wechat\wechat.php 第 435 行.
+
+[ 2016-06-03T10:48:03+08:00 ] 127.0.0.1 /wechat.php/home/index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+NOTIC: [8] Undefined index: access_token E:\wamp\www\a4php\func\wechat\wechat.php 第 435 行.
+
+[ 2016-06-03T10:48:36+08:00 ] 127.0.0.1 /wechat.php/home/index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+NOTIC: [8] Undefined index: access_token E:\wamp\www\a4php\func\wechat\wechat.php 第 436 行.
+
+[ 2016-06-03T10:55:07+08:00 ] 127.0.0.1 /wechat.php/home/index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+NOTIC: [8] Undefined index: access_token E:\wamp\www\a4php\func\wechat\wechat.php 第 435 行.
+
+[ 2016-06-03T10:55:41+08:00 ] 127.0.0.1 /wechat.php/home/index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001196s ]
+
+[ 2016-06-03T10:56:04+08:00 ] 127.0.0.1 /wechat.php/home/index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+NOTIC: [8] Undefined index: access_token E:\wamp\www\a4php\func\wechat\wechat.php 第 436 行.
+

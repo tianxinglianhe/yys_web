@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--头部引入bootstrap-->
+	<include file="./Application/Common/Public/layout/head.html"/>
+
+	<title>宜优速</title>
+</head>
+<body>
+<!--引入导航条-->
+<include file="./Application/Common/Public/layout/nav.html"/>
+
+<!--顶端广告-->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<a href="#">
+				<img src="{:W_ROOT_IMG}top_banner.png" alt="宜优速欢迎您"/>
+			</a>
+		</div>
+	</div>
+</div>
+
+<!--二级导航-->
+<include file="./Application/Common/Public/layout/nav2.html"/>
+
+<!--主体内容-->
+<!--your codes ...-->
+<div class="container">
+	<div class="row">
+		<form id="formJoinCart">
+			<input type="hidden" name="id" value="{$goodsDetailInfo['id']}">
+			<div class="col-md-5">
+				<img src="{:W_PUBLIC_GOODS_IMG}{$goodsDetailInfo['id']}/{$goodsDetailInfo['img']}" alt="" width="100%">
+			</div>
+			<div class="col-md-7">
+				<div class="row">
+					<h3 class="text-muted">
+						{$goodsDetailInfo['name']}
+						<br>
+						<small class="text-danger">{$goodsDetailInfo['explain']}</small>
+					</h3>
+				</div>
+				<div class="row well">
+					<div class="col-md-8">
+						<h4>价格：￥{$goodsDetailInfo['price']}</h4>
+						<h4>
+							<del>价格：￥{$goodsDetailInfo['price']}</del>
+						</h4>
+						<h3 class="text-danger">特价：￥{$goodsDetailInfo['sale_price']}</h3>
+					</div>
+					<div class="col-md-4">
+						<a href="#">联系客服</a>
+					</div>
+				</div>
+				<div class="row">
+					<h5 class="text-muted">供货地区：{$_SESSION['sys']['userIpInfo']['city']}</h5>
+					<hr>
+					<dl class="dl-horizontal">
+						<dt>选择规格：</dt>
+						<php>foreach($normsInfo as $item):</php>
+						<dd>
+							<input type="radio" name="f_norms_id" value="{$item['id']}" id="radFNormsId{$item['id']}">
+							<label for="radFNormsId{$item['id']}">{$item['name']}</label>
+						</dd>
+						<php>endforeach;</php>
+					</dl>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">数量</span>
+							<input class="form-control" type="number" min="1" value="1" placeholder="金额" aria-describedby="basic-addon1" name="number"/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<a class="btn btn-warning form-control" href="#" id="btnJoinCart">加入购物车</a>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!--主体内容<FINISH>-->
+
+<!--footer引入-->
+<include file="./Application/Common/Public/layout/footer.html"/>
+
+<!--javascript-->
+<script language="javascript" type="text/javascript" charset="utf-8">
+	$('#btnJoinCart').on('click', null, null, function () {
+		$.ajax({
+			url: '{:U("home/goods/ajaxJoinCart")}',
+			type: 'post',
+			data: $('#formJoinCart').serialize(),
+			success: function (ret) {
+				if (ret == 1) {
+					showSuccessModal('添加到购物车', '添加成功');
+				} else {
+					showFailModal('添加到购物车', ret);
+				}
+			}
+		});
+		return false;
+	});
+</script>
+</body>
+</html>

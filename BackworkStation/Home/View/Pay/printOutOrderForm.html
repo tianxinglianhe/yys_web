@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--引入head-->
+	<include file="./BackworkStation/Common/Public/layout/head.html"/>
+	<title>打印订单 - 后台 - 宜优速</title>
+	<style>
+		*{
+			font-size: 9px;
+		}
+		h4 strong{
+			font-size: 100%;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<!--头部表格-->
+			<table style="width: 100%; margin-top: -5px;" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img src="{:W_PUBLIC_COMPANY}yiyousu_logo.png" width="150px"></td>
+					<td class="text-center" colspan="2">
+						<h4>
+							<strong>宜优速商城（北京）销售订单</strong>
+							<br>
+							<small style="color: black;">全国订货热线：400-068-7870</small>
+						</h4>
+						<span>订单号：{$ofInfo['no']}</span>
+					</td>
+					<td align="right"><img src="{:W_PUBLIC_COMPANY}public_qr.jpg" width="100px"></td>
+
+				</tr>
+				<tr>
+					<td colspan="4">
+						客户名称：{$ofInfo['username']}&nbsp;&nbsp;&nbsp;&nbsp;
+						下单时间：{:a4getDatetime($ofInfo['create_time'],'datetime');}&nbsp;&nbsp;&nbsp;&nbsp;
+						打印：{:a4getNow('datetime');}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						地址：{$ofInfo['take_over_province']}{$ofInfo['take_over_city']}{$ofInfo['take_over_town']}{$ofInfo['take_over_ex']}&nbsp;&nbsp;&nbsp;&nbsp;
+						电话：{$ofInfo['tel_no']}
+					</td>
+				</tr>
+			</table>
+			<!--中部表格-->
+			<table style="width: 100%;" border="1px dashed black;">
+				<tr>
+					<td>序</td>
+					<td>商品名称</td>
+					<td>规格</td>
+					<td>单位</td>
+					<td>件数</td>
+					<td>零头</td>
+					<td>数量</td>
+					<td>单价</td>
+					<td>箱价</td>
+					<td>金额</td>
+					<td>备注</td>
+				</tr>
+				<php>foreach($ogInfo as $key=>$value):</php>
+				<tr>
+					<td>{$key+1}</td>
+					<td>{$value['name']}</td>
+					<td>{$value['norms']}</td>
+					<td>{$value['unit']}</td>
+					<td>{$value['number']}</td>
+					<td></td>
+					<td>{$value['number']}</td>
+					<td>{$value['once_price']}</td>
+					<td>{$value['once_price']}</td>
+					<td>{$value['once_price']}</td>
+					<td></td>
+				</tr>
+				<php>endforeach;</php>
+				<!--以下是测试数据-->
+				<!--<php>for($i=0;$i<8;$i++):</php>-->
+				<!--<tr style="font-size: 10px;">-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+					<!--<td>测试</td>-->
+				<!--</tr>-->
+				<!--<php>endfor;</php>-->
+				<tr>
+					<td>总价</td>
+					<td class="text-center" colspan="3">{$overCny}</td>
+					<td>{$overNum}</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{$overPrice}</td>
+					<td></td>
+				</tr>
+			</table>
+			<p>对公账号：{:C('company_bank_public_no')}&nbsp;&nbsp;&nbsp;&nbsp;公司名称：{:C('company_name')}<br/>
+			招商账号：{:C('company_zhaoshang_bank_no')}&nbsp;&nbsp;&nbsp;&nbsp;开户行：{:C('company_zhaoshang_bank_name')}&nbsp;&nbsp;&nbsp;&nbsp;户名：{:C('company_zhaoshang_bank_owner_name')}<br/>
+			工行账号：{:C('company_zhaoshang_bank_owner_name')}&nbsp;&nbsp;&nbsp;&nbsp;开户行：{:C('company_gong_bank_no')}&nbsp;&nbsp;&nbsp;&nbsp;户名：{:C('company_gong_bank_owner_name')}<br/>
+			网络采购平台：{:C('company_online_market_url')}&nbsp;&nbsp;&nbsp;&nbsp;售后监督：{:C('company_after_sale_tel_no')}&nbsp;&nbsp;&nbsp;&nbsp;质量监督：{:C('company_quality_tel_no')}<br/>
+			地址电话：{:C('company_addr')}<br/>
+			{:C('remark')}<br/>
+
+				制单人：{:C('name')}&nbsp;&nbsp;&nbsp;&nbsp;
+				区域专员：{:C('area_principal')}&nbsp;&nbsp;&nbsp;&nbsp;
+				出库：{:C('out_storeroom')}&nbsp;&nbsp;&nbsp;&nbsp;
+				送货：{:C('driver')}&nbsp;&nbsp;&nbsp;&nbsp;
+				收货人：{:C('consignee')}&nbsp;&nbsp;&nbsp;&nbsp;
+			</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
