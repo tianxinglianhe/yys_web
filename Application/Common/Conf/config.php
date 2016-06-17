@@ -2,22 +2,22 @@
 return array(
 	#'配置项'=>'配置值'
 	#本地数据库设置
-	'DB_TYPE' => 'mysql', #数据库类型
-	'DB_HOST' => 'localhost', #服务器地址
-	'DB_NAME' => 'yiyousu', #数据库名
-	'DB_USER' => 'root', #用户名
-	'DB_PWD' => '', #密码
-	'DB_PORT' => '3306', #端口
-	'DB_PREFIX' => '', #数据库表前缀
-
-	#ECS数据库设置
 //	'DB_TYPE' => 'mysql', #数据库类型
-//	'DB_HOST' => 'rm-2zes5472l097ri5fc.mysql.rds.aliyuncs.com', #服务器地址
+//	'DB_HOST' => 'localhost', #服务器地址
 //	'DB_NAME' => 'yiyousu', #数据库名
-//	'DB_USER' => 'yys_web', #用户名
-//	'DB_PWD' => 'YIYOUSUmysql1123', #密码
+//	'DB_USER' => 'root', #用户名
+//	'DB_PWD' => '', #密码
 //	'DB_PORT' => '3306', #端口
 //	'DB_PREFIX' => '', #数据库表前缀
+
+	#ECS数据库设置
+	'DB_TYPE' => 'mysql', #数据库类型
+	'DB_HOST' => 'rm-2zes5472l097ri5fc.mysql.rds.aliyuncs.com', #服务器地址
+	'DB_NAME' => 'yiyousu', #数据库名
+	'DB_USER' => 'yys_web', #用户名
+	'DB_PWD' => 'YIYOUSUmysql1123', #密码
+	'DB_PORT' => '3306', #端口
+	'DB_PREFIX' => '', #数据库表前缀
 
 	#虚拟主机
 //	'DB_TYPE' => 'mysql', #数据库类型
