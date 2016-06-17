@@ -184,7 +184,6 @@ class PayController extends Controller
 	 */
 	public function bcWebHook()
 	{
-		if (IS_POST) {
 			/**
 			 * http类型为 Application/json, 非XMLHttpRequest的application/x-www-form-urlencoded, $_POST方式是不能获取到的
 			 */
@@ -192,6 +191,7 @@ class PayController extends Controller
 			$appSecret = C('bcAppSecret');
 			$jsonStr = file_get_contents("php://input");
 			$msg = json_decode($jsonStr);
+			a4saveFile2Json('./wechatPayed.json',json_encode($msg));
 			// webhook字段文档: https://beecloud.cn/doc/?index=webhook
 			//第一步:验证签名
 			$sign = md5($appId . $appSecret . $msg->timestamp);
@@ -227,6 +227,7 @@ class PayController extends Controller
 				switch ($msg->channel_type) {
 					case "WX":
 						echo 'success';
+						a4saveFile2Json('./wechatPayed.json',json_encode($msg));
 						/**
 						 * 处理业务
 						 */
@@ -273,6 +274,6 @@ class PayController extends Controller
 //			print_r($msg);
 //处理消息成功,不需要持续通知此消息返回success
 			echo 'success';
-		}
+
 	}
 }

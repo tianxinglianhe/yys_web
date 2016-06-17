@@ -613,7 +613,9 @@
 			type: 'post',
 			data: $('#formScanPay').serialize(),
 			success: function (RET) {
-				showSuccessModal('微信支付', RET);
+				showSuccessModal('微信支付', RET,function(){
+					location.href='<?php echo U("home/user/myOrderForm");?>';
+				});
 			}
 		});
 	};
