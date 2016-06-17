@@ -139,8 +139,8 @@ class PayController extends Controller
 			$at = $wx->getAccessToken();
 			$conf = a4getConf();
 			$data['touser'] = 'ojX0NwOqkO4sifGfEPh8f0MrVpjE';
-			$data['template_id'] = 'cipzDegae3XiU5CXg_GhMVzdEynO9fiU32i-btmT9PU';
-			$data['url'] = 'http://www.phphelper.cn/bs.php/home/pay/detail.html?no='.$_GET['no'];
+			$data['template_id'] = $conf['wechat']['templateMsg']['新订单'];
+			$data['url'] = 'http://www.phphelper.cn/bs.php/home/pay/detail.html?no=' . $_GET['no'];
 			$data['topcolor'] = '#0000FF';
 			$data['data'] = array(
 				'time' => array('value' => a4getNow('datetime'), 'color' => '#404040'),
@@ -227,7 +227,6 @@ class PayController extends Controller
 				switch ($msg->channel_type) {
 					case "WX":
 						echo 'success';
-						exit;
 						/**
 						 * 处理业务
 						 */
@@ -243,8 +242,8 @@ class PayController extends Controller
 						$at = $wx->getAccessToken();
 						$conf = a4getConf();
 						$data['touser'] = 'ojX0NwOqkO4sifGfEPh8f0MrVpjE';
-						$data['template_id'] = 'cipzDegae3XiU5CXg_GhMVzdEynO9fiU32i-btmT9PU';
-						$data['url'] = 'http://www.phphelper.cn/bs.php/home/pay/detail.html?no='.$msg->transaction_id;
+						$data['template_id'] = $conf['wechat']['templateMsg']['新订单'];
+						$data['url'] = 'http://www.phphelper.cn/bs.php/home/pay/detail.html?no=' . $msg->transaction_id;
 						$data['topcolor'] = '#0000FF';
 						$data['data'] = array(
 							'time' => array('value' => a4getNow('datetime'), 'color' => '#404040'),
@@ -252,7 +251,6 @@ class PayController extends Controller
 							'no' => array('value' => $msg->transaction_id, 'color' => '#990099')
 						);
 						$res = a4post($conf['wechat']['getTemplateMsgIdUrl'] . $at, json_encode($data));
-						a4saveFile2Json('./1.json',$res);
 						break;
 					case "ALI":
 						break;
