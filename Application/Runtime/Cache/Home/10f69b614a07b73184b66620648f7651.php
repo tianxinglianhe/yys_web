@@ -501,13 +501,14 @@
 					<label for="chkIsNeedInVoice">需要发票</label>
 					<div>
 						<a href="javascript:;" id="btnWechatScanPay">
-							<img src="<?php echo W_PUBLIC_IMG;?>btn_wechat_pay.png" alt="微信支付" width="50px">
+							<?php $u = new \Home\Controller\UCloud('yys-img'); $wechatImg = $u->getPrivateImg('s_5760ae46143ce.png'); $alipayImg = $u->getPrivateImg('s_5760ae8a36794.jpg'); ?>
+							<img src="http://<?php echo ($wechatImg); ?>" alt="微信支付" width="50px">
 							微信支付
 						</a>
 					</div>
 					<div>
 						<a href="javascript:;" id="btnAliScanPay">
-							<img src="<?php echo W_PUBLIC_IMG;?>btn_ali_pay.jpg" alt="支付宝支付" width="45px">
+							<img src="http://<?php echo ($alipayImg); ?>" alt="支付宝支付" width="45px">
 							支付宝支付
 						</a>
 					</div>

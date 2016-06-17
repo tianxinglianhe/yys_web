@@ -29,6 +29,7 @@ require_once('./PlugIn/BeeCloud/loader.php');
 require_once('./PlugIn/phpqrcode/phpqrcode.php');
 #引入ucloud
 require_once('./PlugIn/ucloud/proxy.php');
+require_once('./PlugIn/ucloud/ucloud.php');
 ###############引入插件<FINISH>
 
 #引入a4php

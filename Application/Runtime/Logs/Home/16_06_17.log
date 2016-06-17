@@ -84,3 +84,432 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003195s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003366s ]
 
+[ 2016-06-17T12:50:16+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001867s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0192s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000286s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000463s ]
+NOTIC: [8] Undefined index: user C:\app\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 235 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.095855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.096081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001952s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002116s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003339s ]
+
+[ 2016-06-17T12:50:23+08:00 ] 127.0.0.1 /index.php/home/user/ajaxSignIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004315s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0166s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0693s ]
+SQL: SELECT * FROM `user` WHERE `signin_name` = 'test' LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0174s ]
+SQL: UPDATE `user` SET `last_time`='1466139023' WHERE `id` = 8 [ RunTime:0.1300s ]
+
+[ 2016-06-17T12:50:25+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003745s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0180s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000673s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000869s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002643s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002818s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002926s ]
+
+[ 2016-06-17T12:50:30+08:00 ] 127.0.0.1 /index.php/home/user/myShoppingCart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002685s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0421s ]
+SQL: SELECT
+goods.id AS goods_id,
+goods.`name`,
+price_1.price AS price,
+price_1.sale_price AS sale_price,
+price_1.sale_start AS sale_start,
+price_1.sale_end AS sale_end,
+norms.id AS norms_id,
+norms.`name` AS norms_name,
+cart.number AS number,
+cart.id AS cart_id
+FROM cart
+LEFT JOIN goods ON goods.id = cart.f_goods_id
+LEFT JOIN price_1 ON price_1.id = cart.f_goods_id
+LEFT JOIN norms ON norms.id = cart.f_norms_id
+WHERE cart.f_user_id = 8 [ RunTime:0.1053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000290s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000579s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001800s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001969s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002918s ]
+
+[ 2016-06-17T12:50:35+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005308s ]
+NOTIC: [8] Undefined index: cityIp C:\app\wamp\www\a4php\func\func.php 第 1327 行.
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0208s ]
+SQL: SELECT * FROM `cart` WHERE ( id IN (1,3) )  [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0167s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0345s ]
+SQL: SELECT `price` FROM `price_1`
+		WHERE id = 184 [ RunTime:0.0006s ]
+SQL: INSERT INTO `order_goods` (`f_order_form_no`,`f_goods_id`,`f_norms_id`,`number`) VALUES ('3758b3bfa05e6aceae4b1f89e4cb2b08','184','1','1') [ RunTime:0.1275s ]
+SQL: SELECT `price` FROM `price_1`
+		WHERE id = 184 [ RunTime:0.0015s ]
+SQL: INSERT INTO `order_goods` (`f_order_form_no`,`f_goods_id`,`f_norms_id`,`number`) VALUES ('3758b3bfa05e6aceae4b1f89e4cb2b08','184','1','3') [ RunTime:0.0452s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0383s ]
+SQL: INSERT INTO `order_form` (`f_user_id`,`create_time`,`no`,`price`,`f_order_form_status_id`) VALUES ('8','1466139035','3758b3bfa05e6aceae4b1f89e4cb2b08','121','3') [ RunTime:0.0596s ]
+SQL: DELETE FROM `cart` WHERE ( id IN (1,3) ) [ RunTime:0.0736s ]
+
+[ 2016-06-17T12:50:35+08:00 ] 127.0.0.1 /index.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002439s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0168s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '3758b3bfa05e6aceae4b1f89e4cb2b08'  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0175s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0164s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000336s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000526s ]
+
+[ 2016-06-17T12:51:03+08:00 ] 127.0.0.1 /index.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002624s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0173s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '3758b3bfa05e6aceae4b1f89e4cb2b08'  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0440s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0017s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000310s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-06-17T12:53:19+08:00 ] 127.0.0.1 /index.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004464s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0185s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '3758b3bfa05e6aceae4b1f89e4cb2b08'  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0181s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0008s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000422s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000649s ]
+
+[ 2016-06-17T12:53:55+08:00 ] 127.0.0.1 /index.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004626s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = '3758b3bfa05e6aceae4b1f89e4cb2b08'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0484s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0010s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000310s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-06-17T12:54:01+08:00 ] 127.0.0.1 /index.php/home/user/ajaxCreateOrderForm2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002752s ]
+NOTIC: [8] Undefined index: cityIp C:\app\wamp\www\a4php\func\func.php 第 1327 行.
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0179s ]
+SQL: SELECT * FROM `cart` WHERE ( id IN (2,3) )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0174s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0168s ]
+SQL: SELECT `price` FROM `price_1`
+		WHERE id = 184 [ RunTime:0.0008s ]
+SQL: INSERT INTO `order_goods` (`f_order_form_no`,`f_goods_id`,`f_norms_id`,`number`) VALUES ('c536194d7959813a8d1d4006f2005082','184','2','2') [ RunTime:0.1147s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0174s ]
+SQL: INSERT INTO `order_form` (`f_user_id`,`create_time`,`no`,`price`,`f_order_form_status_id`) VALUES ('8','1466139241','c536194d7959813a8d1d4006f2005082','60.5','3') [ RunTime:0.0602s ]
+SQL: DELETE FROM `cart` WHERE ( id IN (2,3) ) [ RunTime:0.0488s ]
+
+[ 2016-06-17T12:54:02+08:00 ] 127.0.0.1 /index.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002441s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0465s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = 'c536194d7959813a8d1d4006f2005082'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0163s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000309s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-06-17T12:55:33+08:00 ] 127.0.0.1 /index.php/home/pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002572s ]
+SQL: SHOW COLUMNS FROM `order_goods` [ RunTime:0.0192s ]
+SQL: SELECT * FROM `order_goods` WHERE `f_order_form_no` = 'c536194d7959813a8d1d4006f2005082'  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0172s ]
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time
+FROM
+goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+WHERE price_1.id = 184 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000491s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000792s ]
+NOTIC: [8] Undefined index: Content-MD5 C:\app\wamp\www\PlugIn\ucloud\http.php 第 67 行.
+NOTIC: [8] Undefined index: Content-Type C:\app\wamp\www\PlugIn\ucloud\http.php 第 67 行.
+NOTIC: [8] Undefined index: Expires C:\app\wamp\www\PlugIn\ucloud\http.php 第 67 行.
+NOTIC: [8] Undefined index: Content-MD5 C:\app\wamp\www\PlugIn\ucloud\http.php 第 67 行.
+NOTIC: [8] Undefined index: Content-Type C:\app\wamp\www\PlugIn\ucloud\http.php 第 67 行.
+NOTIC: [8] Undefined index: Expires C:\app\wamp\www\PlugIn\ucloud\http.php 第 67 行.
+NOTIC: [8] Undefined index: explain C:\app\wamp\www\Application\Runtime\Cache\Home\10f69b614a07b73184b66620648f7651.php 第 534 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061726s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061927s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001915s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002075s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002226s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002394s ]
+
+[ 2016-06-17T12:55:43+08:00 ] 127.0.0.1 /index.php/home/pay/wechatScanPay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004032s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0182s ]
+NOTIC: [8] Undefined index: is_need_invoice C:\app\wamp\www\Application\Home\Controller\PayController.class.php 第 44 行.
+SQL: UPDATE `order_form` SET `f_pay_type_id`='2' WHERE `no` = 'c536194d7959813a8d1d4006f2005082' [ RunTime:0.1255s ]
+
+[ 2016-06-17T12:55:43+08:00 ] 127.0.0.1 /index.php/home/pay/makeQrCode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002608s ]
+
+[ 2016-06-17T12:58:54+08:00 ] 127.0.0.1 /index.php/home/pay/aliScanPay.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002942s ]
+SQL: SHOW COLUMNS FROM `order_form` [ RunTime:0.0249s ]
+NOTIC: [8] Undefined index: is_need_invoice C:\app\wamp\www\Application\Home\Controller\PayController.class.php 第 86 行.
+NOTIC: [8] Undefined index: no C:\app\wamp\www\Application\Home\Controller\PayController.class.php 第 91 行.
+SQL: UPDATE `order_form` SET `f_pay_type_id`='2' WHERE `no` = '' [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: no C:\app\wamp\www\Application\Home\Controller\PayController.class.php 第 99 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000395s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002821s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003019s ]
+
