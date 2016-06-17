@@ -1,0 +1,86 @@
+[ 2016-06-17T08:37:31+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000109s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015327s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.1193s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000455s ]
+NOTIC: [8] Undefined index: user C:\app\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 235 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.160846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.161060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014957s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008749s ]
+
+[ 2016-06-17T08:37:36+08:00 ] 127.0.0.1 /index.php/home/hotelWineshop/paper.html?goodsTypeName=%E9%85%92%E5%BA%97%E7%94%A8%E7%BA%B8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002790s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0241s ]
+SQL: SELECT COUNT(id) AS c FROM `goods` WHERE `f_goods_type_id` = (SELECT `id` FROM `goods_type` WHERE `name` = '酒店用纸'); [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: pageNow C:\app\wamp\www\Application\Home\Model\GoodsModel.class.php 第 33 行.
+SQL: SELECT
+goods.id AS id,
+goods.`name` AS name,
+price_1.price AS price,
+inventory_1.number AS inventory,
+price_1.sale_price AS sale_price,
+inventory_1.sale_number AS sale_inventory,
+price_1.sale_start AS sale_time,
+price_1.sale_end AS sale_time,
+goods_img.`name` AS img
+FROM goods
+INNER JOIN price_1 ON price_1.id = goods.id
+LEFT JOIN inventory_1 ON inventory_1.id = goods.id
+LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
+WHERE goods.f_goods_type_id = (SELECT id FROM goods_type WHERE `name` = '酒店用纸')
+LIMIT 0,8; [ RunTime:0.0038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000284s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8] Undefined index: user C:\app\wamp\www\Application\Runtime\Cache\Home\3aa7ea44b1b9c117d807f3d1e55c1f10.php 第 236 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003207s ]
+
+[ 2016-06-17T08:37:42+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011054s ]
+SQL: SHOW COLUMNS FROM `area` [ RunTime:0.0244s ]
+SQL: SELECT `id` FROM `area` WHERE `name` = '北京' LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000265s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000437s ]
+NOTIC: [8] Undefined index: user C:\app\wamp\www\Application\Runtime\Cache\Home\56d70cf0f710f5f596f222a4dbf456c5.php 第 235 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003366s ]
+

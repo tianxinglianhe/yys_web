@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2016-06-16 17:58:21
+Date: 2016-06-17 09:29:11
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,7 +29,7 @@ CREATE TABLE `area` (
 -- Records of area
 -- ----------------------------
 INSERT INTO `area` VALUES ('0', '全国');
-INSERT INTO `area` VALUES ('110', '北京');
+INSERT INTO `area` VALUES ('1', '北京');
 
 -- ----------------------------
 -- Table structure for cart
@@ -101,19 +101,21 @@ CREATE TABLE `employee` (
   `leave_time` int(11) NOT NULL DEFAULT '0' COMMENT '离职时间',
   `f_employee_type_id` int(11) NOT NULL DEFAULT '3' COMMENT '员工类型',
   `f_employee_status_id` int(11) NOT NULL DEFAULT '0' COMMENT '员工状态',
+  `is_new_order_form_notice` enum('F','T') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'F' COMMENT '新订单通知通知此员工',
+  `is_sign_for_notice` enum('F','T') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'F' COMMENT '用户签收是否通知该员工',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of employee
 -- ----------------------------
-INSERT INTO `employee` VALUES ('1', 'admin', 'ed2b1f468c5f915f3f1cf75d7068baae', '超级管理员', '', '', '', 'ojX0NwOqkO4sifGfEPh8f0MrVpjE', '', '0', 'M', '1463965682', '0', '1', '1');
-INSERT INTO `employee` VALUES ('3', 'qinru', 'ed2b1f468c5f915f3f1cf75d7068baae', '秦茹', '13811093990', '', '', 'ojX0NwP9y_Lj2bYhru8lJF_QdmO0', '', '0', 'F', '1472056380', '0', '3', '1');
-INSERT INTO `employee` VALUES ('4', 'linkun', 'ed2b1f468c5f915f3f1cf75d7068baae', '林坤', '15501031831', '', '', '', '', '0', 'M', '1472057618', '0', '3', '1');
-INSERT INTO `employee` VALUES ('5', 'caoyuan', 'ed2b1f468c5f915f3f1cf75d7068baae', '曹园', '18519215354', '', '', '', '', '0', 'M', '1472057789', '0', '3', '1');
-INSERT INTO `employee` VALUES ('6', 'luzhihao', 'ed2b1f468c5f915f3f1cf75d7068baae', '卢志浩', '13811188441', '', '', '', '', '0', 'M', '1472057837', '0', '1', '1');
-INSERT INTO `employee` VALUES ('7', 'limei', 'ed2b1f468c5f915f3f1cf75d7068baae', '李梅', '18510780526', '', '', '', '', '0', 'F', '1472057883', '0', '1', '1');
-INSERT INTO `employee` VALUES ('8', 'yujizhou', 'ed2b1f468c5f915f3f1cf75d7068baae', '余济舟', '13522178057', '', '', 'ojX0NwOqkO4sifGfEPh8f0MrVpjE', '', '0', 'M', '1472057920', '0', '3', '1');
+INSERT INTO `employee` VALUES ('1', 'admin', 'ed2b1f468c5f915f3f1cf75d7068baae', '超级管理员', '', '', '', 'ojX0NwOqkO4sifGfEPh8f0MrVpjE', '', '0', 'M', '1463965682', '0', '1', '1', 'F', 'F');
+INSERT INTO `employee` VALUES ('3', 'qinru', 'ed2b1f468c5f915f3f1cf75d7068baae', '秦茹', '13811093990', '', '', 'ojX0NwP9y_Lj2bYhru8lJF_QdmO0', '', '0', 'F', '1472056380', '0', '3', '1', 'F', 'F');
+INSERT INTO `employee` VALUES ('4', 'linkun', 'ed2b1f468c5f915f3f1cf75d7068baae', '林坤', '15501031831', '', '', '', '', '0', 'M', '1472057618', '0', '3', '1', 'F', 'F');
+INSERT INTO `employee` VALUES ('5', 'caoyuan', 'ed2b1f468c5f915f3f1cf75d7068baae', '曹园', '18519215354', '', '', '', '', '0', 'M', '1472057789', '0', '3', '1', 'F', 'F');
+INSERT INTO `employee` VALUES ('6', 'luzhihao', 'ed2b1f468c5f915f3f1cf75d7068baae', '卢志浩', '13811188441', '', '', '', '', '0', 'M', '1472057837', '0', '1', '1', 'F', 'F');
+INSERT INTO `employee` VALUES ('7', 'limei', 'ed2b1f468c5f915f3f1cf75d7068baae', '李梅', '18510780526', '', '', '', '', '0', 'F', '1472057883', '0', '1', '1', 'F', 'F');
+INSERT INTO `employee` VALUES ('8', 'yujizhou', 'ed2b1f468c5f915f3f1cf75d7068baae', '余济舟', '13522178057', '', '', 'ojX0NwOqkO4sifGfEPh8f0MrVpjE', '', '0', 'M', '1472057920', '0', '3', '1', 'F', 'F');
 
 -- ----------------------------
 -- Table structure for employee_status
@@ -423,10 +425,10 @@ INSERT INTO `goods_type` VALUES ('21', '洗浴布草', '洗浴布草', '3');
 INSERT INTO `goods_type` VALUES ('22', '居家用品', '居家用品', '4');
 
 -- ----------------------------
--- Table structure for inventory_110
+-- Table structure for inventory_1
 -- ----------------------------
-DROP TABLE IF EXISTS `inventory_110`;
-CREATE TABLE `inventory_110` (
+DROP TABLE IF EXISTS `inventory_1`;
+CREATE TABLE `inventory_1` (
   `id` int(11) NOT NULL DEFAULT '0' COMMENT '对应商品编号',
   `number` int(11) NOT NULL DEFAULT '0' COMMENT '当地库存',
   `sale_number` int(11) NOT NULL DEFAULT '0' COMMENT '促销库存',
@@ -434,9 +436,9 @@ CREATE TABLE `inventory_110` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of inventory_110
+-- Records of inventory_1
 -- ----------------------------
-INSERT INTO `inventory_110` VALUES ('384', '101', '51');
+INSERT INTO `inventory_1` VALUES ('384', '101', '51');
 
 -- ----------------------------
 -- Table structure for norms
@@ -544,10 +546,10 @@ INSERT INTO `pay_type` VALUES ('2', '微信');
 INSERT INTO `pay_type` VALUES ('3', '银联');
 
 -- ----------------------------
--- Table structure for price_110
+-- Table structure for price_1
 -- ----------------------------
-DROP TABLE IF EXISTS `price_110`;
-CREATE TABLE `price_110` (
+DROP TABLE IF EXISTS `price_1`;
+CREATE TABLE `price_1` (
   `id` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '正常价格',
   `sale_price` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '促销价格',
@@ -557,187 +559,187 @@ CREATE TABLE `price_110` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
--- Records of price_110
+-- Records of price_1
 -- ----------------------------
-INSERT INTO `price_110` VALUES ('184', '60.50', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('185', '92.80', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('186', '102.40', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('188', '66.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('189', '88.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('190', '98.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('191', '98.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('192', '390.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('193', '270.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('194', '300.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('195', '450.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('196', '156.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('197', '99.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('198', '720.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('199', '300.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('200', '400.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('201', '510.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('202', '390.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('203', '494.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('204', '18.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('205', '36.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('206', '16.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('207', '38.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('208', '80.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('209', '250.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('210', '550.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('211', '175.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('212', '17.90', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('213', '13.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('214', '280.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('215', '55.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('216', '558.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('217', '119.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('218', '900.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('219', '16.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('220', '42.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('221', '62.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('222', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('223', '58.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('224', '7.50', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('225', '180.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('226', '25.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('227', '998.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('228', '2.50', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('229', '580.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('230', '71.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('231', '430.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('232', '1400.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('233', '22.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('234', '13.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('235', '22.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('236', '1540.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('237', '2.50', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('238', '31.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('239', '945.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('240', '13.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('241', '22.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('242', '4.50', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('243', '360.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('244', '500.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('245', '1060.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('249', '541.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('250', '280.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('251', '1000.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('252', '1480.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('253', '38.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('254', '236.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('255', '45.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('256', '118.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('257', '85.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('258', '98.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('259', '98.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('260', '88.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('261', '66.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('262', '15.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('263', '13.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('264', '180.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('265', '320.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('266', '39.90', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('267', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('268', '20.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('269', '25.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('270', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('271', '28.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('272', '65.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('273', '128.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('274', '139.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('275', '139.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('276', '115.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('277', '100.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('279', '38.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('280', '17.90', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('281', '175.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('282', '550.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('283', '13.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('284', '280.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('285', '55.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('286', '16.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('287', '18.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('288', '25.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('289', '494.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('290', '12.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('291', '9.90', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('292', '15.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('293', '90.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('294', '5.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('295', '30.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('296', '98.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('297', '70.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('298', '11.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('299', '11.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('300', '5.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('301', '36.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('302', '20.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('303', '15.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('304', '5.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('305', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('306', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('307', '68.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('308', '1200.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('309', '240.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('310', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('311', '33.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('312', '36.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('313', '40.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('314', '18.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('315', '860.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('316', '15.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('317', '7.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('318', '1.50', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('319', '2.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('320', '20.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('321', '48.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('322', '30.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('323', '48.60', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('324', '58.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('325', '5.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('326', '5.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('327', '38.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('328', '150.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('329', '2680.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('330', '25.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('331', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('332', '48.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('333', '396.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('334', '23.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('335', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('336', '15.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('337', '38.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('338', '6.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('339', '9.90', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('340', '5.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('341', '16.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('342', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('343', '38.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('344', '15.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('345', '5.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('346', '55.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('347', '25.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('348', '7.50', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('349', '16.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('350', '10.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('351', '14.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('352', '11.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('353', '100.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('354', '70.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('355', '100.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('356', '30.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('357', '119.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('358', '33.50', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('359', '19.90', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('360', '250.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('361', '15.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('362', '15.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('363', '20.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('364', '35.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('383', '1234.00', '0.00', '0', '0');
-INSERT INTO `price_110` VALUES ('384', '123.00', '321.00', '0', '0');
-INSERT INTO `price_110` VALUES ('401', '123.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('184', '60.50', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('185', '92.80', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('186', '102.40', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('188', '66.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('189', '88.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('190', '98.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('191', '98.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('192', '390.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('193', '270.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('194', '300.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('195', '450.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('196', '156.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('197', '99.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('198', '720.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('199', '300.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('200', '400.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('201', '510.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('202', '390.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('203', '494.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('204', '18.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('205', '36.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('206', '16.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('207', '38.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('208', '80.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('209', '250.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('210', '550.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('211', '175.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('212', '17.90', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('213', '13.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('214', '280.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('215', '55.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('216', '558.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('217', '119.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('218', '900.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('219', '16.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('220', '42.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('221', '62.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('222', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('223', '58.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('224', '7.50', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('225', '180.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('226', '25.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('227', '998.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('228', '2.50', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('229', '580.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('230', '71.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('231', '430.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('232', '1400.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('233', '22.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('234', '13.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('235', '22.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('236', '1540.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('237', '2.50', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('238', '31.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('239', '945.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('240', '13.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('241', '22.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('242', '4.50', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('243', '360.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('244', '500.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('245', '1060.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('249', '541.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('250', '280.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('251', '1000.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('252', '1480.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('253', '38.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('254', '236.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('255', '45.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('256', '118.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('257', '85.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('258', '98.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('259', '98.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('260', '88.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('261', '66.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('262', '15.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('263', '13.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('264', '180.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('265', '320.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('266', '39.90', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('267', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('268', '20.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('269', '25.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('270', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('271', '28.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('272', '65.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('273', '128.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('274', '139.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('275', '139.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('276', '115.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('277', '100.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('279', '38.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('280', '17.90', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('281', '175.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('282', '550.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('283', '13.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('284', '280.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('285', '55.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('286', '16.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('287', '18.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('288', '25.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('289', '494.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('290', '12.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('291', '9.90', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('292', '15.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('293', '90.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('294', '5.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('295', '30.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('296', '98.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('297', '70.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('298', '11.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('299', '11.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('300', '5.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('301', '36.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('302', '20.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('303', '15.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('304', '5.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('305', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('306', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('307', '68.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('308', '1200.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('309', '240.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('310', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('311', '33.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('312', '36.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('313', '40.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('314', '18.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('315', '860.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('316', '15.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('317', '7.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('318', '1.50', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('319', '2.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('320', '20.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('321', '48.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('322', '30.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('323', '48.60', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('324', '58.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('325', '5.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('326', '5.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('327', '38.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('328', '150.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('329', '2680.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('330', '25.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('331', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('332', '48.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('333', '396.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('334', '23.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('335', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('336', '15.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('337', '38.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('338', '6.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('339', '9.90', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('340', '5.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('341', '16.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('342', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('343', '38.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('344', '15.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('345', '5.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('346', '55.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('347', '25.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('348', '7.50', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('349', '16.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('350', '10.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('351', '14.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('352', '11.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('353', '100.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('354', '70.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('355', '100.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('356', '30.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('357', '119.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('358', '33.50', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('359', '19.90', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('360', '250.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('361', '15.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('362', '15.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('363', '20.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('364', '35.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('383', '1234.00', '0.00', '0', '0');
+INSERT INTO `price_1` VALUES ('384', '123.00', '321.00', '0', '0');
+INSERT INTO `price_1` VALUES ('401', '123.00', '0.00', '0', '0');
 
 -- ----------------------------
 -- Table structure for user
