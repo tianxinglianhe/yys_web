@@ -100,7 +100,7 @@ class PayController extends Controller
 		//title UTF8编码格式，32个字节内，最长支持16个汉字
 		$data["title"] = '宜优速商品';
 		//渠道类型:ALI_WEB 或 ALI_QRCODE 或 UN_WEB或JD_WAP或JD_WEB时为必填
-		$data["return_url"] = "http://www.phphelper.cn/home/pay/aliQrCodeReturn.html?no=" . $_SESSION['sys']['pay']['orderFormInfo']['no'];
+		$data["return_url"] = "http://yys.phphelper.cn/home/pay/aliQrCodeReturn.html?no=" . $_SESSION['sys']['pay']['orderFormInfo']['no'];
 
 		$data["channel"] = "ALI_QRCODE";
 		$data["qr_pay_mode"] = "0";
@@ -140,7 +140,7 @@ class PayController extends Controller
 			$conf = a4getConf();
 			$data['touser'] = 'ojX0NwOqkO4sifGfEPh8f0MrVpjE';
 			$data['template_id'] = $conf['wechat']['templateMsg']['新订单'];
-			$data['url'] = 'http://www.phphelper.cn/bs.php/home/pay/detail.html?no=' . $_GET['no'];
+			$data['url'] = 'http://yys.phphelper.cn/bs.php/home/pay/detail.html?no=' . $_GET['no'];
 			$data['topcolor'] = '#0000FF';
 			$data['data'] = array(
 				'time' => array('value' => a4getNow('datetime'), 'color' => '#404040'),
