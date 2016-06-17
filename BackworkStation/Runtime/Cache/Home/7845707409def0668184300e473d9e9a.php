@@ -358,12 +358,12 @@
 					<ul class="dropdown-menu">
 						<li>
 							<a href="<?php echo U('home/logistics/newOrderFormNoticeEmployee');?>">
-								<span class="glyphicon glyphicon-list-alt text-primary"> 下单通知人员管理</span>
+								<span class="glyphicon glyphicon-list-alt text-primary"> 新订单单通知人员管理</span>
 							</a>
 						</li>
 						<li>
 							<a href="<?php echo U('home/logistics/signForNoticeEmployee');?>">
-								<span class="glyphicon glyphicon-new-window text-warning"> 出库通知管理</span>
+								<span class="glyphicon glyphicon-new-window text-warning"> 签收通知人员管理</span>
 							</a>
 						</li>
 					</ul>

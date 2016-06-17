@@ -66,53 +66,16 @@
 	 *
 	 * @param TITLE 模态框标题
 	 * @param CONTENT 模态框内容
-	 * @param WAIT 等待刷新的时间 如果等于0则不执行
 	 * @param FUNC 回调函数
 	 */
-	function showSuccessModal(TITLE, CONTENT, WAIT, FUNC) {
+	function showSuccessModal(TITLE, CONTENT, FUNC) {
 		document.getElementById('successModalTitle').innerHTML = TITLE;
 		document.getElementById('successModalContent').innerHTML = CONTENT;
 		document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
 		$('#successModal').modal('show');
-		if (WAIT > 0) {
-			document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + WAIT + ')';
-			WAIT *= 1000;
-			window.setTimeout(
-					function () {
-						FUNC();
-					},
-					WAIT
-			);
-			/**
-			 * @todo 倒计时
-			 *
-			 * @param I 倒计时记步起点(无特殊要求可以不用填写)
-			 */
-			countDown = function (I) {
-				if (isNaN(I)) {
-					I = 1;
-				}
-				if (I > WAIT) {
-					I = 1;
-				}
-				window.setTimeout(
-						function () {
-							document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + (WAIT / 1000 - I) + ')';
-							if((WAIT / 1000 - I)&&(WAIT / 1000 - I)>0){
-								I++;
-								countDown(I);
-							}else{
-								document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
-								window.clearTimeout();
-							}
-						},
-						1000
-				);
-			}
-			countDown();
-
-		}
-
+		$('#successModal').on('hidden.bs.modal', function () {
+			FUNC();
+		})
 	}
 
 	/**
@@ -128,51 +91,16 @@
 	 *
 	 * @param TITLE 模态框标题
 	 * @param CONTENT 模态框内容
-	 * @param WAIT 等待刷新的时间 如果等于0则不刷新 单位:秒
 	 * @param FUNC 回调函数
 	 */
-	function showFailModal(TITLE, CONTENT, WAIT, FUNC) {
+	function showFailModal(TITLE, CONTENT, FUNC) {
 		document.getElementById('failModalTitle').innerHTML = TITLE;
 		document.getElementById('failModalContent').innerHTML = CONTENT;
 		document.getElementById('btnFailModalClose').innerHTML = '关闭';
 		$('#failModal').modal('show');
-		if (WAIT > 0) {
-			document.getElementById('btnFailModalClose').innerHTML = '关闭 (' + WAIT + ')';
-			WAIT *= 1000;
-			window.setTimeout(
-					function () {
-						FUNC();
-					},
-					WAIT
-			);
-			/**
-			 * @todo 倒计时
-			 *
-			 * @param I 倒计时记步起点(无特殊要求可以不用填写)
-			 */
-			countDown = function (I) {
-				if (isNaN(I)) {
-					I = 1;
-				}
-				if (I > WAIT) {
-					I = 1;
-				}
-				window.setTimeout(
-						function () {
-							document.getElementById('btnSuccessModalClose').innerHTML = '关闭(' + (WAIT / 1000 - I) + ')';
-							if((WAIT / 1000 - I)&&(WAIT / 1000 - I)>0){
-								I++;
-								countDown(I);
-							}else{
-								document.getElementById('btnSuccessModalClose').innerHTML = '关闭';
-								window.clearTimeout();
-							}
-						},
-						1000
-				);
-			}
-			countDown();
-		}
+		$('#failModal').on('hidden.bs.modal', function () {
+			FUNC();
+		})
 
 	}
 
@@ -247,7 +175,14 @@
 	}
 
 	/**
-	 * @todo 启动警告询问框
+	 * @todo 关闭普通询问框
+	 */
+	function closeDefaultConfirm() {
+		$('#defaultConfirm').modal('hide');
+	}
+
+	/**
+	 * @todo 启动风险询问框
 	 *
 	 * @param TITLE 等待框标题
 	 * @param CONTENT 等待框内容
@@ -264,6 +199,13 @@
 		document.getElementById('btnWarningConfirmNo').onclick = function () {
 			NO_FUNC();
 		}
+	}
+
+	/**
+	 * @todo 关闭风险询问框
+	 */
+	function closeWarningConfirm() {
+		$('#warningConfirm').modal('hide');
 	}
 </script>
 
@@ -313,45 +255,45 @@
 			<?php endif; ?>
 			<?php if($_SESSION['emp']['employeeInfo']['id']>0): ?>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						权限管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加权限</a></li>
-						<li><a href="#">修改权限</a></li>
-						<li><a href="#">权限对应关系管理</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#"><span class="text-danger">删除权限</span></a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						部门管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加部门</a></li>
-						<li><a href="#">修改部门</a></li>
-						<li><a href="#">部门人员管理</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#"><span class="text-danger">删除部门</span></a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						员工管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加员工</a></li>
-						<li><a href="#">修改员工</a></li>
-						<li><a href="#">员工额外权限</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>
-					</ul>
-				</li>
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--权限管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加权限</a></li>-->
+						<!--<li><a href="#">修改权限</a></li>-->
+						<!--<li><a href="#">权限对应关系管理</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="#"><span class="text-danger">删除权限</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--部门管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加部门</a></li>-->
+						<!--<li><a href="#">修改部门</a></li>-->
+						<!--<li><a href="#">部门人员管理</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="#"><span class="text-danger">删除部门</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--员工管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加员工</a></li>-->
+						<!--<li><a href="#">修改员工</a></li>-->
+						<!--<li><a href="#">员工额外权限</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						商品管理
@@ -400,9 +342,28 @@
 							</a>
 						</li>
 						<li>
+							<?php $u = new \Home\Controller\UCloud('yys-img'); $wechatImg = $u->getPrivateImg('s_5760ae46143ce.png'); ?>
 							<a href="<?php echo U('wechat/index/bindWechat');?>">
-								<img src="<?php echo W_PUBLIC_IMG;?>btn_wechat_pay.png" alt="" style="width: 30px; margin-left: -5px;">
+								<img src="http://<?php echo ($wechatImg); ?>" alt="" style="width: 30px; margin-left: -5px;">
 								<span class="text-success">绑定微信</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class=dropdown>
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						物流管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="<?php echo U('home/logistics/newOrderFormNoticeEmployee');?>">
+								<span class="glyphicon glyphicon-list-alt text-primary"> 新订单单通知人员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="<?php echo U('home/logistics/signForNoticeEmployee');?>">
+								<span class="glyphicon glyphicon-new-window text-warning"> 签收通知人员管理</span>
 							</a>
 						</li>
 					</ul>
@@ -423,13 +384,11 @@
 			data: $('#formSignIn').serialize(),
 			success: function (RET) {
 				if (RET == 1) {
-					showSuccessModal('登陆', '登陆成功', 3, function () {
+					showSuccessModal('登陆', '登陆成功', function () {
 						location.reload();
 					});
 				} else {
-					showFailModal('登陆失败', RET, null, function () {
-						closeFailModal();
-					});
+					showFailModal('登陆失败', RET);
 				}
 			}
 		});

@@ -12,7 +12,7 @@ function checkSignature($ResponseToken = '')
 
 	if (a4isEmpty($ResponseToken)) {
 		$config = a4getConf();
-		$ResponseToken = $config['wechat']['responseToken'];
+		$ResponseToken = $config['wechat']['public']['responseToken'];
 	}
 
 	$signature = $_GET["signature"];
@@ -297,7 +297,7 @@ class a4WechatDataType
 		$conf = a4getConf();
 		//格式化参数
 		$qr_code_str = $this->formatUnifeidOrderQrCodeParams($PARAM);
-		$qr_code_str .= '&key=' . $conf{'wechat_pay'}{'key'};/*加入key*/
+		$qr_code_str .= '&key=' . $conf['wechat']['pay']['key'];/*加入key*/
 		//MD5运算
 		$qr_code_str = md5($qr_code_str);
 		//转大写
@@ -350,7 +350,7 @@ class a4WechatDataType
 	public function getUnifeidOrderQrCodeUrl()
 	{
 		$conf = a4getConf();
-		return sprintf($conf{'wechat_pay'}{'get_unifiedorder_qr_code_ticket_url'},
+		return sprintf($conf['wechat']['pay']['get_unifiedorder_qr_code_ticket_url'],
 			$this->_unifeidorder_qr_code_params{'sign'},
 			$this->_unifeidorder_qr_code_params{'appid'},
 			$this->_unifeidorder_qr_code_params{'mch_id'},
@@ -387,12 +387,12 @@ class a4Wechat extends a4WechatDataType
 		if (!a4isEmpty($AppId)) {
 			$this->_accessToken['appId'] = $AppId;
 		} else {
-			$this->_accessToken['appId'] = $this->_conf['wechat']['appId'];
+			$this->_accessToken['appId'] = $this->_conf['wechat']['public']['appId'];
 		}
 		if (!a4isEmpty($AppSecret)) {
 			$this->_accessToken['appSecret'] = $AppSecret;
 		} else {
-			$this->_accessToken['appSecret'] = $this->_conf['wechat']['appSecret'];
+			$this->_accessToken['appSecret'] = $this->_conf['wechat']['public']['appSecret'];
 		}
 		$this->getAccessToken();
 	}
@@ -407,14 +407,14 @@ class a4Wechat extends a4WechatDataType
 	public function getAccessToken($Filename = '')
 	{
 		if (a4isEmpty($Filename)) {
-			$Filename = $this->_conf['wechat']['accessTokenTempFilename'];
+			$Filename = $this->_conf['wechat']['public']['accessTokenTempFilename'];
 		}
-		if (file_exists($Filename) && filemtime($Filename) + 7200 < time()) {
+		if (file_exists($Filename) && filemtime($Filename) + 7100 < time()) {
 			#从文件中获取全局票根
 			return file_get_contents($Filename);
 		} else {
 			#临时文件中不存在全局票根，发送请求获取
-			$url = sprintf($this->_conf['wechat']['getAccessTokenUrl'], $this->_accessToken['appId'], $this->_accessToken['appSecret']);
+			$url = sprintf($this->_conf['wechat']['public']['getAccessTokenUrl'], $this->_accessToken['appId'], $this->_accessToken['appSecret']);
 			$res = a4request($url, 'get');
 			$resAssoc = json_decode($res, true);
 			a4saveFile2Txt($Filename, $resAssoc['access_token']);
@@ -437,19 +437,14 @@ class a4Wechat extends a4WechatDataType
 	{
 
 		if (a4isEmpty($Filename)) {
-			if (a4isEmpty($this->_conf['wechat']['qrCodeTempFilename'])) {
-				$Filename = './Public/Wechat/qr_code.jpg';
-			} else {
-				$Filename = $this->_conf['wechat']['qrCodeTempFilename'];
-			}
+			$Filename = $this->_conf['wechat']['public']['qrCodeTempFilename'];
 		}
 
 		/*获取二维码票据*/
 		$ticket = $this->getQrCodeTicket($Id, $Type, $Expire);
 		/*通过票据兑换二维码图片*/
-		$url = $this->_conf{'wechat'}{'exchangeQrCodeImgUrl'} . $ticket['ticket'];
-		$res = a4request($url, 'get');
-		a4saveFile('./1', $res);
+		$url = $this->_conf['wechat']['public']['exchangeQrCodeImgUrl'] . $ticket['ticket'];
+		$res = a4get($url);
 		if ($IsSave) {
 			/*保存到文件*/
 			file_put_contents($Filename, $res);
@@ -521,7 +516,7 @@ class a4Wechat extends a4WechatDataType
 
 		/*获取新的二维码票据*/
 		$accessToken = $this->getAccessToken();
-		$url = $this->_conf['wechat']['getQrCodeTicketUrl'] . $accessToken;
+		$url = $this->_conf['wechat']['public']['getQrCodeTicketUrl'] . $accessToken;
 		$res = a4request($url, 'post', $data);
 		$ticket = json_decode($res, true);
 		return $ticket;
@@ -540,15 +535,15 @@ class a4Wechat extends a4WechatDataType
 	public function exchangeQrCodeImg($Ticket, $Filename = '', $IsSave = false)
 	{
 		if (a4isEmpty($Filename)) {
-			if (a4isEmpty($this->_conf['wechat']['qrCodeTempFilename'])) {
+			if (a4isEmpty($this->_conf['wechat']['public']['qrCodeTempFilename'])) {
 				$Filename = './Public/Wechat/qr_code.jpg';
 			} else {
-				$Filename = $this->_conf['wechat']['qrCodeTempFilename'];
+				$Filename = $this->_conf['wechat']['public']['qrCodeTempFilename'];
 			}
 		}
 
 		/*通过票据兑换二维码图片*/
-		$url = $this->_conf{'wechat'}{'exchangeQrCodeImgUrl'} . $Ticket;
+		$url = $this->_conf['wechat']['public']['exchangeQrCodeImgUrl'] . $Ticket;
 		$res = a4request($url, 'get');
 		if ($IsSave) {
 			/*保存到文件*/
@@ -572,7 +567,7 @@ class a4Wechat extends a4WechatDataType
 		$xmlStr = $GLOBALS['HTTP_RAW_POST_DATA'];
 
 		if (a4isEmpty($xmlStr)) {
-			die;
+			exit;
 		}
 
 		//解析XML信息
