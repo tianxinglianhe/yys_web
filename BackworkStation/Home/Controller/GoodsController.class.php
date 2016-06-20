@@ -101,6 +101,10 @@ class GoodsController extends Controller
 			if ($_GET['type'] > 0) {
 				$goods = new GoodsModel();
 				$goodsInfo = $goods->limitSummarize_byFGoodsTypeId_useGET($_GET['type']);
+				$u = new UCloud('goods-img');
+				foreach ($goodsInfo as $key => $value) {
+					$goodsInfo[$key]['thumb_url'] = $u->getPrivateImg($value['thumb']);
+				}
 				$this->assign('goodsInfo', $goodsInfo);
 			}
 			$this->display();
@@ -113,6 +117,7 @@ class GoodsController extends Controller
 	public function detail()
 	{
 		if (IS_GET) {
+			$id = addslashes($_GET['id']);
 			#########获取大类别
 			$goodsTypeModel = new GoodsTypeModel();
 			$this->assign('rootGoodsTypeInfo', $goodsTypeModel->getOver_byParentId());
@@ -122,12 +127,14 @@ class GoodsController extends Controller
 
 			#########根据编号获取商品详细信息
 			$goods = new GoodsModel();
-			$goodsInfo = $goods->get_byId($_GET['id']);
+			$goodsInfo = $goods->get_byId($id);
 			$this->assign('goodsInfo', $goodsInfo);
 
 			#########根据商品编号获取对应规格
-			$norms = new NormsModel();
-			$this->assign('normsInfo', $norms->get_byFGoodsId($_GET['id']));
+			$sql = "SELECT * FROM `norms_{$_SESSION['emp']['employeeIpInfo']['cityId']}`
+			WHERE f_goods_id='{$id}'";
+			$ni = a4mysql($sql);
+			$this->assign('normsInfo', $ni);
 
 			#########获取图片
 			$goodsImg = new GoodsImgModel();
@@ -224,11 +231,11 @@ class GoodsController extends Controller
 			$sql = "SELECT MAX(id) FROM `area`";
 			$maxArea = a4mysql($sql);
 			$maxArea = $maxArea[0]['MAX(id)'];
-			#遍历删除商品价格和库存
+			#遍历删除商品价格和规格
 			for ($i = 0; $i <= $maxArea; $i++) {
 				$sql = "DELETE FROM price_{$i} WHERE id={$id}";
 				a4mysql($sql);
-				$sql = "DELETE FROM inventory_{$i} WHERE id={$id}";
+				$sql = "DELETE FROM norms_{$i} WHERE f_goods_id={$id}";
 				a4mysql($sql);
 			}
 
@@ -246,9 +253,6 @@ class GoodsController extends Controller
 			#########删除RDS商品照片
 			$gi->delete_byFGoodsId($id);
 
-			#########删除商品规格
-			$n = new NormsModel();
-			$n->delete_byFGoodsId($id);
 			echo(1);
 		} else {
 			echo('验证未通过');
@@ -267,45 +271,47 @@ class GoodsController extends Controller
 				array('f_goods_type_id', '<=', 0, '请选择小类别'),
 				array('name', 'e', null, '商品名称不能为空'),
 				array('unit', 'e', null, '商品单位不能为空'),
-				array('price', 'e', null, '商品价格不能为空'),
-				array('price', 'num', null, '商品价格必须是数字'),
-				array('price', '<=', 0, '商品价格不能小于0')
+				array('price', 'e', null, '商品价格不能为空')
 			);
 			$verifyRes = a4verifyForm($_POST, $rule);
 			if ($verifyRes == 0) {
-				$res = array('result' => 0, 'errMsg' => $verifyRes);
-				echo($res);
+				echo($verifyRes);
 				exit;
 			}
 			#########操作数据库：插入字段
+			#检查产品是否有重复
+			$g = new GoodsModel();
+			$tmp = $g->get_byName($_POST['name']);
+			if ($tmp['id'] > 0) {
+				echo('已经存在该商品');
+				exit;
+			}
 			#准备参数
 			$_POST['create_time'] = time();
 			$_POST['f_goods_status_id'] = 1;
 			#创建商品信息
-			$goodsModel = new GoodsModel();
-			$insertRes = $goodsModel->insert();
+			$insertRes = $g->insert();
 			$priceData = array();
 			if ($insertRes > 0) {
 				#创建商品价格
 				$priceData['id'] = $insertRes;
-				$priceData['price'] = $_POST['price'];
+				$priceData['price'] = (string)$_POST['price'];
 				a4addslashes($priceData);#防sql注入过滤
-				$sql = "INSERT INTO `price_" . $_SESSION['emp']['employeeIpInfo']['cityId'] . "`
-				(id,price) VALUE ({$priceData['id']},{$priceData['price']})";
+				$sql = "INSERT INTO price_{$_SESSION['emp']['employeeIpInfo']['cityId']}
+				(id,price) VALUE ({$priceData['id']},'{$priceData['price']}')";
 				$insertPriceRes = a4mysql($sql);
 				if ($insertPriceRes > 0) {
 					#添加成功
-					$res = array('result' => 1, 'id' => $insertRes);
-					echo(json_encode($res));
-				} else {
-					#添加价格失败
-					$res = array('result' => 0, 'errMsg' => $insertPriceRes);
-					echo(json_encode($res));
+					echo($priceData['id']);
+					exit;
+				}
+				if ($insertPriceRes <= 0) {
+					echo($insertPriceRes);
+					exit;
 				}
 			} else {
 				#添加信息失败
-				$res = array('result' => 0, 'errMsg' => $insertRes);
-				echo(json_encode($res));
+				echo($insertRes);
 			}
 			exit;
 		}
@@ -321,8 +327,10 @@ class GoodsController extends Controller
 			$rule = array(
 				array('f_goods_id', 'e', null, '请先添加商品'),
 				array('f_goods_id', '<=', 0, '请先添加商品'),
-				array('value', 'num', null, '规格必须是数字'),
-				array('name', 'e', null, '规格名称不能为空')
+				array('capacity', 'num', null, '规格容量必须是数字'),
+				array('name', 'e', null, '规格名称不能为空'),
+				array('min_price', 'num', null, '最小单位价格必须是数字'),
+				array('min_price', '<=', 0, '最小单位价格必须大于0')
 			);
 			$verifyRes = a4verifyForm($_POST, $rule);
 			if ($verifyRes == 0) {
@@ -330,19 +338,19 @@ class GoodsController extends Controller
 				exit;
 			}
 			#########操作数据库：插入记录
-			$normsModel = new NormsModel();
-			$insertNormsData = array();
-			$insertNormsData['f_goods_id'] = $_POST['f_goods_id'];
-			$insertNormsData['name'] = $_POST['name'];
-			$insertNormsData['value'] = $_POST['value'];
-			$insertNormsData['explain'] = $_POST['explain'];
-			$insertNormsData['id'] = null;
-			a4addslashes($insertNormsData);#防sql注入
-			$normsInfo = $normsModel->insert_useData($insertNormsData);
-			if ($normsInfo > 0) {
+			a4addslashes($_POST);
+			$sql = "INSERT INTO norms_{$_SESSION['emp']['employeeIpInfo']['cityId']}
+			(f_goods_id,`name`,`capacity`,`min_price`,`explain`) VALUES (
+			'{$_POST['f_goods_id']}',
+			'{$_POST['name']}',
+			'{$_POST['capacity']}',
+			'{$_POST['min_price']}',
+			'{$_POST['explain']}');";
+			$insertRes = a4mysql($sql);
+			if ($insertRes > 0) {
 				echo(1);
 			} else {
-				echo($normsInfo);
+				echo($insertRes);
 			}
 			exit;
 		}
@@ -369,16 +377,25 @@ class GoodsController extends Controller
 	{
 		if (IS_POST) {
 			#修改规格名称
-			$norms = new NormsModel();
-			#配置参数
-			$_POST['id'] = $_POST['hdnNormsId'];
-			unset($_POST['hdnNormsId']);
+			$_POST['sale_start'] = a4getTimestamp($_POST['sale_start']);
+			$_POST['sale_end'] = a4getTimestamp($_POST['sale_end']);
+			a4addslashes($_POST);#防sql注入过滤
 			#操作数据库
-			$updateNormsRes = $norms->update_byId_useDATA($_POST);
-			if ($updateNormsRes > 0) {
+			$sql = "UPDATE `norms_{$_SESSION['emp']['employeeIpInfo']['cityId']}`
+			SET
+			`name`='{$_POST['name']}',
+			capacity={$_POST['capacity']},
+			min_price={$_POST['min_price']},
+			sale_min_price={$_POST['sale_min_price']},
+			sale_start={$_POST['sale_start']},
+			sale_end={$_POST['sale_end']},
+			`explain`={$_POST['explain']},
+			inventory={$_POST['inventory']},
+			sale_inventory={$_POST['sale_inventory']}
+			WHERE id={$_POST['hdn_norms_id']}";
+			$updateNormsRes = a4mysql($sql);
+			if ($updateNormsRes >= 0) {
 				redirect(U('home/goods/detail' . '?id=' . $_GET['id']));
-			} elseif ($updateNormsRes == 0) {
-				$this->error('规格没有变化');
 			} else {
 				$this->error($updateNormsRes);
 			}
@@ -399,38 +416,6 @@ class GoodsController extends Controller
 			} else {
 				echo $removeNormsRes;
 			}
-		}
-	}
-
-	/**
-	 * @todo ajax创建规格 修改商品页面专用
-	 */
-	public function ajaxCreateNorms_forUpdateGoods()
-	{
-		if (IS_POST) {
-			#########验证表单
-			$rule = array(
-				array('name', 'e', null, '规格名称不能为空')
-			);
-			$verifyRes = a4verifyForm($_POST, $rule);
-			if ($verifyRes == 0) {
-				echo($verifyRes);
-				exit;
-			}
-			#########操作数据库：插入记录
-			$normsModel = new NormsModel();
-			$insertNormsData = array();
-			$insertNormsData['f_goods_id'] = $_POST['f_goods_id'];
-			$insertNormsData['name'] = $_POST['name'];
-			$insertNormsData['explain'] = $_POST['explain'];
-			$insertNormsData['id'] = null;
-			$normsInfo = $normsModel->insert_useData($insertNormsData);
-			if ($normsInfo > 0) {
-				echo(1);
-			} else {
-				echo($normsInfo);
-			}
-			exit;
 		}
 	}
 
@@ -518,25 +503,24 @@ class GoodsController extends Controller
 
 			#修改当前地区价格
 			$sql = "UPDATE price_{$_SESSION['emp']['employeeIpInfo']['cityId']} SET
-			price={$_POST['price']},sale_price={$_POST['sale_price']},sale_start={$_POST['sale_start']},sale_end={$_POST['sale_end']}
+			price='{$_POST['price']}',sale_price='{$_POST['sale_price']}',sale_start={$_POST['sale_start']},sale_end={$_POST['sale_end']}
 			WHERE id={$_POST['id']}";
 			$updatePriceRes = a4mysql($sql);
 
-			#修改当前地区库存
-			#检查当前地区库存是否存在数据
-			$sql = "SELECT `number` FROM inventory_{$_SESSION['emp']['employeIpInfo']['cityId']} WHERE id={$_POST['id']}";
-			$currentNumber = a4mysql($sql);
-			if ($currentNumber > 0) {
-				#存在库存数据，进行修改
-				$sql = "UPDATE inventory_{$_SESSION['emp']['employeeIpInfo']['cityId']} SET
-				number={$_POST['number']},sale_number={$_POST['sale_number']}
-				WHERE id={$_POST['id']}";
-				$updateInventoryRes = a4mysql($sql);
+			if ($updateGoodsInfoRes > 0 && $updatePriceRes > 0) {
+				#修改成功
+				echo(1);
 			} else {
-				#不存在库存数据，进行添加
-				$sql = "INSERT INTO inventory_{$_SESSION['emp']['employeeIpInfo']['cityId']} (id,`number`,sale_number)
-				VALUE({$_POST['id']},{$_POST['number']},{$_POST['sale_number']})";
-				$insertInventoryRes = a4mysql($sql);
+				if ($updateGoodsInfoRes <= 0) {
+					#修改商品信息失败
+					echo($updateGoodsInfoRes);
+					exit;
+				}
+				if ($updatePriceRes <= 0) {
+					#修改价格失败
+					echo($updatePriceRes);
+					exit;
+				}
 			}
 			exit;
 		}

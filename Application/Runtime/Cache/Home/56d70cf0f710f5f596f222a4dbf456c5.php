@@ -271,23 +271,22 @@
 				<!--登陆栏-->
 				<form class="navbar-form" id="formSignIn" action="<?php echo U('home/user/signin');?>" method="post">
 					<div class="input-group">
-							<span class="input-group-addon">
-								<span class="glyphicon glyphicon-user"></span>
-							</span>
-						<input type="text" class="form-control" placeholder="账号"
-						       name="signin_name">
-							<span class="input-group-addon" id="basic-addonPassword">
-								<span class="glyphicon glyphicon-asterisk"></span>
-							</span>
-						<input type="password" class="form-control" placeholder="密码"
-						       aria-describedby="basic-addonPassword" name="pwd">
-							<span class="input-group-btn">
-								<a class="btn btn-warning" href="javascript:;" id="btnSignIn">登录</a>
-							</span>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-user"></span>
+						</span>
+						<input type="text" class="form-control" placeholder="账号" name="signin_name">
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-asterisk"></span>
+						</span>
+						<input type="password" class="form-control" placeholder="密码" name="pwd">
+						<span class="input-group-btn">
+							<a class="btn btn-warning" href="javascript:;" id="btnSignIn">登录</a>
+						</span>
 					</div>
-					<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx819eb1e0004ea160&redirect_uri=http%3A%2F%2Fphphelper.cn
-&response_type=code&scope=snsapi_login&state=<?php echo session_id();?>#wechat_redirect" class="btn btn-link" id="btnWechatSignIn">微信登陆</a>
-					<a href="<?php echo U('home/user/signup');?>">快速注册</a>
+					<a href="#" class="btn btn-link">忘记密码</a>
+					<!--<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx819eb1e0004ea160&redirect_uri=http%3A%2F%2Fphphelper.cn-->
+					<!--&response_type=code&scope=snsapi_login&state=<?php echo session_id();?>#wechat_redirect" class="btn btn-link" id="btnWechatSignIn">微信登陆</a>-->
+					<a href="<?php echo U('home/user/signup');?>" class="btn btn-link">快速注册</a>
 				</form>
 				<?php endif; ?>
 				</li>

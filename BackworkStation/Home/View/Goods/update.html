@@ -45,7 +45,6 @@
 						<td>编号</td>
 						<td>名称</td>
 						<td>图片</td>
-						<td>价格</td>
 						<td>单位</td>
 					</tr>
 					<php>foreach($goodsInfo as $item):</php>
@@ -58,10 +57,9 @@
 						</td>
 						<td>
 							<a href="{:U('home/goods/detail')}?id={$item['id']}">
-								<img src="{:W_PUBLIC_GOODS_IMG}{$item['id']}/{$item['img']}" alt="" height="100px">
+								<img src="http://{$item['thumb_url']}" alt="" height="100px">
 							</a>
 						</td>
-						<td>{$item['price']}</td>
 						<td>{$item['unit']}</td>
 					</tr>
 					<php>endforeach;</php>

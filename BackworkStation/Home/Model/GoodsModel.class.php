@@ -17,7 +17,23 @@ class GoodsModel extends Model
 	}
 
 	/**
+	 * @todo 根据商品名称 获取商品信息
+	 *
+	 * @param string $Name 商品名称
+	 *
+	 * @return mixed
+	 */
+	public function get_byName($Name)
+	{
+		$where['name'] = array('eq', addslashes($Name));
+		$field = 'id';
+		return $this->where($where)->field($field)->find();
+	}
+
+	/**
 	 * @todo 分页获取全部商品信息
+	 *
+	 * @param integer $PageSize 页容量
 	 */
 	public function limitOver_useGET($PageSize = 20)
 	{
@@ -38,7 +54,7 @@ class GoodsModel extends Model
 	/**
 	 * @todo 根据类别 查询商品概述
 	 *
-	 * @param $_GET ['type']
+	 * @param integer $PAGE_SIZE 页容量
 	 *
 	 * @return array
 	 */
@@ -71,11 +87,8 @@ goods.id,
 goods.open_id,
 goods.`name`,
 goods.unit,
-price_" . $_SESSION['emp']['employeeIpInfo']['cityId'] . ".price AS price,
-price_" . $_SESSION['emp']['employeeIpInfo']['cityId'] . ".sale_price AS sale_price,
-goods_img.`name` AS img
+goods_img.thumb AS thumb
 FROM goods
-INNER JOIN price_" . $_SESSION['emp']['employeeIpInfo']['cityId'] . " ON price_" . $_SESSION['emp']['employeeIpInfo']['cityId'] . ".id = goods.id
 LEFT JOIN goods_img ON goods_img.f_goods_id = goods.id
 WHERE f_goods_status_id = 1
 AND goods.f_goods_type_id = $type
@@ -88,6 +101,7 @@ LIMIT $limit,$pageSize";
 	 * @todo 通过商品编号 获取商品信息
 	 *
 	 * @param $ID
+	 *
 	 * @return mixed
 	 */
 	public function get_byId($ID)

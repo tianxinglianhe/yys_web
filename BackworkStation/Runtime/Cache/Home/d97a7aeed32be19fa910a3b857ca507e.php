@@ -255,45 +255,45 @@
 			<?php endif; ?>
 			<?php if($_SESSION['emp']['employeeInfo']['id']>0): ?>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						权限管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加权限</a></li>
-						<li><a href="#">修改权限</a></li>
-						<li><a href="#">权限对应关系管理</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#"><span class="text-danger">删除权限</span></a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						部门管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加部门</a></li>
-						<li><a href="#">修改部门</a></li>
-						<li><a href="#">部门人员管理</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#"><span class="text-danger">删除部门</span></a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						员工管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加员工</a></li>
-						<li><a href="#">修改员工</a></li>
-						<li><a href="#">员工额外权限</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>
-					</ul>
-				</li>
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--权限管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加权限</a></li>-->
+						<!--<li><a href="#">修改权限</a></li>-->
+						<!--<li><a href="#">权限对应关系管理</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="#"><span class="text-danger">删除权限</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--部门管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加部门</a></li>-->
+						<!--<li><a href="#">修改部门</a></li>-->
+						<!--<li><a href="#">部门人员管理</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="#"><span class="text-danger">删除部门</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--员工管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加员工</a></li>-->
+						<!--<li><a href="#">修改员工</a></li>-->
+						<!--<li><a href="#">员工额外权限</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						商品管理
@@ -346,6 +346,24 @@
 							<a href="<?php echo U('wechat/index/bindWechat');?>">
 								<img src="http://<?php echo ($wechatImg); ?>" alt="" style="width: 30px; margin-left: -5px;">
 								<span class="text-success">绑定微信</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class=dropdown>
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						物流管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="<?php echo U('home/logistics/newOrderFormNoticeEmployee');?>">
+								<span class="glyphicon glyphicon-list-alt text-primary"> 新订单单通知人员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="<?php echo U('home/logistics/signForNoticeEmployee');?>">
+								<span class="glyphicon glyphicon-new-window text-warning"> 签收通知人员管理</span>
 							</a>
 						</li>
 					</ul>
@@ -414,7 +432,6 @@
 						<td>编号</td>
 						<td>名称</td>
 						<td>图片</td>
-						<td>价格</td>
 						<td>单位</td>
 					</tr>
 					<?php foreach($goodsInfo as $item): ?>
@@ -427,10 +444,9 @@
 						</td>
 						<td>
 							<a href="<?php echo U('home/goods/detail');?>?id=<?php echo ($item['id']); ?>">
-								<img src="<?php echo W_PUBLIC_GOODS_IMG; echo ($item['id']); ?>/<?php echo ($item['img']); ?>" alt="" height="100px">
+								<img src="http://<?php echo ($item['thumb_url']); ?>" alt="" height="100px">
 							</a>
 						</td>
-						<td><?php echo ($item['price']); ?></td>
 						<td><?php echo ($item['unit']); ?></td>
 					</tr>
 					<?php endforeach; ?>

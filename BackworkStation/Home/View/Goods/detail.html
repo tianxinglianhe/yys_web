@@ -74,22 +74,14 @@
 				<input class="form-control" type="text" name="sale_price" value="{$goodsInfo['sale_price']}">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">促销起始时间：</span>
+				<span class="input-group-addon">促销起始时间（显示）：</span>
 				<input class="form-control" type="text" name="sale_start"
 				       value="{:a4getDatetime($goodsInfo['sale_start'],'datetime')}">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">促销终止时间：</span>
+				<span class="input-group-addon">促销终止时间（显示）：</span>
 				<input class="form-control" type="text" name="sale_end"
 				       value="{:a4getDatetime($goodsInfo['sale_end'],'datetime')}">
-			</p>
-			<p class="input-group">
-				<span class=input-group-addon>全部库存（件）：</span>
-				<input class="form-control" type="text" name="number" value="{:a4default($goodsInfo['inventory'],99999)}">
-			</p>
-			<p class="input-group">
-				<span class="input-group-addon">促销库存（件）：</span>
-				<input class="form-control" type="text" name="sale_number" value="{:a4default($goodsInfo['sale_inventory'],99999)}">
 			</p>
 			<a class="btn btn-success form-control" href="javascript:;" id="btnUpdateGoodsInfo">确定修改</a>
 		</form>
@@ -100,22 +92,29 @@
 			<h5>创建规格</h5>
 			<form id="formCreateNorms">
 				<input type="hidden" name="f_goods_id" value="{$_GET['id']}">
-				<div class="input-group">
+				<p class="input-group">
 					<span class="input-group-addon">规格名称：</span>
-					<input class="form-control" type="text" name="name">
-				</div>
-				<div class="input-group" style="margin-top: 5px;">
+					<input class="form-control" type="text" name="name" id="txtName">
+				</p>
+				<p class="input-group">
+					<span class=input-group-addon>最小单位价格：</span>
+					<input class="form-control" type="text" name="min_price" id="txtMinPrice">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">规格容量（数量/件）：</span>
+					<input class="form-control" type="text" name="capacity" id="txtCapacity">
+				</p>
+				<p class="input-group">
 					<span class="input-group-addon">规格说明：</span>
-					<input class="form-control" type="text" name="explain">
-				</div>
-				<a class="btn btn-success form-control" href="javascript:;" id="btnCreateNorms"
-				   style="margin-top: 5px;">创建规格</a>
+					<input class="form-control" type="text" name="explain" id="txtNormsExplain">
+				</p>
+				<a class="btn btn-success form-control" href="javascript:;" id="btnCreateNorms">创建规格</a>
 			</form>
 			<h5>修改规格</h5>
 			<table class="table table-border">
 				<php>foreach($normsInfo as $item):</php>
 				<form action="{:U('home/goods/updateNorms')}?id={$_GET['id']}" method="post">
-					<input type="hidden" name="hdnNormsId" value="{$item['id']}">
+					<input type="hidden" name="hdn_norms_id" value="{$item['id']}">
 					<tr>
 						<td>名称</td>
 						<td>
@@ -125,13 +124,37 @@
 					<tr>
 						<td>值/件</td>
 						<td>
-							<input class="form-control" type="text" name="value" value="{$item['value']}">
+							<input class="form-control" type="text" name="capacity" value="{$item['capacity']}">
+						</td>
+					</tr>
+					<tr>
+						<td>价格</td>
+						<td>
+							<input class="form-control" type="text" name="min_price" value="{$item['min_price']}">
+						</td>
+					</tr>
+					<tr>
+						<td>促销价格</td>
+						<td>
+							<input class="form-control" type="text"  name="sale_min_price" value="{$item['sale_min_price']}">
 						</td>
 					</tr>
 					<tr>
 						<td>说明</td>
 						<td>
 							<input class="form-control" type="text" name="explain" value="{$item['explain']}">
+						</td>
+					</tr>
+					<tr>
+						<td>库存</td>
+						<td>
+							<input class="form-control" type="text" name="inventory" value="{$item['inventory']}">
+						</td>
+					</tr>
+					<tr>
+						<td>促销库存</td>
+						<td>
+							<input class="form-control" type="text" name="sale_inventory" value="{$item['sale_inventory']}">
 						</td>
 					</tr>
 					<tr>
@@ -210,11 +233,10 @@
 			type: 'post',
 			data: $('#formUpdateGoodsInfo').serialize(),
 			success: function (Ret) {
-				if (Ret == 1) {
+				if (Ret >= 0) {
 					showSuccessModal('修改商品信息', '修改成功');
 				} else {
-					showFailModal('1',Ret);
-//					showFailModal('修改失败', '商品信息没有变化或修改失败');
+					showFailModal('修改失败', '商品信息没有变化或修改失败');
 				}
 			}
 		});
@@ -267,7 +289,7 @@
 	 */
 	document.getElementById('btnCreateNorms').onclick = function () {
 		$.ajax({
-			url: '{:U("home/goods/ajaxCreateNorms_forUpdateGoods")}',
+			url: '{:U("home/goods/ajaxCreateNorms")}',
 			type: 'post',
 			data: $('#formCreateNorms').serialize(),
 			success: function (RET) {

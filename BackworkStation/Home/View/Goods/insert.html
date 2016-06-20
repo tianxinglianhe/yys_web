@@ -58,8 +58,12 @@
 				<input class="form-control" type="text" name="unit" id="txtUnit">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">商品价格（元）：</span>
+				<span class="input-group-addon">显示价格（元）：</span>
 				<input class="form-control" type="text" name="price" id="txtPrice">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">最小售卖单位：</span>
+				<input class="form-control" type="text" name="min_sale" id="txtMinSale">
 			</p>
 			<a href="javascript:;" class="btn btn-primary form-control" id="btnCreateGoods">创建商品</a>
 		</form>
@@ -77,10 +81,14 @@
 				<input class="form-control" type="text" name="name" id="txtNormsName">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">规格值（数量/件）：</span>
-				<input class="form-control" type="text" name="value" id="txtValue">
+				<span class=input-group-addon>最小单位价格：</span>
+				<input class="form-control" type="text" name="min_price" id="txtMinPrice">
 			</p>
-			<p class="input-group" style="margin-top: 5px;">
+			<p class="input-group">
+				<span class="input-group-addon">规格容量（数量/件）：</span>
+				<input class="form-control" type="text" name="capacity" id="txtCapacity">
+			</p>
+			<p class="input-group">
 				<span class="input-group-addon">规格说明：</span>
 				<input class="form-control" type="text" name="explain" id="txtNormsExplain">
 			</p>
@@ -144,14 +152,12 @@
 			type: 'post',
 			data: $('#formCreateGoods').serialize(),
 			success: function (RET) {
-				ret = JSON.parse(RET);
-				if (ret['result'] == 1) {
+				if (isNaN(RET) == false && RET > 0) {
 					showSuccessModal('添加商品', '添加成功', function () {
-						location.href = '{:U("home/goods/insert")}?f_goods_id=' + ret['id'];
-					});
+						location.href = '{:U("home/goods/insert")}?f_goods_id=' + RET;
+					})
 				} else {
-					showFailModal('添加商品失败', ret['errMsg'], function () {
-						location.reload();
+					showFailModal('添加商品失败', RET, function () {
 					});
 				}
 			}
@@ -173,7 +179,6 @@
 					});
 				} else {
 					showFailModal('创建规格失败', RET, function () {
-						location.reload();
 					});
 				}
 			}

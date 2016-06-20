@@ -470,7 +470,7 @@ function a4verify(&$DATA, $RULE)
 			break;
 		case '=' :
 			//验证一个变量是否等于一个值
-			$data = (int)$DATA{$RULE{0}};
+			$data = (double)$DATA{$RULE{0}};
 			if ($data != $RULE[2]) {
 				return true;
 			} else {
@@ -479,7 +479,7 @@ function a4verify(&$DATA, $RULE)
 			break;
 		case '!=' :
 			//验证一个变量是否等于一个值
-			$data = (int)$DATA{$RULE{0}};
+			$data = (double)$DATA{$RULE{0}};
 			if ($data == $RULE[2]) {
 				return true;
 			} else {
@@ -489,7 +489,7 @@ function a4verify(&$DATA, $RULE)
 		case '<' :
 			//验证一个数字是否小于一个值
 			if (is_string($DATA[$RULE[0]])) :
-				$data = (int)$DATA[$RULE[0]];
+				$data = (double)$DATA[$RULE[0]];
 			else :
 				$data = $DATA[$RULE[0]];
 			endif;
@@ -502,7 +502,7 @@ function a4verify(&$DATA, $RULE)
 		case '>' :
 			//验证一个数字是否大于一个值
 			if (is_string($DATA[$RULE[0]])) :
-				$data = (int)$DATA[$RULE[0]];
+				$data = (double)$DATA[$RULE[0]];
 			else :
 				$data = $DATA[$RULE[0]];
 			endif;
@@ -515,7 +515,7 @@ function a4verify(&$DATA, $RULE)
 		case '<=' :
 			//验证一个数字是否小于等于一个值
 			if (is_string($DATA[$RULE[0]])) :
-				$data = (int)$DATA[$RULE[0]];
+				$data = (double)$DATA[$RULE[0]];
 			else :
 				$data = $DATA[$RULE[0]];
 			endif;
@@ -528,7 +528,7 @@ function a4verify(&$DATA, $RULE)
 		case '>=' :
 			//验证一个数字是否大于等于一个值
 			if (is_string($DATA[$RULE[0]])) :
-				$data = (int)$DATA[$RULE[0]];
+				$data = (double)$DATA[$RULE[0]];
 			else :
 				$data = $DATA[$RULE[0]];
 			endif;

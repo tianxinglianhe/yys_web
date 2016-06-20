@@ -47,7 +47,8 @@ price_" . $_SESSION['sys']['userIpInfo']['cityId'] . ".sale_price AS sale_price,
 inventory_" . $_SESSION['sys']['userIpInfo']['cityId'] . ".sale_number AS sale_inventory,
 price_" . $_SESSION['sys']['userIpInfo']['cityId'] . ".sale_start AS sale_time,
 price_" . $_SESSION['sys']['userIpInfo']['cityId'] . ".sale_end AS sale_time,
-goods_img.`name` AS img
+goods_img.`name` AS img,
+goods_img.`thumb` AS thumb
 FROM goods
 INNER JOIN price_" . $_SESSION['sys']['userIpInfo']['cityId'] . " ON price_" . $_SESSION['sys']['userIpInfo']['cityId'] . ".id = goods.id
 LEFT JOIN inventory_" . $_SESSION['sys']['userIpInfo']['cityId'] . " ON inventory_" . $_SESSION['sys']['userIpInfo']['cityId'] . ".id = goods.id

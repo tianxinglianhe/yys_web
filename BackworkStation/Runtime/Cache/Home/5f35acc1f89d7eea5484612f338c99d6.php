@@ -254,45 +254,45 @@
 			<?php endif; ?>
 			<?php if($_SESSION['emp']['employeeInfo']['id']>0): ?>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						权限管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加权限</a></li>
-						<li><a href="#">修改权限</a></li>
-						<li><a href="#">权限对应关系管理</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#"><span class="text-danger">删除权限</span></a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						部门管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加部门</a></li>
-						<li><a href="#">修改部门</a></li>
-						<li><a href="#">部门人员管理</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#"><span class="text-danger">删除部门</span></a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						员工管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加员工</a></li>
-						<li><a href="#">修改员工</a></li>
-						<li><a href="#">员工额外权限</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>
-					</ul>
-				</li>
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--权限管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加权限</a></li>-->
+						<!--<li><a href="#">修改权限</a></li>-->
+						<!--<li><a href="#">权限对应关系管理</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="#"><span class="text-danger">删除权限</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--部门管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加部门</a></li>-->
+						<!--<li><a href="#">修改部门</a></li>-->
+						<!--<li><a href="#">部门人员管理</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="#"><span class="text-danger">删除部门</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--员工管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加员工</a></li>-->
+						<!--<li><a href="#">修改员工</a></li>-->
+						<!--<li><a href="#">员工额外权限</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						商品管理
@@ -341,9 +341,28 @@
 							</a>
 						</li>
 						<li>
+							<?php $u = new \Home\Controller\UCloud('yys-img'); $wechatImg = $u->getPrivateImg('s_5760ae46143ce.png'); ?>
 							<a href="<?php echo U('wechat/index/bindWechat');?>">
-								<img src="http://yys-img.ufile.ucloud.com.cn/s_5760ae46143ce.png?UCloudPublicKey=WLw4pYG8jP3ECIQs8TRlffSQdykzUMojKGt6vENIkDPyuFio4+Z55A==&Expires=1465955763&Signature=iuV/6919KN5YHOo7JoE7ZsU6t6I=" alt="" style="width: 30px; margin-left: -5px;">
+								<img src="http://<?php echo ($wechatImg); ?>" alt="" style="width: 30px; margin-left: -5px;">
 								<span class="text-success">绑定微信</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class=dropdown>
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						物流管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="<?php echo U('home/logistics/newOrderFormNoticeEmployee');?>">
+								<span class="glyphicon glyphicon-list-alt text-primary"> 新订单单通知人员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="<?php echo U('home/logistics/signForNoticeEmployee');?>">
+								<span class="glyphicon glyphicon-new-window text-warning"> 签收通知人员管理</span>
 							</a>
 						</li>
 					</ul>
@@ -419,15 +438,19 @@
 			</p>
 			<p class="input-group">
 				<span class="input-group-addon">商品说明：</span>
-				<input class="form-control" type="text" name="explain" id="txtExplain">
+				<input class="form-control" type="text" name="explain" id="txtExplain" placeholder="选填">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">商品单位：</span>
+				<span class="input-group-addon">商品单位（箱、袋等）：</span>
 				<input class="form-control" type="text" name="unit" id="txtUnit">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">商品价格：</span>
+				<span class="input-group-addon">显示价格（元）：</span>
 				<input class="form-control" type="text" name="price" id="txtPrice">
+			</p>
+			<p class="input-group">
+				<span class="input-group-addon">最小售卖单位：</span>
+				<input class="form-control" type="text" name="min_sale" id="txtMinSale">
 			</p>
 			<a href="javascript:;" class="btn btn-primary form-control" id="btnCreateGoods">创建商品</a>
 		</form>
@@ -445,10 +468,14 @@
 				<input class="form-control" type="text" name="name" id="txtNormsName">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">规格值（数量/件）：</span>
-				<input class="form-control" type="text" name="value" id="txtValue">
+				<span class=input-group-addon>最小单位价格：</span>
+				<input class="form-control" type="text" name="min_price" id="txtMinPrice">
 			</p>
-			<p class="input-group" style="margin-top: 5px;">
+			<p class="input-group">
+				<span class="input-group-addon">规格容量（数量/件）：</span>
+				<input class="form-control" type="text" name="capacity" id="txtCapacity">
+			</p>
+			<p class="input-group">
 				<span class="input-group-addon">规格说明：</span>
 				<input class="form-control" type="text" name="explain" id="txtNormsExplain">
 			</p>
@@ -512,14 +539,12 @@
 			type: 'post',
 			data: $('#formCreateGoods').serialize(),
 			success: function (RET) {
-				ret = JSON.parse(RET);
-				if (ret['result'] == 1) {
+				if (isNaN(RET) == false && RET > 0) {
 					showSuccessModal('添加商品', '添加成功', function () {
-						location.href = '<?php echo U("home/goods/insert");?>?f_goods_id=' + ret['id'];
-					});
+						location.href = '<?php echo U("home/goods/insert");?>?f_goods_id=' + RET;
+					})
 				} else {
-					showFailModal('添加商品失败', ret['errMsg'], function () {
-						location.reload();
+					showFailModal('添加商品失败', RET, function () {
 					});
 				}
 			}
@@ -541,7 +566,6 @@
 					});
 				} else {
 					showFailModal('创建规格失败', RET, function () {
-						location.reload();
 					});
 				}
 			}

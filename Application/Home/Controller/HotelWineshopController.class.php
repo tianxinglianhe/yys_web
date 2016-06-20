@@ -15,6 +15,13 @@ class HotelWineshopController extends Controller
 		if (IS_GET) {
 			$g = new GoodsModel();
 			$gi = $g->limitGoods_byGoodsTypeName_useGET();
+
+			#获取ucloud图片
+			$u = new UCloud('goods-img');
+			foreach ($gi as $key => $value) {
+				$gi[$key]['thumb_url'] = $u->getPrivateImg($value['thumb']);
+			}
+
 			$this->assign('goodsInfo', $gi);
 			$this->display();
 		}

@@ -255,45 +255,45 @@
 			<?php endif; ?>
 			<?php if($_SESSION['emp']['employeeInfo']['id']>0): ?>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						权限管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加权限</a></li>
-						<li><a href="#">修改权限</a></li>
-						<li><a href="#">权限对应关系管理</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#"><span class="text-danger">删除权限</span></a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						部门管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加部门</a></li>
-						<li><a href="#">修改部门</a></li>
-						<li><a href="#">部门人员管理</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="#"><span class="text-danger">删除部门</span></a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						员工管理
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">增加员工</a></li>
-						<li><a href="#">修改员工</a></li>
-						<li><a href="#">员工额外权限</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>
-					</ul>
-				</li>
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--权限管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加权限</a></li>-->
+						<!--<li><a href="#">修改权限</a></li>-->
+						<!--<li><a href="#">权限对应关系管理</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="#"><span class="text-danger">删除权限</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--部门管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加部门</a></li>-->
+						<!--<li><a href="#">修改部门</a></li>-->
+						<!--<li><a href="#">部门人员管理</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="#"><span class="text-danger">删除部门</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
+				<!--<li class="dropdown">-->
+					<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+						<!--员工管理-->
+						<!--<span class="glyphicon glyphicon-menu-down"></span>-->
+					<!--</a>-->
+					<!--<ul class="dropdown-menu">-->
+						<!--<li><a href="#">增加员工</a></li>-->
+						<!--<li><a href="#">修改员工</a></li>-->
+						<!--<li><a href="#">员工额外权限</a></li>-->
+						<!--<li role="separator" class="divider"></li>-->
+						<!--<li><a href="javascript:void(0);"><span class="text-danger">删除员工</span></a></li>-->
+					<!--</ul>-->
+				<!--</li>-->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						商品管理
@@ -346,6 +346,24 @@
 							<a href="<?php echo U('wechat/index/bindWechat');?>">
 								<img src="http://<?php echo ($wechatImg); ?>" alt="" style="width: 30px; margin-left: -5px;">
 								<span class="text-success">绑定微信</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class=dropdown>
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						物流管理
+						<span class="glyphicon glyphicon-menu-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="<?php echo U('home/logistics/newOrderFormNoticeEmployee');?>">
+								<span class="glyphicon glyphicon-list-alt text-primary"> 新订单单通知人员管理</span>
+							</a>
+						</li>
+						<li>
+							<a href="<?php echo U('home/logistics/signForNoticeEmployee');?>">
+								<span class="glyphicon glyphicon-new-window text-warning"> 签收通知人员管理</span>
 							</a>
 						</li>
 					</ul>
@@ -443,22 +461,14 @@
 				<input class="form-control" type="text" name="sale_price" value="<?php echo ($goodsInfo['sale_price']); ?>">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">促销起始时间：</span>
+				<span class="input-group-addon">促销起始时间（显示）：</span>
 				<input class="form-control" type="text" name="sale_start"
 				       value="<?php echo a4getDatetime($goodsInfo['sale_start'],'datetime');?>">
 			</p>
 			<p class="input-group">
-				<span class="input-group-addon">促销终止时间：</span>
+				<span class="input-group-addon">促销终止时间（显示）：</span>
 				<input class="form-control" type="text" name="sale_end"
 				       value="<?php echo a4getDatetime($goodsInfo['sale_end'],'datetime');?>">
-			</p>
-			<p class="input-group">
-				<span class=input-group-addon>全部库存（件）：</span>
-				<input class="form-control" type="text" name="number" value="<?php echo a4default($goodsInfo['inventory'],99999);?>">
-			</p>
-			<p class="input-group">
-				<span class="input-group-addon">促销库存（件）：</span>
-				<input class="form-control" type="text" name="sale_number" value="<?php echo a4default($goodsInfo['sale_inventory'],99999);?>">
 			</p>
 			<a class="btn btn-success form-control" href="javascript:;" id="btnUpdateGoodsInfo">确定修改</a>
 		</form>
@@ -469,22 +479,29 @@
 			<h5>创建规格</h5>
 			<form id="formCreateNorms">
 				<input type="hidden" name="f_goods_id" value="<?php echo ($_GET['id']); ?>">
-				<div class="input-group">
+				<p class="input-group">
 					<span class="input-group-addon">规格名称：</span>
-					<input class="form-control" type="text" name="name">
-				</div>
-				<div class="input-group" style="margin-top: 5px;">
+					<input class="form-control" type="text" name="name" id="txtName">
+				</p>
+				<p class="input-group">
+					<span class=input-group-addon>最小单位价格：</span>
+					<input class="form-control" type="text" name="min_price" id="txtMinPrice">
+				</p>
+				<p class="input-group">
+					<span class="input-group-addon">规格容量（数量/件）：</span>
+					<input class="form-control" type="text" name="capacity" id="txtCapacity">
+				</p>
+				<p class="input-group">
 					<span class="input-group-addon">规格说明：</span>
-					<input class="form-control" type="text" name="explain">
-				</div>
-				<a class="btn btn-success form-control" href="javascript:;" id="btnCreateNorms"
-				   style="margin-top: 5px;">创建规格</a>
+					<input class="form-control" type="text" name="explain" id="txtNormsExplain">
+				</p>
+				<a class="btn btn-success form-control" href="javascript:;" id="btnCreateNorms">创建规格</a>
 			</form>
 			<h5>修改规格</h5>
 			<table class="table table-border">
 				<?php foreach($normsInfo as $item): ?>
 				<form action="<?php echo U('home/goods/updateNorms');?>?id=<?php echo ($_GET['id']); ?>" method="post">
-					<input type="hidden" name="hdnNormsId" value="<?php echo ($item['id']); ?>">
+					<input type="hidden" name="hdn_norms_id" value="<?php echo ($item['id']); ?>">
 					<tr>
 						<td>名称</td>
 						<td>
@@ -494,13 +511,37 @@
 					<tr>
 						<td>值/件</td>
 						<td>
-							<input class="form-control" type="text" name="value" value="<?php echo ($item['value']); ?>">
+							<input class="form-control" type="text" name="capacity" value="<?php echo ($item['capacity']); ?>">
+						</td>
+					</tr>
+					<tr>
+						<td>价格</td>
+						<td>
+							<input class="form-control" type="text" name="min_price" value="<?php echo ($item['min_price']); ?>">
+						</td>
+					</tr>
+					<tr>
+						<td>促销价格</td>
+						<td>
+							<input class="form-control" type="text"  name="sale_min_price" value="<?php echo ($item['sale_min_price']); ?>">
 						</td>
 					</tr>
 					<tr>
 						<td>说明</td>
 						<td>
 							<input class="form-control" type="text" name="explain" value="<?php echo ($item['explain']); ?>">
+						</td>
+					</tr>
+					<tr>
+						<td>库存</td>
+						<td>
+							<input class="form-control" type="text" name="inventory" value="<?php echo ($item['inventory']); ?>">
+						</td>
+					</tr>
+					<tr>
+						<td>促销库存</td>
+						<td>
+							<input class="form-control" type="text" name="sale_inventory" value="<?php echo ($item['sale_inventory']); ?>">
 						</td>
 					</tr>
 					<tr>
@@ -579,11 +620,10 @@
 			type: 'post',
 			data: $('#formUpdateGoodsInfo').serialize(),
 			success: function (Ret) {
-				if (Ret == 1) {
+				if (Ret >= 0) {
 					showSuccessModal('修改商品信息', '修改成功');
 				} else {
-					showFailModal('1',Ret);
-//					showFailModal('修改失败', '商品信息没有变化或修改失败');
+					showFailModal('修改失败', '商品信息没有变化或修改失败');
 				}
 			}
 		});
@@ -636,7 +676,7 @@
 	 */
 	document.getElementById('btnCreateNorms').onclick = function () {
 		$.ajax({
-			url: '<?php echo U("home/goods/ajaxCreateNorms_forUpdateGoods");?>',
+			url: '<?php echo U("home/goods/ajaxCreateNorms");?>',
 			type: 'post',
 			data: $('#formCreateNorms').serialize(),
 			success: function (RET) {
