@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : local
-Source Server Version : 50508
-Source Host           : localhost:3306
+Source Server         : yys.phphelper.cn
+Source Server Version : 50518
+Source Host           : rm-2zes5472l097ri5fco.mysql.rds.aliyuncs.com:3306
 Source Database       : yiyousu
 
 Target Server Type    : MYSQL
-Target Server Version : 50508
+Target Server Version : 50518
 File Encoding         : 65001
 
-Date: 2016-06-17 09:29:11
+Date: 2016-06-20 08:34:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -42,14 +42,11 @@ CREATE TABLE `cart` (
   `number` int(11) NOT NULL DEFAULT '0' COMMENT '购物车中商品的数量',
   `f_norms_id` int(11) NOT NULL DEFAULT '0' COMMENT '所选商品规格',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of cart
 -- ----------------------------
-INSERT INTO `cart` VALUES ('1', '184', '8', '1', '1');
-INSERT INTO `cart` VALUES ('2', '184', '8', '2', '2');
-INSERT INTO `cart` VALUES ('3', '184', '8', '3', '1');
 
 -- ----------------------------
 -- Table structure for collection
@@ -476,19 +473,23 @@ CREATE TABLE `order_form` (
   `refund_time` int(11) NOT NULL DEFAULT '0' COMMENT '申请退款时间',
   `no` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '订单编号',
   `price` double(10,2) NOT NULL DEFAULT '0.00' COMMENT '总金额',
-  `is_need_invoice` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否需要发票',
+  `is_need_invoice` enum('F','T') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'F' COMMENT '是否需要发票',
   `invoice_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '发票类型',
   `invoice_company_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '发票公司名称',
   `f_order_form_status_id` int(11) NOT NULL DEFAULT '1' COMMENT '订单状态',
   `bc_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `f_pay_type_id` int(11) NOT NULL DEFAULT '0' COMMENT '支付类型',
   `refund_explain` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '退款申请说明',
+  `is_delete` enum('T','F') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'F' COMMENT '用户是否删除',
+  `f_area_id` int(11) NOT NULL DEFAULT '1' COMMENT '区域编号',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of order_form
 -- ----------------------------
+INSERT INTO `order_form` VALUES ('39', '8', '1466306704', '0', '48ab880a9433f9e6bc9dd5b46d0a34ca', '60.50', 'F', '', '', '3', '2016061921001004790233765162', '2', '', 'F', '1');
+INSERT INTO `order_form` VALUES ('40', '8', '1466306886', '0', '3edd45b9489aedbd0af70742a7ff47b3', '60.50', 'F', '', '', '3', '', '0', '', 'F', '1');
 
 -- ----------------------------
 -- Table structure for order_form_status
@@ -522,11 +523,13 @@ CREATE TABLE `order_goods` (
   `f_norms_id` int(11) NOT NULL DEFAULT '0' COMMENT '规格编号',
   `number` int(11) NOT NULL DEFAULT '0' COMMENT '商品数量',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of order_goods
 -- ----------------------------
+INSERT INTO `order_goods` VALUES ('50', '48ab880a9433f9e6bc9dd5b46d0a34ca', '184', '1', '1');
+INSERT INTO `order_goods` VALUES ('51', '3edd45b9489aedbd0af70742a7ff47b3', '184', '1', '1');
 
 -- ----------------------------
 -- Table structure for pay_type
@@ -762,13 +765,14 @@ CREATE TABLE `user` (
   `wechat_open_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '微信登陆用（open_id）',
   `f_user_status_id` int(11) NOT NULL DEFAULT '0' COMMENT '状态',
   `f_user_type_id` int(11) NOT NULL DEFAULT '0' COMMENT '用户类型',
+  `invonce_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '公司名称/个人姓名',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('8', 'ed2b1f468c5f915f3f1cf75d7068baae', 'test', 'jericho_ph@qq.com', '12345678901', '测试公司', '', '北京市', '北京市', '东城区', '地址地址地址', '1462867417', '1466064563', '', '1', '0');
+INSERT INTO `user` VALUES ('8', 'ed2b1f468c5f915f3f1cf75d7068baae', 'test', 'jericho_ph@qq.com', '12345678901', '测试公司', '', '北京市', '北京市', '东城区', '地址地址地址', '1462867417', '1466331044', '', '1', '0', '');
 
 -- ----------------------------
 -- Table structure for user_status
